@@ -103,6 +103,13 @@ header {
 						flex: 1 1 auto;
 						font-size: 1.8rem;
 						padding: 30px 0;
+						&.monitoring {
+							label {
+								border-bottom: 10px solid #23B0FF;
+								padding-bottom: 20px;
+								color: #23B0FF;
+							}
+						}
 					}
 				}
 			}
@@ -123,6 +130,18 @@ header {
 			}
 		}
 	}
+}
+
+/* 어드민 바디 */
+#admin {
+	background: url(@/assets/image/sample-admin.png) no-repeat top;
+	margin: 20px auto 0;
+	height: calc(100% - 108px);
+}
+
+.admin-container {
+	background-color: rgb(242, 242, 242);
+	height: 100vh;
 }
 
 /* 퀵메뉴 */
