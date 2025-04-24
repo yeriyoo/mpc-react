@@ -7,7 +7,7 @@ import Admin from '@/page/Admin.tsx';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename={'/mpc'}>
       <Routes>
         <Route path={'/'} element={<App />} />
         <Route path={'/admin'} element={<Admin />} />

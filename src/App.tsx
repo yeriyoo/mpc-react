@@ -7,6 +7,7 @@ import { defaults as defaultsControls } from 'ol/control';
 import Header from '@/component/Header.tsx';
 import TopQuickMenu from '@/component/TopQuickMenu.tsx';
 import BottomQuickMenu from '@/component/BottomQuickMenu.tsx';
+import { useMapStore } from '@/store/commonStore.ts';
 
 /*
 -- 동아시아 기준 렌더링 범위
@@ -25,6 +26,8 @@ import BottomQuickMenu from '@/component/BottomQuickMenu.tsx';
 */
 
 function App() {
+  const setBaseMap = useMapStore(state => state.setBaseMap);
+
   useEffect(() => {
     // 동아시아 범위
     const boundingExtent = [
@@ -54,6 +57,7 @@ function App() {
       }),
     });
 
+    setBaseMap(map);
     return () => {
       if (map) map.dispose();
     };
