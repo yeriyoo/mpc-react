@@ -15,11 +15,9 @@ import profileImg from '@/assets/image/header/profile.svg';
 import alarmImg from '@/assets/image/header/alarm.svg';
 import favoriteImg from '@/assets/image/header/favorite.svg';
 import aiImg from '@/assets/image/header/ai.svg';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
-  const navigate = useNavigate();
-
   return (
     <header className="header-wrap">
       <nav>
