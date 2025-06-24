@@ -1,7 +1,10 @@
 import { Table } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { useState } from "react";
+import FieldInfoUploadModal from "@/component/map/modal/FieldInfoUploadModal.tsx";
 
 const Publish = () => {
+  const [isShow01, setIsShow01] = useState(false);
   return (
     <>
       <div className="d-flex flex-column flex-wrap gap-2 p-3">
@@ -19,6 +22,12 @@ const Publish = () => {
                 <td>
                   <div className="d-flex gap-4">
                     <Link to={"/pubilsh/main"}>메인</Link>
+                    <Link to={"/publish/main"}></Link>
+                    <Link to={"#"} onClick={() => setIsShow01(true)}>
+                      업로드
+                    </Link>
+                    <Link to={"/publish/sample08"}></Link>
+                    <Link to={"/publish/sample16"}></Link>
                   </div>
                 </td>
               </tr>
@@ -26,6 +35,9 @@ const Publish = () => {
           </Table>
         </div>
       </div>
+      {isShow01 && (
+        <FieldInfoUploadModal setIsShow={() => setIsShow01(false)} />
+      )}
     </>
   );
 };
