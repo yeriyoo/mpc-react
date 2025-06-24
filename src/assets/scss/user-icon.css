@@ -1,0 +1,92 @@
+@charset "UTF-8";
+
+/* icon & image */
+.mpci {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.btn .mpci {
+    width: 1.313rem;
+    height: 1.313rem;
+}
+
+.mpci.size-lg,
+.btn-lg .mpci,
+.btn-group-lg>.btn .mpci,
+.input-group-lg>.btn .mpci {
+    width: 1.875rem;
+    height: 1.875rem;
+}
+
+.mpci.size-sm,
+.btn-sm .mpci,
+.btn-group-sm>.btn .mpci,
+.input-group-sm>.btn .mpci {
+    width: 1.188rem;
+    height: 1.188rem;
+}
+
+.mpci.size-xs,
+.btn-xs .mpci,
+.btn-group-xs>.btn .mpci,
+.input-group-xs>.btn .mpci {
+    width: 1.063rem;
+    height: 1.063rem;
+}
+
+.mpci.size-xxs,
+.btn-xxs .mpci,
+.btn-group-xxs>.btn .mpci,
+.input-group-xxs>.btn .mpci {
+    width: 0.75rem;
+    height: 0.75rem;
+}
+
+.mpci.brand-symbol {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    background-image: var(--mpc-brand-symbol);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100%;
+}
+
+.mpci.icon-required {
+    position: relative;
+    display: inline-block;
+    width: auto;
+    height: auto;
+}
+
+.mpci.icon-required::before {
+    content: "*";
+    color: var(--mpc-danger);
+    font-style: normal;
+}
+
+.mpci.mpci-image {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mpci.csi {
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100%;
+}
+
+.icon-menu1 {
+    background-image: url(@/assets/image/ic_menu1.svg);
+}
+
+.icon-menu2 {
+    background-image: url(@/assets/image/ic_menu2.svg);
+}
+
+.icon-face-print {
+    background-image: url(@/assets/image/ic_face_print.svg);
+}

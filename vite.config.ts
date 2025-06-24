@@ -3,7 +3,8 @@ import react from '@vitejs/plugin-react';
 import * as path from 'path';
 
 export default defineConfig({
-  base: '/mpc/',
+  css: { preprocessorOptions: { scss: { api: 'modern-compiler', quietDeps: true } } },
+  base: '/',
   plugins: [react()],
   resolve: {
     alias: {
