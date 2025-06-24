@@ -1,5 +1,5 @@
 @import 'bootstrap/scss/bootstrap';
-@import 'bootstrap-icons/font/bootstrap-icons.css';
+//@import 'bootstrap-icons/font/bootstrap-icons.css';
 @import '@/custom/assets/font/font.css';
 
 :root,
@@ -2325,19 +2325,19 @@ i.bi {
         height: 30px;
 
         &.img-status1 {
-            background-image: url("@/assets/img/img_ship.svg");
+            //background-image: url("@/assets/img/img_ship.svg");
         }
 
         &.img-status2 {
-            background-image: url("@/assets/img/img_map.svg");
+            //background-image: url("@/assets/img/img_map.svg");
         }
 
         &.img-status3 {
-            background-image: url("@/assets/img/img_share.svg");
+            //background-image: url("@/assets/img/img_share.svg");
         }
 
         &.img-status4 {
-            background-image: url("@/assets/img/img_alarm.svg");
+            //background-image: url("@/assets/img/img_alarm.svg");
         }
     }
 

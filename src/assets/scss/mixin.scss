@@ -1,0 +1,211 @@
+// 색 정의
+$white: #ffffff;
+$black: #000000;
+
+// 배경색
+$bg-white: $white;
+$bg-black: $black;
+
+// 폰트 정의
+$font-size-9: 9px;
+$font-size-10: 10px;
+$font-size-11: 11px;
+$font-size-12: 12px;
+$font-size-13: 13px;
+$font-size-14: 14px;
+$font-size-15: 15px;
+$font-size-16: 16px;
+$font-size-18: 18px;
+
+$font-weight-thin: 200;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+$font-weight-extra-bold: 900;
+
+$font-color-white: $white;
+$font-color-black: $black;
+$font-color-general: #040404;
+$font-color-sub: #666666;
+
+// font variable 폰트
+@mixin font($size, $weight, $color) {
+  font-size: $size;
+  font-weight: $weight;
+  color: $color;
+}
+
+// width, height 넓이,높이
+@mixin wh-100 {
+  width: 100%;
+  height: 100%;
+}
+
+@mixin width-height($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+// position 레이아웃
+@mixin position-absolute-center {
+  transform: translate(-50%,-50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+@mixin position-fixed-bottom-left($bottom, $left) {
+  position: fixed;
+  bottom: $bottom;
+  left: $left;
+}
+
+@mixin position-fixed-top-left($top, $left) {
+  position: fixed;
+  top: $top;
+  left: $left;
+}
+
+@mixin position-fixed-top-right($top, $right) {
+  position: fixed;
+  top: $top;
+  right: $right;
+}
+
+@mixin position-absolute-top-left($top, $left) {
+  position: absolute;
+  top: $top;
+  left: $left;
+}
+
+@mixin position-absolute-top-right($top, $right) {
+  position: absolute;
+  top: $top;
+  right: $right;
+}
+
+@mixin position-absolute-bottom-left($bottom, $left) {
+  position: absolute;
+  bottom: $bottom;
+  left: $left;
+}
+
+@mixin position-absolute-bottom-right($bottom, $right) {
+  position: absolute;
+  bottom: $bottom;
+  right: $right;
+}
+
+@mixin position-absolute-all($top, $right, $bottom, $left) {
+  position: absolute;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+// flex 레이아웃
+@mixin flex-a-center {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flex-a-start {
+  display: flex;
+  align-items: start;
+}
+
+@mixin flex-end {
+  display: flex;
+  align-items: flex-end;
+}
+
+@mixin flex-stretch {
+  display: flex;
+  align-items: stretch;
+}
+
+@mixin flex-stretch-gap($gap) {
+  @include flex-stretch();
+  gap: $gap;
+}
+
+@mixin flex-a-j-start {
+  @include flex-a-center();
+  justify-content: flex-start;
+}
+
+@mixin flex-a-end {
+  @include flex-a-center();
+  justify-content: flex-end;
+}
+
+@mixin flex-a-center-gap($gap) {
+  @include flex-a-center();
+  gap: $gap;
+}
+
+@mixin flex-a-between {
+  @include flex-a-center();
+  justify-content: space-between;
+}
+
+@mixin flex-a-j-center {
+  @include flex-a-center();
+  justify-content: center;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-a-column {
+  @include flex-a-center();
+  flex-direction: column;
+}
+
+@mixin flex-a-column-gap($gap) {
+  @include flex-a-column();
+  gap: $gap;
+}
+
+@mixin flex-a-j-column {
+  @include flex-a-column();
+  justify-content: center;
+}
+
+@mixin flex-a-j-column-gap($gap) {
+  @include flex-a-j-column();
+  gap: $gap;
+}
+
+@mixin flex-a-column-between {
+  @include flex-a-column();
+  justify-content: space-between;
+}
+
+// border
+@mixin border-no-bg($width, $color) {
+  border: $width solid $color;
+}
+
+@mixin border-bg($width, $color, $bg) {
+  border: $width solid $color;
+  background-color: $bg;
+}
+
+@mixin border($width, $color, $bg, $radius) {
+  border: $width solid $color;
+  border-radius: $radius;
+  background-color: $bg;
+}
+
+// ellispsis 텍스트 ...처리
+@mixin ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: horizontal;
+  -webkit-line-clamp: 1;
+}

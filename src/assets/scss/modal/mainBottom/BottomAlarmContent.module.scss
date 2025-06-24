@@ -1,0 +1,24 @@
+.area {
+  background-color: white;
+  height: 198px;
+  padding: 16px;
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 168px;
+  }
+  li {
+    background: #F5F5F5 url("@/assets/img/mainGis/bottom/main_gis_arrow_right.svg") no-repeat right 3% bottom 50%;
+    border: #DDD solid 1px;
+    height: 36px;
+    padding: 8px;
+    cursor: pointer;
+    display: flex;
+  }
+  li:hover {
+    background: #0C30B6 url("@/assets/img/mainGis/bottom/main_gis_arrow_right_white.svg") no-repeat right 3% bottom 50%;
+    color: white;
+  }
+}

@@ -1,0 +1,1511 @@
+@charset "UTF-8";
+@import '../../mixin';
+
+
+.back {
+  @include wh-100;
+  @include position-fixed-top-left(0,0);
+  @include flex-a-j-column;
+  z-index: 101;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.common-modal-wrap {
+  --bs-modal-zindex: 1055;
+  --bs-modal-width: 500px;
+  --bs-modal-padding: 1rem;
+  --bs-modal-margin: 0.5rem;
+  --bs-modal-bg: #ffffff;
+  --bs-modal-border-color: #d3d3d3;
+  --bs-modal-border-width: 1px;
+  --bs-modal-border-radius: 0;
+  --bs-modal-box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.25);
+  --bs-modal-inner-border-radius: 0;
+  --bs-modal-header-padding-x: 1rem;
+  --bs-modal-header-padding-y: 1rem;
+  --bs-modal-header-padding: 1rem 1rem;
+  --bs-modal-title-line-height: 1.5;
+  --bs-modal-footer-gap: 0.5rem;
+
+  position: relative;
+  display: flex;
+  align-items: center;
+  max-width: calc(100vw - 40px);
+  width: calc(100vw - 40px);
+  height: calc(100vh - var(--bs-modal-margin) * 2);
+  min-height: calc(100vh - var(--bs-modal-margin) * 2);
+  margin: var(--bs-modal-margin);
+  pointer-events: none;
+  transition: transform 0.3s ease-out;
+  transform: translate(0, 0);
+
+  > .common-modal-style {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-height: 100%;
+    overflow: hidden;
+    pointer-events: auto;
+    background-color: var(--bs-modal-bg);
+    background-clip: padding-box;
+    border: var(--bs-modal-border-width) solid var(--bs-modal-border-color);
+    border-radius: var(--bs-modal-border-radius);
+    outline: 0;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.25);
+    padding: 20px;
+    .modal-common-header, .modal-tab-btn {
+      display: flex;
+      flex-shrink: 0;
+      align-items: center;
+    }
+    .modal-tab-btn {
+      gap: 1px;
+    }
+    .modal-content-style {
+      position: relative;
+      flex: 1 1 auto;
+      overflow: auto;
+    }
+    .common-btn-wrap {
+      flex-shrink: 0;
+      flex-wrap: wrap;
+    }
+  }
+}
+
+@media (min-width: 576px) {
+  .common-modal {
+    --bs-modal-margin: 1.75rem;
+  }
+  .common-modal-wrap {
+    max-width: var(--bs-modal-width);
+    width: var(--bs-modal-width);
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .modal-sm {
+    --bs-modal-width: 300px;
+  }
+}
+@media (min-width: 992px) {
+  .modal-lg,
+  .modal-xl {
+    --bs-modal-width: 800px;
+  }
+}
+@media (min-width: 1200px) {
+  .modal-xl {
+    --bs-modal-width: 1140px;
+  }
+}
+
+/* 24-09-11 모달 공통 스타일 */
+.common-modal-wrap {
+  // z-index: var(--zIndex-UI-Modal);
+  // border: 1px solid #D3D3D3;
+  &.common-memo-modify-modal {
+    @include position-absolute-center;
+  }
+  // 관리자 수집 관리 등록 모달
+  &.admin-collection-modal {
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    .common-modal-style {
+      // & > * {
+      //   min-width: 1100px;
+      //   width: 100%;
+      // }
+      .collection-table-wrap {
+        margin-top: 20px;
+        .collection-table {
+          .collection-table-title {
+            strong {
+              @include font($font-size-18,$font-weight-bold,#040404);
+            }
+          }
+          .collection-table-search {
+            margin: 20px 0;
+            ul {
+              @include flex-a-center-gap(6px);
+              li {
+                input[type="text"] {
+                  border-radius: 0;
+                  height: 40px;
+                }
+                button[type="button"] {
+                  @include width-height(40px,40px);
+                  background-color: #EFF6FF;
+                  border: 1px solid #9EB7D2;
+                  &.focus {
+                    background-color: #2494D3;
+                    color: $font-color-white;
+                  }
+                  &.collection-search-btn {
+                    @include width-height(80px,40px);
+                    @include flex-a-center-gap(6px);
+                    justify-content: center;
+                  }
+                }
+              }
+            }
+          }
+          .collection-table-list {
+            table {
+              thead {
+                th {
+                  text-align: center;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  // 수집 작업관리 모달
+  &.admin-collection-detail-modal {
+    position: absolute;
+    top: 10%;
+    left: 30%;
+    .common-modal-style {
+      // & > * {
+      //   min-width: 786px;
+      //   width: 100%;
+      // }
+      .collection-manage-wrap {
+        @include flex-column;
+        margin-bottom: 20px;
+        gap: 6px;
+        .collection-manage-title {
+          border-bottom: 1px solid #6A6A6A;
+          padding-bottom: 10px;
+          margin-top: 20px;
+          strong {
+            @include font($font-size-18,$font-weight-bold,#040404);
+          }
+        }
+        .collection-manage-content {
+          @include flex-a-center-gap(6px);
+          width: 100%;
+          input[type="text"] {
+            width: 100%;
+            height: 40px;
+            border-radius: 0;
+          }
+          button[type="button"] {
+            border: 1px solid #9EB7D2;
+            background-color: #EFF6FF;
+            color: #426891;
+            min-width: 100px;
+            width: 100px;
+            min-height: 40px;
+            height: 40px;
+          }
+        }
+      }
+      .collection-schedule-wrap {
+        .collection-schedule-title {
+          border-bottom: 1px solid #6A6A6A;
+          padding-bottom: 10px;
+          margin-top: 20px;
+          strong {
+            @include font($font-size-18,$font-weight-bold,#040404);
+          }
+        }
+        .collection-schedule-date-wrap {
+          @include flex-a-center-gap(6px);
+          border-bottom: 1px solid #DDDDDD;
+          .schedule-date-title {
+            @include width-height(120px,60px);
+            @include flex-column;
+            justify-content: center;
+            background-color: #EFF6FF;
+            text-align: left;
+            padding-left: 10px;
+            min-width: 120px;
+            strong {
+              @include font($font-size-14,$font-weight-bold,#040404);
+            }
+          }
+          .collection-schedule-date {
+            @include flex-a-center-gap(6px);
+            width: 100%;
+            input[type="date"] {
+              border-radius: 0;
+              width: 100%;
+            }
+          }
+        }
+        .collection-schedule-time-wrap {
+          @include flex-a-center-gap(6px);
+          border-bottom: 1px solid #DDDDDD;
+          .schedule-time-title {
+            @include width-height(120px,240px);
+            @include flex-column;
+            justify-content: center;
+            text-align: left;
+            background-color: #EFF6FF;
+            padding-left: 10px;
+            min-width: 120px;
+            strong {
+              @include font($font-size-14,$font-weight-bold,#040404);
+            }
+          }
+          .collection-schedule-time-content {
+            @include flex-column;
+            gap: 20px;
+            .collection-schedule-month,.collection-schedule-day,.collection-schedule-hour,.collection-schedule-minutes,.collection-schedule-second {
+              @include flex-a-center-gap(6px);
+              position: relative;
+              .indicator {
+                @include flex-a-j-center;
+                @include width-height(30px,30px);
+                transform: translateY(2px);
+                pointer-events: none;
+                position: absolute;
+                color: $font-color-white;
+                font-weight: $font-weight-bold;
+              }
+            }
+            .collection-schedule-day,.collection-schedule-hour,.collection-schedule-minutes,.collection-schedule-second {
+              input[type="range"] {
+                background-color: #DDDDDD;
+                -webkit-appearance: none;
+                appearance: none;
+                padding: unset;
+                outline: none;
+                width: 546px;
+                height: 6px;
+                &::-webkit-slider-runnable-track {
+                  cursor: pointer;
+                  background-color: #DDDDDD;
+                  height: 6px;
+                }
+                &::-webkit-slider-thumb {
+                  @include width-height(30px,30px);
+                  background-color: #2494D3;
+                  border-radius: 50%;
+                  -webkit-appearance: none;
+                  appearance: none;
+                  margin-top: -10px;
+                }
+              }
+            }
+            .collection-schedule-month {
+              button[type="button"] {
+                @include width-height(40px,40px);
+                border: 1px solid #DDDDDD;
+                &.focus {
+                  background-color: #2494D3;
+                  color: $font-color-white;
+                }
+              }
+            }
+          }
+        }
+        .collection-schedule-active-wrap {
+          @include flex-a-center-gap(6px);
+          border-bottom: 1px solid #DDDDDD;
+          .schedule-active-title {
+            @include width-height(120px,60px);
+            @include flex-column;
+            justify-content: center;
+            background-color: #EFF6FF;
+            text-align: left;
+            padding-left: 10px;
+            min-width: 120px;
+            strong {
+              @include font($font-size-14,$font-weight-bold,#040404);
+            }
+          }
+          .active-toggle {
+            input[type="checkbox"] {
+              display: none;
+              &:checked {
+                +label {
+                  background-color: #2494D3;
+                }
+              }
+            }
+            input[type="checkbox"]:checked + label:after {
+              transform: translate3d(24px,0,0);
+            }
+            label {
+              @include width-height(48px,24px);
+              cursor: pointer;
+              display: block;
+              position: relative;
+              transition: all 0.4s ease-out;
+              background-color: #AAAAAA;
+              border-radius: 20px;
+              &::after {
+                @include position-absolute-top-left(3.5px,3px);
+                @include width-height(16px,16px);
+                transition: all 0.4s ease-out;
+                background-color: $bg-white;
+                border-radius: 50%;
+                content: "";
+              }
+            }
+          }
+        }
+        .collection-schedule-category-wrap {
+          @include flex-a-center-gap(6px);
+          .schedule-category-title {
+            @include width-height(120px,60px);
+            @include flex-column;
+            justify-content: center;
+            background-color: #EFF6FF;
+            text-align: left;
+            padding-left: 10px;
+            min-width: 120px;
+            strong {
+              @include font($font-size-14,$font-weight-bold,#040404);
+            }
+          }
+          .schedule-category-select {
+            @include flex-a-center-gap(10px);
+            select {
+              @include font($font-size-13,$font-weight-regular,#040404);
+              min-width: 140px;
+              width: 120px;
+              background-image: url("@/assets/img/pub/icon-select-16.png");
+              background-repeat: no-repeat;
+              background-size: 12px 8px;
+              background-position-x: calc(100% - 10px);
+              background-position-y: 12px;
+            }
+          }
+        }
+      }
+    }
+  }
+  &.dashboard-modify, &.dashboard, &.shortKey, &.infoShare, &.dashboard-favorite-area, &.my-menu-setting,&.my-analysis-share-alarm,&.my-info-setting {
+    z-index: 102;
+  }
+  // 단축키 설정
+  &.shortKey {
+    .common-modal-style {
+      .modal-content-style {
+        // & > * {
+        //   min-width: 525px;
+        //   width: 100%;
+        // }
+      }
+    }
+  }
+  // 마이페이지 대시보드 관심선박, 관심영역
+  &.dashboard,&.dashboard-favorite-area,&.my-analysis-share-alarm,&.my-info-setting {
+    .common-modal-style {
+      .modal-content-style {
+        // & > * {
+        //   min-width: 1100px;
+        //   width: 100%;
+        // }
+        // 마이페이지 -> 개인정보 설정
+        .my-info-setting-wrap {
+          @include flex-column;
+          .my-info-setting {
+            @include flex-stretch-gap(10px);
+            border-bottom: 1px solid #DDDDDD;
+            label {
+              @include font($font-size-14,$font-weight-bold,#040404);
+              width: 140px;
+              min-width: 140px;
+              background-color: #EFF6FF;
+              padding-left: 10px;
+              line-height: 60px;
+            }
+            .my-info-item {
+              padding-top: 10px;
+            }
+            input[type="text"],input[type="password"] {
+              border: 1px solid #DDDDDD;
+              text-indent: 10px;
+              outline: none;
+              min-height: 40px;
+              &:disabled {
+                color: $font-color-black;
+              }
+              &:focus {
+                outline: none;
+                appearance: none;
+              }
+            }
+            input[type="text"] {
+              @include width-height(340px,40px);
+            }
+            input[type="password"] {
+              @include width-height(180px,40px);
+            }
+            // 비밀번호
+            .password-wrap {
+              display: flex;
+              gap: 5px;
+              padding: 10px 0;
+              flex-direction: column;
+              .input-password {
+                @include flex-a-center-gap(10px);
+              }
+              .current-password,.new-password {
+                @include flex-a-center-gap(6px);
+                strong {
+                  @include font($font-size-13,$font-weight-bold,#040404);
+                  white-space: nowrap;
+                }
+              }
+              .modify-btn-wrap {
+                @include flex-a-center-gap(4px);
+                button[type="button"] {
+                  @include font($font-size-13,$font-weight-bold,#426891);
+                  @include width-height(80px,40px);
+                  background-color: #EFF6FF;
+                  border: 1px solid #9EB7D2;
+                }
+              }
+              .explanation {
+                @include flex-a-start;
+                gap: 6px;
+                b {
+                  @include font($font-size-14,$font-weight-bold,#426891);
+                }
+                small {
+                  @include width-height(20px,20px);
+                  @include flex-a-j-center;
+                  font-weight: $font-weight-bold;
+                  background-color: $bg-white;
+                  border: 1px solid #9EB7D2;
+                  border-radius: 50%;
+                  line-height: 20px;
+                  color: #9EB7D2;
+                }
+              }
+            }
+            // 공인인증서
+            .certificate {
+              @include font($font-size-13,$font-weight-bold,#426891);
+              @include width-height(220px,40px);
+              background-color: #EFF6FF;
+              border: 1px solid #9EB7D2;
+              min-width: 220px;
+              min-height: 40px;
+            }
+            .name-wrap,.email-wrap,.degree-wrap,.organ-wrap {
+              @include flex-a-center-gap(10px);
+
+            }
+          }
+        }
+        .common-modal-search-wrap {
+          @include flex-a-center-gap(6px);
+          background-color: #F2F2F2;
+          padding: 10px;
+          select {
+            background: url("@/assets/img/shipDetail/detailModalIcon/attention_arrow_down.svg") no-repeat right white;
+            border: 1px solid #DDDDDD;
+            padding: 4px;
+            max-width: 200px;
+            width: 100%;
+            min-height: 40px;
+            height: 40px;
+            &:focus {
+              outline-color: rgba(0,0,0,0.2);
+            }
+          }
+          .common-modal-search-title {
+            @include font($font-size-14,$font-weight-bold,#040404);
+            @include flex-a-j-center;
+            max-width: 80px;
+            width: 100%;
+            min-height: 40px;
+            height: 40px;
+          }
+          .common-search-input-wrap {
+            @include flex-a-center-gap(6px);
+            width: 100%;
+            input[type="text"] {
+              border: 1px solid #DDDDDD;
+              text-indent: 10px;
+              width: 100%;
+              &::placeholder {
+                text-indent: 10px;
+              }
+              &:focus-visible {
+                outline: none;
+              }
+            }
+            .common-search-btn {
+              position: relative;
+              button[type="button"] {
+                @include width-height(80px,40px);
+                @include flex-a-center-gap(4px);
+                justify-content: center;
+                background-color: #EFF6FF;
+                border: 1px solid #9EB7D2;
+                &:focus-visible {
+                  outline: none;
+                }
+              }
+            }
+          }
+        }
+        .dashboard-util-btn-wrap {
+          @include flex-a-center;
+          border-bottom: 1px solid #000000;
+          padding: 10px 0;
+          &.f-between {
+            justify-content: space-between;
+          }
+          &.f-end {
+            justify-content: flex-end;
+          }
+          .dashboard-util-btn {
+            @include flex-a-center-gap(6px);
+            button[type="button"] {
+              @include width-height(80px,32px);
+              background-color: #EFF6FF;
+              border: 1px solid #9EB7D2;
+            }
+          }
+        }
+      }
+    }
+  }
+  .common-modal-style {
+    // background-color: $bg-white;
+    // padding: 30px;
+    // 모달 헤더
+    .modal-common-header {
+      position: relative;
+      padding-bottom: 12px;
+      h3 {
+        @include font(22px,$font-weight-bold,#262B44);
+      }
+      .common-modal-close {
+        @include position-absolute-top-right(0,0);
+        @include width-height(22px,22px);
+        text-indent: -9999px;
+        &::after, &::before {
+          z-index: var(--zIndex-Element-After);
+          @include width-height(2px,22px);
+          @include position-absolute-top-left(2px,10px);
+          transform: rotate(45deg);
+          background: #000;
+          content: '';
+        }
+        &::after {
+          transform: rotate(-45deg);
+        }
+      }
+    }
+    // 모달 탭 버튼 (입출항/위험물)
+    .modal-tab-btn {
+      border-bottom: 1px solid #6A6A6A;
+      margin-bottom: 10px;
+      width: 100%;
+      button[type='button'] {
+        font-size: $font-size-13;
+        font-weight: $font-weight-regular;
+        background-color: #DDDDDD;
+        color: #666666;
+        min-width: 100px;
+        width: 100px;
+        min-height: 40px;
+        height: 40px;
+        &.active {
+          font-weight: $font-weight-bold;
+          color: $font-color-white;
+          background-color: #213079;
+        }
+      }
+    }
+    // 승선인원 조회
+    .crew-count {
+      border-top: 1px solid #6A6A6A;
+      padding: 10px 0 4px 0;
+      p {
+        @include font($font-size-15,$font-weight-regular,#040404);
+        span {
+          @include font($font-size-15,$font-weight-bold,#2494D3);
+        }
+      }
+    }
+    .modal-content-style {
+      border-top: 1px solid #6A6A6A;
+      .table-group {
+        width: 100%;
+        // 마이페이지 -> 분석/공유/알람 모달
+        &.my-page-modal-table {
+          position: relative;
+          padding-top: 10px;
+        }
+        table {
+          width: 100%;
+          th,td {
+            font-size: $font-size-14;
+            color: #040404;
+            text-align: center;
+            height: 40px;
+          }
+          thead {
+            th {
+              font-weight: $font-weight-bold;
+              background-color: #EFF6FF;
+              border-bottom: unset;
+              border-top: unset;
+            }
+          }
+          tbody {
+            td {
+              // 마이페이지 대시보드 관심선박 모달 수정 버튼, 단축키 수정 삭제 버튼
+              &.dashboard-modify-btn,&.short-key-delete-btn  {
+                button[type="button"] {
+                  @include width-height(80px,32px);
+                  background-color: #EFF6FF;
+                  border: 1px solid #9EB7D2;
+                }
+              }
+            }
+          }
+        }
+      }
+      // 마이페이지 -> 메뉴 설정 (즐겨찾기 메뉴) 모달
+      .favorite-menu-wrap {
+        @include flex-a-center-gap(10px);
+        justify-content: space-between;
+        // min-width: 600px;
+        // width: 600px;
+        padding: 10px 0;
+        // 메뉴 찾기, 현재 맞춤 메뉴 공통
+        .favorite-menu-list-wrap,.favorite-menu-custom-wrap {
+          @include flex-a-column-gap(20px);
+          width: 100%;
+          .favorite-menu-title-wrap {
+            @include flex-a-between;
+            height: 32px;
+            width: 100%;
+            strong {
+              @include font($font-size-18,$font-weight-bold,#040404);
+            }
+            img {
+              @include width-height(32px,32px);
+            }
+          }
+          // 메뉴 찾기, 현재 맞춤 메뉴 공통
+          .favorite-menu-list, .favorite-menu-custom-list {
+            position: relative;
+            overflow-y: scroll;
+            overflow-x: hidden;
+            max-height: 400px;
+            min-height: 400px;
+            border: 1px solid #DDDDDD;
+            width: 100%;
+            &::-webkit-scrollbar {
+              background-color: #DDDDDD;
+              width: 4px;
+            }
+            &::-webkit-scrollbar-thumb {
+              background-color: #AAAAAA;
+            }
+          }
+          // 현재 맞춤 메뉴 오른쪽
+          .favorite-menu-custom-list {
+            padding: 10px;
+            ul {
+              @include flex-a-column-gap(4px);
+              li {
+                @include flex-a-between;
+                border: 1px solid #DDDDDD;
+                padding: 10px;
+                width: 100%;
+                span {
+                  @include font($font-size-14,$font-weight-regular,#040404);
+                }
+                img {
+                  cursor: pointer;
+                }
+              }
+            }
+          }
+          // 메뉴 찾기 왼쪽
+          .favorite-menu-list {
+            padding: 16px 0 16px 12px;
+            .root-tree-wrap {
+              position: relative;
+              .root-tree-content-wrap {
+                //&:after {
+                //  @include position-absolute-top-left(26px,11px);
+                //  @include width-height(1px,100%);
+                //  background-color: #BBBBBB;
+                //  content: "";
+                //}
+                // 루트, 첫번째 뎁스
+                .tree-content {
+                  @include flex-a-center-gap(6px);
+                  position: relative;
+                  height: 32px;
+                  &.one-depth {
+                    cursor: pointer;
+                    padding-left: 28px;
+                    &.selected {
+                      strong {
+                        color: #2494D3;
+                      }
+                    }
+                  }
+                  .tree-box-icon {
+                    @include width-height(22px,22px);
+                    @include flex-a-j-center;
+                    position: relative;
+                    cursor: pointer;
+                    background-color: $bg-white;
+                    border: 1px solid #BBBBBB;
+                    color: #BBBBBB;
+                    z-index: 1;
+                    &:after {
+                      @include position-absolute-top-left(10px,21px);
+                      @include width-height(8px,1px);
+                      background-color: #BBBBBB;
+                      content: "";
+                    }
+                    img {
+                      @include wh-100;
+                    }
+                  }
+                  .tree-title-icon {
+                    @include flex-a-center-gap(2px);
+                    article {
+                      @include width-height(22px,22px);
+                      img {
+                        @include wh-100;
+                      }
+                    }
+                    strong {
+                      @include font($font-size-14,$font-weight-bold,$font-color-black);
+                    }
+                  }
+                }
+                // 첫번째 뎁스
+                .one-depth-list-wrap {
+                  position: relative;
+                  display: none;
+                  &.show {
+                    display: block
+                  }
+                  &:not(&:last-of-type) .one-depth-list:after {
+                    @include position-absolute-top-left(0,39px);
+                    @include width-height(1px,100%);
+                    background-color: #BBBBBB;
+                    content: "";
+                  }
+                  &:last-of-type .one-depth-list:after {
+                    @include position-absolute-top-left(0,39px);
+                    @include width-height(1px,10px);
+                    background-color: #BBBBBB;
+                    content: "";
+                  }
+                  .one-depth-list {
+                    // 두번째 뎁스
+                    .two-depth-list-wrap {
+                      position: relative;
+                      display: none;
+                      &.show {
+                        display: block;
+                      }
+                      &:not(&:last-of-type) .two-depth-list .two-depth:before {
+                        @include position-absolute-top-left(0px,66px);
+                        @include width-height(1px,100%);
+                        background-color: #BBBBBB;
+                        content: "";
+                      }
+                      &:last-of-type .two-depth-list .two-depth:before {
+                        @include position-absolute-top-left(0px,66px);
+                        @include width-height(1px,10px);
+                        background-color: #BBBBBB;
+                        content: "";
+                      }
+                      .two-depth-list {
+                        @include flex-column;
+                        .two-depth {
+                          @include flex-a-center-gap(4px);
+                          position: relative;
+                          cursor: pointer;
+                          height: 24px;
+                          padding-left: 72px;
+                          &.selected {
+                            article {
+                              svg {
+                                g {
+                                  fill: #2494D3;
+                                }
+                              }
+                            }
+                            strong {
+                              color: #2494D3;
+                            }
+                          }
+                          &:after {
+                            @include position-absolute-top-left(10px,66px);
+                            @include width-height(8px,1px);
+                            background-color: #BBBBBB;
+                            content: "";
+                          }
+                          article {
+                            @include width-height(20px,20px);
+                            svg {
+                              @include wh-100;
+                            }
+                          }
+                          strong {
+                            @include font($font-size-14,$font-weight-regular,$font-color-black);
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        .favorite-menu-choice-btn {
+          button[type="button"] {
+            @include font($font-size-13,$font-weight-bold,#426891);
+            @include width-height(60px,32px);
+            background-color: #EFF6FF;
+            border: 1px solid #9EB7D2;
+          }
+        }
+      }
+      // 항로 예측 모달
+      &.predictLong {
+        // & > * {
+        //   min-width: 1000px;
+        //   width: 100%;
+        // }
+        .predictLong-wrap {
+          //min-width: 1000px;
+          width: 100%;
+          min-height: 330px;
+          height: 330px;
+          #predictLongMap {
+            @include wh-100;
+            position: relative;
+          }
+        }
+      }
+      // 항적 조회 모달
+      &.tracking {
+        // min-width: 1800px;
+        // width: 1800px;
+        .tracking-wrap {
+          @include flex-a-start;
+          flex-wrap: wrap;
+          gap: 20px;
+          .tracking-group {
+            @include flex-column;
+            flex: 0 0 auto;
+            width: 100%;
+
+            gap: 20px;
+            .tracking-map-wrap {
+              position: relative;
+              min-width: 100%;
+              width: 100%;
+              min-height: 330px;
+              height: 330px;
+              #trackingMap {
+                @include wh-100;
+                position: relative;
+              }
+            }
+          }
+          .table-group {
+            max-height: 640px;
+          }
+        }
+        .tracking-right {
+          display: flex;
+          flex-direction: column;
+          flex: 0 0 auto;
+          width: 100%;
+          gap: 20px;
+        }
+        .tracking-date-wrap {
+          @include flex-a-j-center;
+          gap: 14px;
+          margin-top: 20px;
+          .date-wrap {
+            margin-bottom: 10px;
+            .dates {
+              @include flex-a-between;
+              gap: 6px;
+              input[type="datetime-local"] {
+                @include font($font-size-14,$font-weight-bold,#040404);
+                @include width-height(180px,40px);
+                min-width: 180px;
+                min-height: 40px;
+                cursor: pointer;
+                border: 1px solid #DDDDDD;
+                border-radius: 4px;
+                padding-right: 0;
+                &::-webkit-calendar-picker-indicator {
+                  @include width-height(16px,16px);
+                  background: transparent;
+                  cursor: pointer;
+                }
+              }
+            }
+            .dates-range {
+              @include flex-a-j-column();
+              position: relative;
+              width: 100%;
+              min-height: 20px;
+              .track, .range {
+                @include position-absolute-all(6px, 0, 0, 0);
+                border-radius: 20px;
+                height: 40%;
+              }
+              .track {
+                background-color: #4A5DB9;
+                z-index: 11;
+              }
+              .range {
+                background-color: #EAEAEA;
+              }
+              input[type="range"] {
+                background-color: transparent;
+                pointer-events: none;
+                position: absolute;
+                appearance: none;
+                width: 100%;
+                z-index: 99;
+                &:focus {
+                  outline: none;
+                }
+                &::-webkit-slider-thumb {
+                  @include width-height(18px,18px);
+                  @include border(6px,#213079,#759EC3,50%);
+                  pointer-events: all;
+                  -webkit-appearance: none;
+                  appearance: none;
+                  transition: .2s ease-in-out;
+                }
+              }
+            }
+          }
+          .tracking-reset {
+            @include width-height(80px,30px);
+            @include flex-a-center;
+            padding-right: 6px;
+            background-color: #EFF6FF;
+            border: 1px solid #9EB7D2;
+            button[type="button"] {
+              @include font($font-size-11,$font-weight-bold,#426891);
+              @include wh-100;
+            }
+          }
+        }
+        .tracking-chart {
+          @include flex-a-between;
+          flex-direction: column;
+          .resentSpeedChart,.resentDraughtChart {
+            @include width-height(100%,250px);
+          }
+        }
+      }
+      // 입출항/위험물,최근포트호출,운항정보 더보기 모달
+      // &.more > * {
+      //   min-width: 1100px;
+      //   width: 100%;
+      // }
+      // 선박 스코어보드 모달,승선인원 상세조회, 위협지수, 퀵메뉴 알림
+      &.scoreBoard, &.crew, &.rating, &.alarm, &.shortCutKey {
+        overflow: visible !important;
+        // min-width: 495px;
+        // width: 495px;
+      }
+      // 퀵메뉴 알람 설정 모달
+      &.alarm {
+        ul {
+          li {
+            @include flex-a-between;
+            line-height: 22px;
+            width: 100%;
+            padding: 6px 0;
+            border-bottom: 1px solid #DDDDDD;
+          }
+        }
+      }
+      // 위협지수 모달
+      &.rating {
+        colgroup {
+          col {
+            background-color: #EFF6FF;
+          }
+        }
+        table {
+          tbody {
+            tr {
+              &.total-count {
+                td {
+                  &:last-of-type {
+                    background-color: #D6E8FF;
+                  }
+                }
+              }
+              td {
+                position: relative;
+                overflow: visible;
+                border-bottom: 1px solid #DDDDDD;
+                .question-icon {
+                  @include width-height(20px,20px);
+                  display: inline-flex;
+                  align-items: center;
+                  justify-content: center;
+                  cursor: pointer;
+                  margin-left: 4px;
+                  background-color: #A4C2EA;
+                  border-radius: 50%;
+                  &::after {
+                    content: '?';
+                    font-size: $font-size-14;
+                    color: $font-color-white;
+                  }
+                  &:hover {
+                    .question-content {
+                      display: block;
+                    }
+                  }
+                  .question-content {
+                    @include position-absolute-top-left(44%,90%);
+                    background-color: rgba(0,0,0,0.8);
+                    border-radius: 6px;
+                    display: none;
+                    padding: 10px;
+                    width: 100%;
+                    z-index: 1;
+                    p {
+                      @include font($font-size-12,$font-weight-bold,$font-color-white);
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        .btm-text {
+          @include flex-a-j-center;
+          border-bottom: 1px solid #DDDDDD;
+          font-size: $font-size-16;
+          font-weight: $font-weight-bold;
+          color: #040404;
+          padding: 10px 0;
+          span {
+            font-weight: $font-weight-bold;
+            color: #2494D3;
+          }
+        }
+      }
+      // 사진추가,관심선박 공통
+      .add-picture-wrap,.ship-favorite-wrap, .add-memo-wrap {
+        // min-width: 465px;
+        // width: 465px;
+      }
+      // 사진 추가
+      .add-picture-wrap {
+        @include flex-a-center-gap(4px);
+        justify-content: space-between;
+        border-bottom: 1px solid #DDDDDD;
+        padding: 10px 0;
+        width: 100%;
+        .file-name {
+          width: 100%;
+          p {
+            @include font($font-size-14,$font-weight-regular,#040404);
+            @include width-height(100%,40px);
+            @include flex-a-center;
+            text-indent: 10px;
+            border: 1px solid #DDDDDD;
+          }
+        }
+        article {
+          @include border-bg(1px,#9EB7D2,#EFF6FF);
+          @include flex-a-j-center;
+          cursor: pointer;
+          gap: 4px;
+          width: 100px;
+          height: 40px;
+          button[type="button"] {
+            @include font($font-size-13,$font-weight-bold,#426891);
+          }
+        }
+        input[type="file"] {
+          display: none;
+        }
+      }
+      // 관심 선박, 메모추가 공통
+      .ship-favorite-wrap, .add-memo-wrap, {
+        @include flex-a-column;
+        .table-group {
+          @include flex-a-column;
+          width: 100%;
+          flex-shrink: 1;
+          flex-grow: 1;
+          flex-basis: 100%;
+          table {
+            width: 100%;
+            colgroup {
+              col {
+                &:first-of-type {
+                  background-color: #EFF6FF;
+                  width: 30%;
+                }
+              }
+            }
+            th,td {
+              border-bottom: 1px solid #DDDDDD;
+              padding: 0 0 0 10px;
+            }
+            th {
+              text-align: left;
+              label {
+                @include font($font-size-14,$font-weight-bold,#040404);
+              }
+            }
+            td {
+              @include font($font-size-14,$font-weight-regular,#040404);
+              @include ellipsis();
+              text-align: unset;
+              max-width: 380px;
+              select {
+                background: url("@/assets/img/shipDetail/detailModalIcon/attention_arrow_down.svg") no-repeat right;
+                border: 1px solid #DDDDDD;
+                padding: 4px;
+                max-width: 318px;
+                width: 100%;
+                min-height: 40px;
+                height: 40px;
+                &:focus {
+                  outline-color: rgba(0,0,0,0.2);
+                }
+              }
+              textarea {
+                @include font($font-size-14,$font-weight-regular,#040404);
+                @include wh-100();
+                text-indent: 4px;
+                border: 1px solid #DDDDDD;
+                border-radius: 0;
+                max-width: 318px;
+                max-height: 146px;
+                padding: 0;
+                resize: none;
+                &:focus {
+                  outline-color: rgba(0,0,0,0.2);
+                }
+              }
+            }
+          }
+        }
+      }
+      // 관심선박
+      .ship-favorite-wrap {
+        .con-detail {
+          table {
+            tbody {
+              tr {
+                td {
+                  &.information-share-wrap {
+                    @include flex-a-center-gap(10px);
+                    div {
+                      .find-btn {
+                        @include font($font-size-13,$font-weight-bold,#426891);
+                        @include width-height(60px,30px);
+                        background-color: #eff6ff;
+                        border: 1px solid #9eb7d2;
+                      }
+                    }
+                  }
+                }
+                &:first-of-type {
+                  th,td {
+                    height: 40px;
+                  }
+                }
+                &.share-content-wrap {
+                  th,td {
+                    min-height: 166px;
+                    height: 166px;
+                  }
+                }
+                &:nth-of-type(2) {
+                  th,td {
+                    height: 60px;
+                  }
+                }
+                &:nth-of-type(3) {
+                  th,td {
+                    min-height: 166px;
+                    height: 166px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      // 메모 추가
+      .add-memo-wrap {
+        .dashboard-share {
+          table {
+            tbody {
+              tr {
+                &:first-of-type{
+                  th,td {
+                    height: 60px;
+                  }
+                  .share-search-input-wrap {
+                    @include flex-a-center-gap(4px);
+                    input[type="text"] {
+                      border: 1px solid #DDDDDD;
+                      outline: none;
+                      appearance: none;
+                    }
+                    .share-search-btn {
+                      @include font($font-size-13,$font-weight-bold,#426891);
+                      @include width-height(80px,40px);
+                      @include flex-a-center;
+                      cursor: pointer;
+                      justify-content: space-evenly;
+                      background-color: #eff6ff;
+                      border: 1px solid #9eb7d2;
+                    }
+                  }
+                }
+                &:last-of-type {
+                  th,td {
+                    min-height: 166px;
+                    height: 166px;
+                  }
+                }
+              }
+            }
+          }
+        }
+        .memo-detail {
+          table {
+            tbody {
+              tr {
+                &:first-of-type{
+                  th,td {
+                    height: 40px;
+                  }
+                }
+                &:last-of-type {
+                  th,td {
+                    min-height: 166px;
+                    height: 166px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    // 등록,취소 버튼
+    .common-btn-wrap {
+      @include flex-a-j-center();
+      margin-top: 20px;
+      width: 100%;
+      gap: 4px;
+      button[type="button"] {
+        @include width-height(140px,42px);
+        &.enroll, &.confirm,&.delete {
+          @include font($font-size-16,$font-weight-bold,$font-color-white);
+          background-color: #213079;
+        }
+        &.cancel {
+          @include font($font-size-16,$font-weight-bold,$font-color-black);
+          background-color: #D9D9D9;
+        }
+      }
+    }
+
+  }
+}
+
+/* 24-09-04 선박 마우스 호버 카드 */
+.ship-hover-box {
+  z-index: 111;
+  display: none;
+  background-color: rgba(48,56,95,0.9);
+  position: absolute;
+  //max-width: 240px;
+  //min-width: 210px;
+  //width: 100%;
+  //max-height: 70px;
+  //min-height: 60px;
+  //height: 100%;
+  padding: 12px 6px;
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 100px;
+    border-width: 10px 10px 0 10px;
+    border-style: solid;
+    border-color: rgba(48,56,95,0.9) transparent transparent transparent;
+    width: 0;
+    height: 0;
+  }
+  .ship-hover-info-wrap {
+    .ship-hover-info {
+      ul {
+        @include flex-a-center-gap(4px);
+        li {
+          @include flex-a-center();
+          &.ship-hover-icon {
+            span {
+              &:first-of-type {
+                @include width-height(24px,20px);
+              }
+              &:last-of-type {
+                @include width-height(26px,20px);
+              }
+            }
+            img {
+              @include wh-100();
+              object-fit: cover;
+              background-position: center;
+              background-size: contain;
+            }
+          }
+          &.ship-hover-name {
+            gap: 4px;
+            span {
+              &.ship-name {
+                @include font($font-size-14,$font-weight-bold,$font-color-white);
+              }
+              &.ship-id {
+                @include font($font-size-13,$font-weight-regular,$font-color-white);
+                text-indent: -9999px;
+                //min-width: 76px;
+                //width: 76px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .ship-hover-sog-cog {
+      ul {
+        @include flex-a-center-gap(4px);
+        li {
+          @include font($font-size-13,$font-weight-regular,$font-color-white);
+          &:nth-of-type(2) {
+            background-color: #A5AAC8;
+            width: 1px;
+            height: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.ship-hover-box2 {
+  background-color: rgba(48,56,95,0.9);
+  position: relative;
+  //max-width: 100%;
+  //min-width: 210px;
+  //width: 100%;
+  //min-height: 60px;
+  //height: 60px;
+  padding: 12px 6px;
+  &::after {
+    content: '';
+    //background-color: rgba(48,56,95,0.9);
+    position: absolute;
+    bottom: -10px;
+    left: 100px;
+    border-width: 10px 10px 0 10px;
+    border-style: solid;
+    border-color: rgba(48,56,95,0.9) transparent transparent transparent;
+    width: 0;
+    height: 0;
+  }
+  .ship-hover-info-wrap {
+    .ship-hover-info {
+      ul {
+        @include flex-a-center-gap(4px);
+        li {
+          @include flex-a-center();
+          &.ship-hover-icon {
+            span {
+              &:first-of-type {
+                @include width-height(24px,20px);
+              }
+              &:last-of-type {
+                @include width-height(26px,20px);
+              }
+            }
+            img {
+              @include wh-100();
+              object-fit: cover;
+              background-position: center;
+              background-size: contain;
+            }
+          }
+          &.ship-hover-name {
+            gap: 4px;
+            span {
+              &.ship-name {
+                @include font($font-size-14,$font-weight-bold,$font-color-white);
+              }
+              &.ship-id {
+                @include font($font-size-13,$font-weight-regular,$font-color-white);
+                text-indent: -9999px;
+                //min-width: 76px;
+                //width: 76px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .ship-hover-sog-cog {
+      ul {
+        @include flex-a-center-gap(4px);
+        li {
+          @include font($font-size-13,$font-weight-regular,$font-color-white);
+          &:nth-of-type(2) {
+            background-color: #A5AAC8;
+            width: 1px;
+            height: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 576px) {
+}
+@media (min-width: 992px) {
+}
+@media (min-width: 1200px) {
+  .tracking {
+    .tracking-wrap {
+      flex-wrap: nowrap !important;
+      .tracking-group {
+        width: calc(58.33333333% - 10px) !important;
+      }
+      .tracking-right {
+        width: calc(41.66666667% - 10px) !important;
+      }
+    }
+  }
+}
