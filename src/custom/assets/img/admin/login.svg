@@ -1,0 +1,34 @@
+<svg width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Group">
+<g id="Clip path group">
+<mask id="mask0_2463_100694" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="19" height="20">
+<g id="SVGID_2_">
+<path id="Vector" d="M18.9262 0.5H0.5V19.4705H18.9262V0.5Z" fill="white"/>
+</g>
+</mask>
+<g mask="url(#mask0_2463_100694)">
+<path id="Vector_2" d="M7.57545 1.58984H1.58887V18.3834H7.57545" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"/>
+</g>
+</g>
+<g id="Clip path group_2">
+<mask id="mask1_2463_100694" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="19" height="20">
+<g id="SVGID_2__2">
+<path id="Vector_3" d="M18.5219 0.5H0.5V19.4705H18.5219V0.5Z" fill="white"/>
+</g>
+</mask>
+<g mask="url(#mask1_2463_100694)">
+<path id="Vector_4" d="M11.8376 14.1841L7.12305 9.36371L11.8376 4.62109" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+<g id="Clip path group_3">
+<mask id="mask2_2463_100694" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="19" height="20">
+<g id="SVGID_2__3">
+<path id="Vector_5" d="M18.9262 0.5H0.5V19.4705H18.9262V0.5Z" fill="white"/>
+</g>
+</mask>
+<g mask="url(#mask2_2463_100694)">
+<path id="Vector_6" d="M7.18644 9.36328H17.8379" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+</g>
+</svg>

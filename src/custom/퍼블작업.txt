@@ -1,0 +1,662 @@
+2024-10-21
+git: [publishing] Style: Modal 태그 및 사이즈 추가 & 상세정보 간격 수정
+1. 기존 modal 스타일 수정
+  - 항적조회 modal 사이즈? ShipDetailTrackingModal.tsx
+  - 신호정보 modal 소스 변경함, 개발소스 확인 요청 SignalInfoModal.tsx
+2. 상세정보 간격 수정
+
+
+2024-10-22
+1. 아래 파일들 신규 추가
+common_new.scss //스타일 파일 추가
+
+/components/mypage/modal/MyPageModal1.tsx //관심선박/영역정보_관심선박팝업
+/components/mypage/modal/MyPageModal2.tsx //관심선박/영역정보_관심선박팝업_관심선박수정팝업
+/components/mypage/modal/MyPageModal3.tsx //관심선박/영역정보_관심선박팝업_관심선박해제팝업
+/components/mypage/modal/MyPageModal4.tsx //관심선박/영역정보_관심영역팝업
+/components/mypage/modal/MyPageModal5.tsx //관심선박/영역정보_관심영역_단축키설정팝업
+/components/mypage/modal/MyPageModal6.tsx //관심선박/영역정보_관심영역_예외사항등록팝업
+/components/mypage/modal/MyPageModal7.tsx //분석/공유/알람정보팝업_알람리스트팝업
+/components/mypage/modal/MyPageModal8.tsx //분석/공유/알람정보팝업_공유리스트팝업
+/components/mypage/modal/MyPageModal9.tsx //분석/공유/알람정보팝업_분석리스트팝업
+
+
+2024-10-23
+git: [publishing] Style: 마이페이지 신규추가 및 수정
+1. 기존 modal 스타일 수정
+  - 항적조회 modal 사이즈 xl사이즈에 맞게 레이아웃 수정 ShipDetailTrackingModal.tsx 
+  - Modal 사이즈 수정 ShipDetailLongPredictModal.tsx
+  - Modal 사이즈 수정 ShipDetailLastPortModal.tsx     
+
+2. 아래 파일들 신규추가
+/components/mypage/page/MyPage.tsx //마이페이지
+/components/mypage/modal/MyPageFavoriteModal.tsx //즐겨찾기메뉴팝업
+
+3. 기존 MyPage.tsx 파일명을 ModalView.tsx로 변경
+
+4. 아래 파일들 신규 태그 버튼들 class명 btn에서 nbtn으로 수정
+/components/mypage/modal/MyPageModal1.tsx //관심선박/영역정보_관심선박팝업
+/components/mypage/modal/MyPageModal2.tsx //관심선박/영역정보_관심선박팝업_관심선박수정팝업
+/components/mypage/modal/MyPageModal3.tsx //관심선박/영역정보_관심선박팝업_관심선박해제팝업
+/components/mypage/modal/MyPageModal4.tsx //관심선박/영역정보_관심영역팝업
+/components/mypage/modal/MyPageModal5.tsx //관심선박/영역정보_관심영역_단축키설정팝업
+/components/mypage/modal/MyPageModal6.tsx //관심선박/영역정보_관심영역_예외사항등록팝업
+/components/mypage/modal/MyPageModal7.tsx //분석/공유/알람정보팝업_알람리스트팝업
+/components/mypage/modal/MyPageModal8.tsx //분석/공유/알람정보팝업_공유리스트팝업
+/components/mypage/modal/MyPageModal9.tsx //분석/공유/알람정보팝업_분석리스트팝업
+
+5. img 폴더안에 svg파일 8개 파일 추가
+
+
+2024-10-24
+git: [publishing] Style: scss 일부 수정
+1. react bootstrap ui framework으로 새로 퍼블 작업하기로 함
+  - 기존 작업 환경의 css, scss, 이전 작업소스와 새로 추가한 작업 소스들이 모두 따로 혼재되어있어 분석하여 정리하기에 시간이 더 오래걸림.
+  - 신규 작업 환경 셋팅 대기 중
+2. Figma에서 총 134개 svg 파일 추출
+
+
+2024-10-25
+1. react bootstrap ui framework에 library 및 샘플 화면 요청
+  - Datepicker, Fullcalendar, Hightchart, Realgrid, Bootstrap icon, colorpicker, slider, tree
+
+
+2024-10-28
+git: [publishing] Style: 신규 공통 퍼블 소스 작업 중
+1. react bootstrap ui framework 공통 퍼블 소스 작업 중
+  - sample01: 메인 화면
+  - sample02: 로그인 화면
+  - sample03: 회원가입 화면
+  - sample04: 에러 화면
+  - sample05: 상세 화면
+
+
+2024-10-29
+git: [publishing] Style: 신규 공통 퍼블 소스 작업 중
+1. react bootstrap ui framework 공통 퍼블 소스 작업 중
+- sample01: 메인 화면
+- sample02: 로그인
+- sample03: 로그인_회원가입
+- sample04: 로그인_GPKI인증서로그인
+- sample05: 로그인_사용자인증서등록
+- sample06: 에러페이지
+- sample07: 선박상세정보_상세정보
+
+
+2024-10-30
+git: [publishing] Style: 신규 공통 퍼블 소스 작업 중(2024-10-30)
+1. react bootstrap ui framework 공통 퍼블 소스 작업 중
+- sample01: 메인 화면 - Offcanvas & Modal 모음
+- sample02: 로그인
+- sample03: 로그인_회원가입 
+- sample04: 로그인_GPKI인증서로그인
+- sample05: 로그인_사용자인증서등록
+- sample06: 에러페이지
+- sample07: 선박상세정보_상세정보 - Modal 모음
+
+2. 샘플 화면 요청
+  - Datepicker, Fullcalendar, Hightchart, Realgrid, Bootstrap icon, tree
+
+
+2024-10-31
+git: [publishing] Style: 신규 퍼블 작업 중(2024-10-31)
+1. react bootstrap ui framework 퍼블 작업 중 (약 50% 완료)
+- sample01: 메인 화면 - Offcanvas & Modal 모음
+- sample02: 로그인
+- sample03: 로그인_회원가입 
+- sample04: 로그인_GPKI인증서로그인
+- sample05: 로그인_사용자인증서등록
+- sample06: 에러페이지
+- sample07: 선박상세정보_상세정보 - Modal 모음
+- sample08: Modal 샘플 모음
+
+2. 샘플 화면 요청
+- Multiselet, Datepicker, Fullcalendar, Hightchart, Realgrid, Bootstrap icon, tree
+
+3. 남은 작업
+- library 퍼블 된 화면에 적용 후 스타일 정리
+- 이미지 정리
+- 전체 스타일 정리
+
+
+2024-11-01
+git: [publishing] Style: 신규 퍼블 작업 중(2024-11-01)
+1. react bootstrap ui framework 퍼블 작업 중 (약 60% 완료)
+- sample01: 메인 화면 - Offcanvas & Modal 모음
+- sample02: 로그인
+- sample03: 로그인_회원가입 
+- sample04: 로그인_GPKI인증서로그인
+- sample05: 로그인_사용자인증서등록
+- sample06: 에러페이지
+- sample07: 선박상세정보_상세정보 - Modal 모음
+- sample08: Modal 샘플 모음
+
+2. 샘플 화면 요청
+- Multiselet, Datepicker, Fullcalendar, Hightchart, Realgrid, Bootstrap icon, tree
+
+3. 남은 작업
+- library 퍼블 된 화면에 적용 후 스타일 정리
+- 이미지 정리
+- 전체 스타일 정리
+
+
+2024-11-04
+git: [publishing] Style: 신규 퍼블 작업 중(2024-11-04)
+1. react bootstrap ui framework 퍼블 작업 중 (약 70% 완료)
+- sample01: 메인 화면 - Offcanvas & Modal 모음
+- sample02: 로그인
+- sample03: 로그인_회원가입 
+- sample04: 로그인_GPKI인증서로그인
+- sample05: 로그인_사용자인증서등록
+- sample06: 에러페이지
+- sample07: 선박상세정보_상세정보 - Modal 모음
+- sample08: Modal 샘플 모음
+
+2. 샘플 화면 요청
+- Multiselet, Datepicker, Fullcalendar, Hightchart, Realgrid, Bootstrap icon, tree
+
+3. 남은 작업
+- library 퍼블 된 화면에 적용 후 스타일 정리
+- 이미지 정리
+- 전체 스타일 정리
+
+
+2024-11-05
+git: [publishing] Style: 신규 퍼블 작업 중(2024-11-05)
+git: [publishing] Style: 신규 스타일 작업 중(2024-11-05)
+git: [publishing] Style: 신규 스타일 작업 중2(2024-11-05)
+1. react bootstrap ui framework 퍼블 완료
+- sample01: 메인 화면 - Offcanvas & Modal 모음
+- sample02: 로그인
+- sample03: 로그인_회원가입 
+- sample04: 로그인_GPKI인증서로그인
+- sample05: 로그인_사용자인증서등록
+- sample06: 에러페이지
+- sample07: 선박상세정보_상세정보 - Modal 모음
+- sample08: Modal 샘플 모음
+
+2. 퍼블 된 곳에 library 적용 요청 후 대기중
+- Multiselet, Datepicker, Fullcalendar, Hightchart, Realgrid, Bootstrap icon, tree
+
+3. 작업중 (약 50% 완료)
+- 이미지 정리
+- 전체 스타일 정리
+- library 퍼블 된 화면에 적용 후 스타일 정리
+
+4. <body> 태그에 data-bs-theme="dark" 적용 요청
+
+
+2024-11-06
+git: [publishing] Style: 신규 스타일 작업 중(2024-11-06)
+git: [publishing] Style: 신규 스타일 작업 중2(2024-11-06)
+1. html 수정
+- sample01의 우측의 자산 버튼과 해당 Collapse 추가 
+- sample01의 선택선박, 타임라인 추가
+- sample01의 관심선박/영역정보 문구 수정 및 상태 추가
+
+2. 퍼블 된 곳에 library 적용 요청 후 대기중
+- Multiselet, Datepicker, Fullcalendar, Hightchart, Realgrid, Bootstrap icon, tree
+
+3. 작업중 (약 70% 완료)
+- 이미지 정리
+- 전체 스타일 정리
+- library 퍼블 된 화면에 적용 후 스타일 정리
+
+4. <body> 태그에 data-bs-theme="dark" 적용 요청
+
+
+2024-11-07
+git: [publishing] Style: 신규 스타일 작업 중(2024-11-07)
+git: [publishing] Style: 컨텐츠 및 스타일 수정(2024-11-07)
+1. html 수정
+- sample01 자산현황 컨텐츠 추가 및 보기 방식 스타일 수정, 분석 검색 컨텐츠 수정, 관측정보 map-guide 추가, 마이페이지 왼쪽 메뉴 명칭 수정, 마이페이지 관심영역 컨텐츠 수정, 예외사항등록 Modal 컨텐츠 수정
+
+2. 작업중 (약 70% 완료)
+- 이미지 정리
+- 전체 스타일 정리
+- library 스타일 정리
+
+3. 요청된 사항
+- 퍼블 된 곳에 library 적용(Multiselet, Datepicker, Fullcalendar, Hightchart, Realgrid, Bootstrap icon, tree)
+- <body> 태그에 data-bs-theme="dark" 적용
+- 관리자 폴더 구조(?)
+
+
+2024-11-08
+git: [publishing] Style: 관리자 신규 작업(2024-11-08)
+git: [publishing] Style: 관리자 신규 작업2(2024-11-08)
+
+1. 퍼블 sample01과 sample07의 화면과 모달 분리해 정리
+
+2. sample01 왼쪽 컨텐츠 수정
+
+3. 작업중
+- 관리자 신규 퍼블(60%)
+- 이미지 정리 (90%)
+- 전체 스타일 정리 (80%)
+- library 스타일 정리 (대기중)
+
+4. 요청된 사항
+- 퍼블 된 곳에 library 적용(Multiselet, Datepicker, Fullcalendar, Hightchart, Realgrid, Bootstrap icon, tree)
+- <body> 태그에 data-bs-theme="dark" 적용
+- 관리자 폴더 구조(?) : 우선 custom/admin 폴더 안에 작업중
+
+
+2024-11-11
+git: [publishing] Style: 관리자 신규 작업(2024-11-11)
+
+1. 작업중
+- 관리자 신규 퍼블(80%)
+- 이미지 정리 (90%)
+- 전체 스타일 정리 (90%)
+- library 스타일 정리 (대기중)
+
+2. 요청된 사항
+- 퍼블 된 곳에 library 적용(Multiselet, Datepicker, Fullcalendar, Hightchart, Realgrid, Bootstrap icon, tree)
+- <body> 태그에 data-bs-theme="dark" 적용
+- 관리자 폴더 구조(?) : custom/admin 폴더 안에 작업 중
+
+
+2024-11-12
+git: [publishing] Style: 관리자 신규 작업(2024-11-12)
+
+1. 작업중
+- 관리자 신규 퍼블(90%)
+- 이미지 정리 (90%)
+- 전체 스타일 정리 (90%)
+- library 스타일 정리 (대기중)
+
+2. 요청된 사항
+- 퍼블 된 곳에 library 적용(Multiselet, Datepicker, Fullcalendar, Hightchart, Realgrid, Bootstrap icon, tree)
+- <body> 태그에 data-bs-theme="dark" 적용
+- 관리자 폴더 구조(?) : custom/admin 폴더 안에 작업 중
+
+
+2024-11-13
+git: [publishing] Style: 신규 퍼블 & 스타일 수정(2024-11-13)
+
+1. 남은 작업
+- MDA & 관리자 신규 퍼블 : 요청한 library 대기중
+- 이미지 정리 (90%)
+- 전체 스타일 정리 (90%)
+
+2. 요청된 사항
+- 퍼블 된 곳에 library 적용(Multiselet, Datepicker, Fullcalendar, Hightchart, Realgrid, Bootstrap icon??, tree)
+- <body> 태그에 data-bs-theme="dark" 적용
+- 관리자 폴더 구조 : custom/admin 폴더 안에 작업 완료
+
+3. react image gallery와 photoswipe.com의 사진 띄우기 갤러리 library 필요(기술 검토 포함 요청)
+
+
+2024-11-14
+git: [publishing] Style: 신규 퍼블 & 스타일 수정(2024-11-14)
+
+1. 남은 작업
+- MDA & 관리자 신규 퍼블 : 요청한 library 대기중
+- 이미지 정리 (90%)
+- 전체 스타일 정리 (90%)
+
+2. 요청된 사항
+- 퍼블 된 곳에 library 적용(Multiselet, Datepicker(+timepicker), Fullcalendar, Hightchart, Realgrid, Bootstrap icon, tree, 사진 등록 첨부파일??)
+- <body> 태그에 data-bs-theme="dark" 적용
+- 관리자 폴더 구조 : custom/admin 폴더 안에 작업 완료
+
+3. react image gallery와 photoswipe.com의 사진 띄우기 갤러리 library 필요한지 기술 검토 포함하여 요청
+
+
+
+2024-11-18
+git: [publishing] Style: 신규 퍼블 & 스타일 수정(2024-11-18)
+
+1. 남은 작업
+- MDA & 관리자 신규 퍼블 : 요청한 library 대기중
+- 이미지 정리 (90%)
+- 전체 스타일 정리 (90%)
+
+2. 요청된 사항
+- 퍼블 된 곳에 library 적용(Multiselet, Datepicker(+timepicker), Fullcalendar, Hightchart, Realgrid, Bootstrap icon, tree, 사진 등록 첨부파일??)
+- <body> 태그에 data-bs-theme="dark" 적용
+- 관리자 폴더 구조 : custom/admin 폴더 안에 작업 완료
+
+3. react image gallery와 photoswipe.com의 사진 띄우기 갤러리 library 필요한지 기술 검토 포함하여 요청
+
+
+2024-11-19
+git: [publishing] alert 전체 퍼블
+git: [publishing] 알람 스타일 수정
+git: [publishing] 동영상 영역 퍼블 추가
+git: [publishing] 화면 정리
+
+1. 요청된 사항
+- 퍼블 된 곳에 library 적용(Multiselet, Datepicker(+timepicker), Fullcalendar, Hightchart, Realgrid, Bootstrap icon, tree, 사진 등록 첨부파일??)
+- <body> 태그에 data-bs-theme="dark" 적용
+- 관리자 폴더 구조 : custom/admin 폴더 안에 작업 완료
+- react image gallery와 photoswipe.com의 사진 띄우기 갤러리 library 필요한지 기술 검토 포함하여 요청
+
+2. 남은 작업
+- MDA & 관리자 신규 퍼블 : 요청한 library 대기중
+- 이미지 정리 (90%) : 요청한 library 대기중
+- 전체 스타일 정리 (90%) : 요청한 library 대기중
+
+3. alert 전체 퍼블 완료, 알람 스타일 수정, 동영상 영역 퍼블 추가
+
+
+2024-11-20
+git: [publishing] 구역설정 모달 추가
+git: [publishing] 관리자 화면 스타일 정리
+git: [publishing] library 샘플 빈화면 추가
+
+1. 요청된 사항
+- 퍼블 된 곳에 library 적용(Multiselet, Datepicker(+timepicker), Fullcalendar, Hightchart, Realgrid, Bootstrap icon, tree, 사진 등록 첨부파일??) => 샘플화면 만들어 놨음.
+- <body> 태그에 data-bs-theme="dark" 적용
+- 관리자 폴더 구조 : custom/admin 폴더 안에 작업 완료
+- react image gallery와 photoswipe.com의 사진 띄우기 갤러리 library 필요한지 기술 검토 포함하여 요청
+
+2. 남은 작업
+- MDA & 관리자 신규 퍼블 : 요청한 library 대기중
+- 이미지 정리 (90%) : 요청한 library 대기중
+- 전체 스타일 정리 (90%) : 요청한 library 대기중
+
+3. 구역설정 모달 퍼블 추가, 관리자 화면 스타일 정리, library 샘플 빈화면 추가
+
+
+2024-11-21
+git: [publishing] 기획 수정된 화면 수정 및 스타일 수정
+git: [publishing] 공통-버튼 모음 화면 추가
+git: [publishing] 토글 버튼 수정
+git: [publishing] 검색 clear 버튼 수정
+
+1. 요청된 사항
+- 퍼블 된 곳에 library 적용(Multiselet, Datepicker(+timepicker), Fullcalendar, Hightchart, Realgrid, Bootstrap icon, tree, 사진 등록 첨부파일??) => 샘플화면 만들어 놨음.
+- <body> 태그에 data-bs-theme="dark" 적용
+- 관리자 폴더 구조 : custom/admin 폴더 안에 작업 완료
+- react image gallery와 photoswipe.com의 사진 띄우기 갤러리 library 필요한지 기술 검토 포함하여 요청
+
+2. 남은 작업
+- MDA & 관리자 신규 퍼블 : 요청한 library 대기중
+- 이미지 정리 (90%) : 요청한 library 대기중
+- 전체 스타일 정리 (90%) : 요청한 library 대기중
+
+3. 기획 수정된 화면 수정 및 스타일 수정, 공통-버튼 모음 화면 추가, 토글 버튼 수정, 검색 clear 버튼 수정
+
+
+2024-11-22
+git: [publishing] 토글 이벤트 수정
+
+1. 요청된 사항
+- 퍼블 된 곳에 library 적용(Multiselet, Datepicker(+timepicker), Fullcalendar, Hightchart, Realgrid, Bootstrap icon, tree, 사진 등록 첨부파일??) => 샘플화면 만들어 놨음.
+- <body> 태그에 data-bs-theme="dark" 적용
+- 관리자 폴더 구조 : custom/admin 폴더 안에 작업 완료
+- react image gallery와 photoswipe.com의 사진 띄우기 갤러리 library 필요한지 기술 검토 포함하여 요청
+
+2. 남은 작업
+- MDA & 관리자 신규 퍼블 : 요청한 library 대기중
+- 이미지 정리 (90%) : 요청한 library 대기중
+- 전체 스타일 정리 (90%) : 요청한 library 대기중
+
+3. 토글 이벤트 수정, 선박DB 화면 디자인 추가 및 수정
+
+
+2024-11-25
+git: [publishing] 선박DB 화면 퍼블 추가 및 수정
+
+1. 요청된 사항
+- 퍼블 된 곳에 library 적용(Multiselet, Datepicker(+timepicker), Fullcalendar, Hightchart, Realgrid, Bootstrap icon, tree, 사진 등록 첨부파일??) => 샘플화면 만들어 놨음.
+- <body> 태그에 data-bs-theme="dark" 적용
+- 관리자 폴더 구조 : custom/admin 폴더 안에 작업 완료
+- react image gallery와 photoswipe.com의 사진 띄우기 갤러리 library 필요한지 기술 검토 포함하여 요청
+
+2. 남은 작업
+- MDA & 관리자 신규 퍼블 : 요청한 library 대기중
+- 이미지 정리 (90%) : 요청한 library 대기중
+- 전체 스타일 정리 (90%) : 요청한 library 대기중
+
+3. 선박DB 화면 퍼블 추가 및 수정
+
+
+2024-11-26
+git: [publishing] 이미지 추가 및 수정
+
+1. 요청된 사항
+- 퍼블 된 곳에 library 적용(Multiselet, Datepicker(+timepicker), Fullcalendar, Hightchart, Realgrid, Bootstrap icon, tree, 사진 등록 첨부파일??) => 샘플화면 만들어 놨음.
+- <body> 태그에 data-bs-theme="dark" 적용
+- 관리자 폴더 구조 : custom/admin 폴더 안에 작업 완료
+- react image gallery와 photoswipe.com의 사진 띄우기 갤러리 library 필요한지 기술 검토 포함하여 요청
+
+2. 남은 작업
+- MDA & 관리자 신규 퍼블 : 요청한 library 대기중
+- 이미지 정리 (90%) : 요청한 library 대기중
+- 전체 스타일 정리 (90%) : 요청한 library 대기중
+
+3. 이미지 추가 및 수정
+
+4. 한전KDN 디자인 시작
+
+
+2024-11-27
+git: [publishing] 버튼 스타일 정리
+
+1. 요청된 사항
+- 퍼블 된 곳에 library 적용(Multiselet, Datepicker(+timepicker), Fullcalendar, Hightchart, Realgrid, Bootstrap icon, tree, 사진 등록 첨부파일??) => 샘플화면 만들어 놨음.
+- <body> 태그에 data-bs-theme="dark" 적용
+- 관리자 폴더 구조 : custom/admin 폴더 안에 작업 완료
+- react image gallery와 photoswipe.com의 사진 띄우기 갤러리 library 필요한지 기술 검토 포함하여 요청
+
+2. 남은 작업
+- MDA & 관리자 신규 퍼블 : 요청한 library 대기중
+- 이미지 정리 (90%) : 요청한 library 대기중
+- 전체 스타일 정리 (90%) : 요청한 library 대기중
+
+3. 버튼 스타일 정리
+
+4. 한전KDN 디자인 중
+
+
+2024-12-03
+git: [publishing] 지도 초기화 버튼 추가, 선박정보 수정
+
+1. 요청된 사항
+- 퍼블 된 곳에 library 적용(Multiselet, Datepicker(+timepicker), Fullcalendar, Hightchart, Realgrid, Bootstrap icon, tree, 사진 등록 첨부파일??) => 샘플화면 만들어 놨음.
+- <body> 태그에 data-bs-theme="dark" 적용
+- 관리자 폴더 구조 : custom/admin 폴더 안에 작업 완료
+- react image gallery와 photoswipe.com의 사진 띄우기 갤러리 library 필요한지 기술 검토 포함하여 요청
+
+2. 남은 작업
+- MDA & 관리자 신규 퍼블 : 요청한 library 대기중
+- 이미지 정리 (90%) : 요청한 library 대기중
+- 전체 스타일 정리 (90%) : 요청한 library 대기중
+
+3. 한전KDN 디자인 대기 중
+
+4. 지도 초기화 버튼 추가, 선박정보 수정, map poiner 색상 추가
+
+
+2024-12-04
+git: [publishing] 우측 컨트롤 스타일 및 레이아웃 수정, 팝업 및 스타일 추가
+git: [publishing] modal & alert, 문구 등 컨텐츠 수정
+
+1. 요청된 사항
+- 퍼블 된 곳에 library 적용(Multiselet, Datepicker(+timepicker), Fullcalendar, Hightchart, Realgrid, Bootstrap icon, tree, 사진 등록 첨부파일??) => 샘플화면 만들어 놨음.
+- <body> 태그에 data-bs-theme="dark" 적용
+- 관리자 폴더 구조 : custom/admin 폴더 안에 작업 완료
+- react image gallery와 photoswipe.com의 사진 띄우기 갤러리 library 필요한지 기술 검토 포함하여 요청
+
+2. 남은 작업
+- MDA & 관리자 신규 퍼블 : 요청한 library 대기중
+- 이미지 정리 (90%) : 요청한 library 대기중
+- 전체 스타일 정리 (90%) : 요청한 library 대기중
+
+3. 한전KDN 디자인 대기 중
+
+4. 우측 컨트롤 스타일 및 레이아웃 수정, 테마 설정 & 내 정보 수정 팝업 추가, map poiner 색상 추가, modal & alert, 문구 등 컨텐츠 수정
+
+
+2024-12-05
+git: [publishing] 날씨 popover 추가
+git: [publishing] 이미지 추가/수정
+
+1. 요청된 사항
+- 퍼블 된 곳에 library 적용(Multiselet, Datepicker(+timepicker), Fullcalendar, Hightchart, Realgrid, Bootstrap icon, tree, 사진 등록 첨부파일??) => 샘플화면 만들어 놨음.
+- <body> 태그에 data-bs-theme="dark" 적용
+- 관리자 폴더 구조 : custom/admin 폴더 안에 작업 완료
+- react image gallery와 photoswipe.com의 사진 띄우기 갤러리 library 필요한지 기술 검토 포함하여 요청
+
+2. 남은 작업
+- MDA & 관리자 신규 퍼블 : 요청한 library 대기중
+- 이미지 정리 (90%) : 요청한 library 대기중
+- 전체 스타일 정리 (90%) : 요청한 library 대기중
+
+3. 한전KDN 디자인 대기 중
+
+4. 날씨 popover 추가, 이미지 추가/수정
+
+5. 한전KDN 관리자 디자인 중
+
+
+2024-12-06
+git: [publishing] 날씨 이미지 및 퍼블 추가
+git: [publishing] 날씨 태그 수정
+
+1. 요청된 사항
+- 퍼블 된 곳에 library 적용(Multiselet, Datepicker(+timepicker), Fullcalendar, Hightchart, Realgrid, Bootstrap icon, tree, 사진 등록 첨부파일??) => 샘플화면 만들어 놨음.
+- <body> 태그에 data-bs-theme="dark" 적용
+- 관리자 폴더 구조 : custom/admin 폴더 안에 작업 완료
+- react image gallery와 photoswipe.com의 사진 띄우기 갤러리 library 필요한지 기술 검토 포함하여 요청
+
+2. 남은 작업
+- MDA & 관리자 신규 퍼블 : 요청한 library 대기중
+- 이미지 정리 (90%) : 요청한 library 대기중
+- 전체 스타일 정리 (90%) : 요청한 library 대기중
+
+3. 한전KDN 디자인 & 한전KDN 관리자 디자인 대기 중
+
+4. 날씨 이미지 및 퍼블 추가
+
+5. 한전KDN 지도 색상 디자인
+
+
+2024-12-10
+git: [publishing] 이미지 수정
+
+1. 요청된 사항
+- 퍼블 된 곳에 library 적용(Multiselet, Datepicker(+timepicker), Fullcalendar, Hightchart, Realgrid, Bootstrap icon, tree, 사진 등록 첨부파일??) => 샘플화면 만들어 놨음.
+- <body> 태그에 data-bs-theme="dark" 적용
+- 관리자 폴더 구조 : custom/admin 폴더 안에 작업 완료
+- react image gallery와 photoswipe.com의 사진 띄우기 갤러리 library 필요한지 기술 검토 포함하여 요청
+
+2. 남은 작업
+- MDA & 관리자 신규 퍼블 : 요청한 library 대기중
+- 이미지 정리 (90%) : 요청한 library 대기중
+- 전체 스타일 정리 (90%) : 요청한 library 대기중
+
+3. 한전KDN 디자인 & 한전KDN 관리자 디자인 및 퍼블 중
+
+
+2024-12-12
+git: [publishing] player 태그 수정
+
+1. 요청된 사항
+- 퍼블 된 곳에 library 적용(Multiselet, Datepicker(+timepicker), Fullcalendar, Hightchart, Realgrid, Bootstrap icon, tree, 사진 등록 첨부파일??) => 샘플화면 만들어 놨음.
+- <body> 태그에 data-bs-theme="dark" 적용
+- 관리자 폴더 구조 : custom/admin 폴더 안에 작업 완료
+- react image gallery와 photoswipe.com의 사진 띄우기 갤러리 library 필요한지 기술 검토 포함하여 요청
+
+2. 남은 작업
+- MDA & 관리자 신규 퍼블 : 요청한 library 대기중
+- 이미지 정리 (90%) : 요청한 library 대기중
+- 전체 스타일 정리 (90%) : 요청한 library 대기중
+
+3. 한전KDN 디자인 & 한전KDN 관리자 디자인 및 퍼블 중
+
+
+2024-12-26
+git: [publishing] 이미지 추가
+git: [publishing] 수온 추가
+
+1. 요청된 사항
+- 퍼블 된 곳에 library 적용(Multiselet, Datepicker(+timepicker), Fullcalendar, Hightchart, Realgrid, Bootstrap icon, tree, 사진 등록 첨부파일??) => 샘플화면 만들어 놨음.
+- <body> 태그에 data-bs-theme="dark" 적용
+- 관리자 폴더 구조 : custom/admin 폴더 안에 작업 완료
+- react image gallery와 photoswipe.com의 사진 띄우기 갤러리 library 필요한지 기술 검토 포함하여 요청
+
+2. 남은 작업
+- MDA & 관리자 신규 퍼블 : 요청한 library 대기중
+- 이미지 정리 (90%) : 요청한 library 대기중
+- 전체 스타일 정리 (90%) : 요청한 library 대기중
+
+3. 한전KDN 디자인 & 한전KDN 관리자 디자인 및 퍼블 중
+
+
+2025-01-06
+git: [publishing] css 수정
+
+1. 요청된 사항
+- 퍼블 된 곳에 library 적용(Multiselet, Datepicker(+timepicker), Fullcalendar, Hightchart, Realgrid, Bootstrap icon, tree, 사진 등록 첨부파일??) => 샘플화면 만들어 놨음.
+- <body> 태그에 data-bs-theme="dark" 적용
+- 관리자 폴더 구조 : custom/admin 폴더 안에 작업 완료
+- react image gallery와 photoswipe.com의 사진 띄우기 갤러리 library 필요한지 기술 검토 포함하여 요청
+
+2. 남은 작업
+- MDA & 관리자 신규 퍼블 : 요청한 library 대기중
+- 이미지 정리 (90%) : 요청한 library 대기중
+- 전체 스타일 정리 (90%) : 요청한 library 대기중
+
+3. 한전KDN 디자인 & 한전KDN 관리자 디자인 및 퍼블 중
+
+
+2025-01-08
+git: [publishing] 비행해역 퍼블 추가
+git: [publishing] DATA Source tooltip 추가
+
+1. 요청된 사항
+- 퍼블 된 곳에 library 적용(Multiselect, Datepicker(+timepicker), Fullcalendar, Hightchart, Realgrid, Bootstrap icon, tree, 사진 등록 첨부파일??) => 샘플화면 만들어 놨음.
+- <body> 태그에 data-bs-theme="dark" 적용
+- 관리자 폴더 구조 : custom/admin 폴더 안에 작업 완료
+- react image gallery와 photoswipe.com의 사진 띄우기 갤러리 library 필요한지 기술 검토 포함하여 요청
+
+2. 남은 작업
+- MDA & 관리자 신규 퍼블 : 요청한 library 대기중
+- 이미지 정리 (90%) : 요청한 library 대기중
+- 전체 스타일 정리 (90%) : 요청한 library 대기중
+
+3. 한전KDN 디자인 & 한전KDN 관리자 디자인 및 퍼블 중
+
+
+2025-01-09
+git: [publishing] input type, date로 변경
+git: [publishing] 선박정보의 move 버튼 추가
+
+1. 요청된 사항
+- 퍼블 된 곳에 library 적용(Multiselect, Datepicker(+timepicker), Fullcalendar, Hightchart, Realgrid, Bootstrap icon, tree, 사진 등록 첨부파일??) => 샘플화면 만들어 놨음.
+- <body> 태그에 data-bs-theme="dark" 적용
+- 관리자 폴더 구조 : custom/admin 폴더 안에 작업 완료
+- react image gallery와 photoswipe.com의 사진 띄우기 갤러리 library 필요한지 기술 검토 포함하여 요청
+
+2. 남은 작업
+- MDA & 관리자 신규 퍼블 : 요청한 library 대기중
+- 이미지 정리 (90%) : 요청한 library 대기중
+- 전체 스타일 정리 (90%) : 요청한 library 대기중
+
+3. 한전KDN 디자인 & 한전KDN 관리자 디자인 및 퍼블 중
+
+
+2025-01-16
+git: [publishing] 선박상세, 선박검색 반응형 스타일로 수정
+
+1. 요청된 사항
+- 퍼블 된 곳에 library 적용(Multiselect, Datepicker(+timepicker), Fullcalendar, Hightchart, Realgrid, Bootstrap icon, tree, 사진 등록 첨부파일??) => 샘플화면 만들어 놨음.
+- <body> 태그에 data-bs-theme="dark" 적용
+- 관리자 폴더 구조 : custom/admin 폴더 안에 작업 완료
+- react image gallery와 photoswipe.com의 사진 띄우기 갤러리 library 필요한지 기술 검토 포함하여 요청
+
+2. 남은 작업
+- MDA & 관리자 신규 퍼블 : 요청한 library 대기중
+- 이미지 정리 (90%) : 요청한 library 대기중
+- 전체 스타일 정리 (90%) : 요청한 library 대기중
+
+3. 한전KDN 디자인 & 한전KDN 관리자 디자인 및 퍼블 중
+4. 1차 소스 선박상세, 선박검색, 모달 반응형으로 수정 중
+
+
+2025-02-20
+git: [publishing] 로딩 태그 추가
