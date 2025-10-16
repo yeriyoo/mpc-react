@@ -1,31 +1,22 @@
 {
+  "extends": "./tsconfig.json",
   "compilerOptions": {
-    "baseUrl": "./",
-    "paths": {
-      "@/*": ["src/*"]
-    },
-    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
-    "target": "ES2020",
-    "useDefineForClassFields": true,
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],
-    "module": "ESNext",
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-
-    /* Bundler mode */
-    "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
-    "isolatedModules": true,
-    "moduleDetection": "force",
-    "noEmit": true,
+    "target": "esnext",
+    "module": "esnext",
     "jsx": "react-jsx",
-
-    /* Linting */
+    "moduleResolution": "node",
     "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true
   },
-  "include": ["src"],
+ "include": [
+  "src/App.tsx",
+  "src/main.tsx",
+  "src/Publish.tsx",
+  "src/pages/**/*.ts",
+  "src/pages/**/*.tsx",
+  "src/Styles/**/*.scss"
+, "src/pages/BottomTable01.tsx", "src/pages/BottomTable02.tsx", "src/pages/BottomTable03.tsx", "src/pages/BottomTable04.tsx", "src/pages/BottomTable05.tsx", "src/pages/InterLogin375.tsx", "src/pages/InterLogin768.tsx", "src/pages/InterLogin1440.tsx", "src/pages/InterLogin1920.tsx", "src/pages/InterPage375.tsx", "src/pages/InterPage768.tsx", "src/pages/InterPage1440.tsx", "src/pages/InterPage1920.tsx", "src/pages/LeftMainMenu.tsx", "src/pages/LoginMain.tsx", "src/pages/MainPage.tsx", "src/pages/MapIcon.tsx", "src/pages/MapWeatherIcon.tsx", "src/pages/Modal01.tsx", "src/pages/Modal02.tsx", "src/pages/Modal03.tsx", "src/pages/Modal04.tsx", "src/pages/RightQuickMenu.tsx", "src/pages/RightQuickMenu1440.tsx", "src/pages/RightTopMenu.tsx", "src/pages/SlideMenu.tsx"  ],
+  "exclude": ["node_modules", "dist"]
 }
