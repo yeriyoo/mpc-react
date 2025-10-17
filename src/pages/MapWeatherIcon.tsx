@@ -18,7 +18,7 @@ const MapWeatherIcon: React.FC<MapWeatherIconProps> = ({ positions, mapImage }) 
         style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center' }}
       />
 
-      {positions.map((pos, idx) => (
+      {positions.length > 0 && positions.map((pos, idx) => (
         <OverlayTrigger
           key={idx}
           placement="top"

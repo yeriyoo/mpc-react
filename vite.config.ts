@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react';
 import * as path from 'path';
 
 export default defineConfig({
-  base: '/', // 배포 시 기본 경로
+  base: '/mpc-react/', // 배포 시 기본 경로
   plugins: [react()],
   resolve: {
     alias: {

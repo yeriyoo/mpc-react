@@ -1,26 +1,12 @@
-// This file is an augmentation to the built-in ImportMeta interface
-// Thus cannot contain any top-level imports
-// <https://www.typescriptlang.org/docs/handbook/declaration-merging.html#module-augmentation>
+/// <reference types="vite/client" />
 
 interface ImportMetaEnv {
-  [key: string]: string;
-  BASE_URL: string;
-  MODE: string;
-  DEV: boolean;
-  PROD: boolean;
-  SSR: boolean;
+  readonly BASE_URL: string;
+  readonly MODE: string;
+  readonly DEV: boolean;
+  readonly PROD: boolean;
 }
 
 interface ImportMeta {
-  url: string;
-
-  readonly hot?: import('./hot').ViteHotContext;
-
   readonly env: ImportMetaEnv;
-
-  glob: import('./importGlob').ImportGlobFunction;
-  /**
-   * @deprecated Use `import.meta.glob('*', { eager: true })` instead
-   */
-  globEager: import('./importGlob').ImportGlobEagerFunction;
 }

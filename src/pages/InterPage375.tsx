@@ -18,6 +18,7 @@ import {
   mdiBellOutline,
   mdiAccountOutline,
   mdiFileChartOutline,
+  mdiWeight,
 } from '@mdi/js';
 
 const InterPage375 = () => {
@@ -117,28 +118,82 @@ const InterPage375 = () => {
 
           <Dropdown.Menu className="custom-dropdown-menu">
             <Dropdown.Item>
-              <img src="/assets/dr-icon-00.svg" />
+              <img src="/mpc-react/assets/dr-icon-00.svg" />
             </Dropdown.Item>
             <Dropdown.Item>
-              <img src="/assets/dr-icon-01.svg" />
+              <img src="/mpc-react/assets/dr-icon-01.svg" />
             </Dropdown.Item>
             <Dropdown.Item>
-              <img src="/assets/dr-icon-02.svg" />
+              <img src="/mpc-react/assets/dr-icon-02.svg" />
             </Dropdown.Item>
             <Dropdown.Item>
-              <img src="/assets/dr-icon-03.svg" />
+              <img src="/mpc-react/assets/dr-icon-03.svg" />
             </Dropdown.Item>
             <Dropdown.Item>
-              <img src="/assets/dr-icon-04.svg" />
+              <img src="/mpc-react/assets/dr-icon-04.svg" />
             </Dropdown.Item>
             <Dropdown.Item>
-              <img src="/assets/dr-icon-05.svg" />
+              <img src="/mpc-react/assets/dr-icon-05.svg" />
             </Dropdown.Item>
             <Dropdown.Item>
-              <img src="/assets/dr-icon-06.svg" />
+              <img src="/mpc-react/assets/dr-icon-06.svg" />
             </Dropdown.Item>
             <Dropdown.Item>
-              <img src="/assets/dr-icon-07.svg" />
+              <img src="/mpc-react/assets/dr-icon-07.svg" />
+            </Dropdown.Item>
+             <Dropdown.Item
+             style={{
+                  display: 'flex',
+                  flexDirection: 'column', 
+                  alignItems: 'center', 
+                  padding: '8px 0',
+                }}
+              >
+              <img
+            src="/mpc-react/assets/map-small-01.png"
+            style={{
+              width: '28px',
+              border: '2px solid #C2CDDE',
+              borderRadius: '4px',
+            }}
+          />
+          <span style={{ fontSize: '14px', fontWeight:'bold', color:'#C2CDDE' }}>S-57</span>
+            </Dropdown.Item>
+             <Dropdown.Item
+             style={{
+                  display: 'flex',
+                  flexDirection: 'column', 
+                  alignItems: 'center', 
+                  padding: '8px 0',
+                }}
+              >
+              <img
+            src="/mpc-react/assets/map-small-01.png"
+            style={{
+              width: '28px',
+              border: '2px solid #C2CDDE',
+              borderRadius: '4px',
+            }}
+          />
+          <span style={{ fontSize: '14px', fontWeight:'bold', color:'#C2CDDE' }}>S-101</span>
+            </Dropdown.Item>
+             <Dropdown.Item
+             style={{
+                  display: 'flex',
+                  flexDirection: 'column', 
+                  alignItems: 'center', 
+                  padding: '8px 0',
+                }}
+              >
+              <img
+            src="/mpc-react/assets/map-small-02.png"
+            style={{
+              width: '28px',
+              border: '2px solid #C2CDDE',
+              borderRadius: '4px',
+            }}
+          />
+          <span style={{ fontSize: '14px', fontWeight:'bold', color:'#C2CDDE' }}>3D</span>
             </Dropdown.Item>
           </Dropdown.Menu>
         </Dropdown>
@@ -149,27 +204,26 @@ const InterPage375 = () => {
             <div>
               <img
                 className="logo-on-overlay"
-                src="/assets/wing-logo-375.svg"
+                src="/mpc-react/assets/wing-logo-375.svg"
                 alt="logo"
               />
             </div>
             <Navbar fixed="bottom" className="bottom-navbar">
               <Nav className="bottom-nav">
                 <Nav.Item>
-                  <Nav.Link href="#home"></Nav.Link>
+                  <Nav.Link></Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                  <Nav.Link href="#search" className="bottom-nav-link">
+                  <Nav.Link className="bottom-nav-link">
                     <Icon path={mdiFolderUploadOutline} size={1} />
                     <div className="nav-label">업로드</div>
                   </Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
                   <Nav.Link
-                    href="#menu"
                     className="bottom-nav-link"
                     onClick={() => {
-                      setActiveSheet('BottomTable02');
+                      setActiveSheet('BottomTable03');
                       setIsBottomTableOpen(true);
                     }}
                   >
@@ -178,13 +232,13 @@ const InterPage375 = () => {
                   </Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                  <Nav.Link href="#alert" className="bottom-nav-link">
+                  <Nav.Link className="bottom-nav-link">
                     <Icon path={mdiBellOutline} size={1} />
                     <div className="nav-label">알림</div>
                   </Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                  <Nav.Link href="#mypage" className="bottom-nav-link">
+                  <Nav.Link className="bottom-nav-link">
                     <Icon path={mdiAccountOutline} size={1} />
                     <div className="nav-label">계정</div>
                   </Nav.Link>

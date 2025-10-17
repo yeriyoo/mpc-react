@@ -16,7 +16,8 @@
   "src/Publish.tsx",
   "src/pages/**/*.ts",
   "src/pages/**/*.tsx",
-  "src/Styles/**/*.scss"
-, "src/pages/BottomTable01.tsx", "src/pages/BottomTable02.tsx", "src/pages/BottomTable03.tsx", "src/pages/BottomTable04.tsx", "src/pages/BottomTable05.tsx", "src/pages/InterLogin375.tsx", "src/pages/InterLogin768.tsx", "src/pages/InterLogin1440.tsx", "src/pages/InterLogin1920.tsx", "src/pages/InterPage375.tsx", "src/pages/InterPage768.tsx", "src/pages/InterPage1440.tsx", "src/pages/InterPage1920.tsx", "src/pages/LeftMainMenu.tsx", "src/pages/LoginMain.tsx", "src/pages/MainPage.tsx", "src/pages/MapIcon.tsx", "src/pages/MapWeatherIcon.tsx", "src/pages/Modal01.tsx", "src/pages/Modal02.tsx", "src/pages/Modal03.tsx", "src/pages/Modal04.tsx", "src/pages/RightQuickMenu.tsx", "src/pages/RightQuickMenu1440.tsx", "src/pages/RightTopMenu.tsx", "src/pages/SlideMenu.tsx"  ],
+  "src/Styles/**/*.scss",
+  "src/**/*.ts", "src/**/*.tsx", "src/custom.d.ts","src", "vite-env.d.ts",
+ "src/pages/BottomTable01.tsx", "src/pages/BottomTable02.tsx", "src/pages/BottomTable03.tsx", "src/pages/BottomTable04.tsx", "src/pages/BottomTable05.tsx", "src/pages/InterLogin375.tsx", "src/pages/InterLogin768.tsx", "src/pages/InterLogin1440.tsx", "src/pages/InterLogin1920.tsx", "src/pages/InterPage375.tsx", "src/pages/InterPage768.tsx", "src/pages/InterPage1440.tsx", "src/pages/InterPage1920.tsx", "src/pages/LeftMainMenu.tsx", "src/pages/LoginMain.tsx", "src/pages/MainPage.tsx", "src/pages/MapIcon.tsx", "src/pages/MapWeatherIcon.tsx", "src/pages/Modal01.tsx", "src/pages/Modal02.tsx", "src/pages/Modal03.tsx", "src/pages/Modal04.tsx", "src/pages/RightQuickMenu.tsx", "src/pages/RightQuickMenu1440.tsx", "src/pages/RightTopMenu.tsx", "src/pages/SlideMenu.tsx"  ],
   "exclude": ["node_modules", "dist"]
 }

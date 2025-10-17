@@ -8,11 +8,23 @@ const InterLogin1920 = () => {
       <div className="login-box">
         <Form className="login-form">
           <Form.Group controlId="userid" className="mb-3 custom-group">
-            <Form.Control type="text" name="userid" placeholder="사번" required />
+            <Form.Control
+              type="text"
+              name="userid"
+              placeholder="사번"
+              required
+              autoComplete="username"
+            />
           </Form.Group>
 
           <Form.Group controlId="password" className="mb-3 custom-group">
-            <Form.Control type="password" name="password" placeholder="비밀번호" required />
+            <Form.Control
+              type="password"
+              name="password"
+              placeholder="비밀번호"
+              required
+              autoComplete="current-password"
+            />
           </Form.Group>
 
           <Form.Group controlId="remember" className="mb-3 remember-wrapper">

@@ -31,7 +31,7 @@ const InterPage1440: React.FC<InterPage1440Props> = ({
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [isSlideMenuOpen, setIsSlideMenuOpen] = useState(false);
   const [mapIcons, setMapIcons] = useState<{ top: string; left: string; label?: string }[]>([]);
-  const [mapImage, setMapImage] = useState('/assets/default-map.jpg');
+  const [mapImage, setMapImage] = useState('/mpc-react/assets/default-map.jpg');
   
 
 
@@ -69,7 +69,7 @@ const InterPage1440: React.FC<InterPage1440Props> = ({
   };
 
   const handleToggleS57Map = () => {
-  setMapImage(prev => prev === '/assets/s-57-map-1440.jpg' ? '/assets/default-map.jpg' : '/assets/s-57-map-1440.jpg');
+  setMapImage(prev => prev === '/mpc-react/assets/s-57-map-1440.jpg' ? '/mpc-react/assets/default-map.jpg' : '/mpc-react/assets/s-57-map-1440.jpg');
   };
 
   return (
@@ -77,8 +77,8 @@ const InterPage1440: React.FC<InterPage1440Props> = ({
       <Navbar expand="lg" className="bg-body-tertiary">
         <Container fluid>
           <div className="d-flex align-items-center">
-            <Navbar.Brand href="#action0" className="navbar__brand-box d-flex align-items-center">
-              <img src="/assets/winglogo.svg" alt="로고" className="navbar__brand-logo" />
+            <Navbar.Brand className="navbar__brand-box d-flex align-items-center">
+              <img src="/mpc-react/assets/winglogo.svg" alt="로고" className="navbar__brand-logo" />
               <strong>해양환경 위기대응 통합지원 시스템</strong>
             </Navbar.Brand>
 
@@ -105,7 +105,7 @@ const InterPage1440: React.FC<InterPage1440Props> = ({
           <RightTopMenu
           mapImage={mapImage}
           setMapImage={setMapImage}
-          defaultMap="/assets/default-map.jpg"
+          defaultMap="/mpc-react/assets/default-map.jpg"
           />
         </Container>
 

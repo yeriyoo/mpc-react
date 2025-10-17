@@ -17,7 +17,7 @@ const RightQuickMenu1440: React.FC<RightQuickMenu1440Props> = ({ mapImage, setMa
   const [isProfileDropdownOpen, setIsProfileDropdownOpen] = useState(false);
   const [showModal03, setShowModal03] = useState(false);
   const [showModal04, setShowModal04] = useState(false);
-  const s57Map = '/assets/s-57-map-1440.jpg';
+  const s57Map = '/mpc-react/assets/s-57-map-1440.jpg';
 
    const handleS57Click = () => {
   setMapImage(mapImage === s57Map ? defaultMap : s57Map);
@@ -42,43 +42,43 @@ const RightQuickMenu1440: React.FC<RightQuickMenu1440Props> = ({ mapImage, setMa
       <Dropdown.Menu className="dropdown-icon-menu">
         <Dropdown.Item onClick={() => setShowModal03(true)}>
           <OverlayTrigger placement="left" overlay={<Tooltip id="tooltip-1">선박항적</Tooltip>}>
-            <img src="/assets/dr-icon-00.svg" alt="icon1" />
+            <img src="/mpc-react/assets/dr-icon-00.svg" alt="icon1" />
           </OverlayTrigger>
         </Dropdown.Item>
 
         <Dropdown.Item onClick={() => setShowModal04(true)}>
           <OverlayTrigger placement="left" overlay={<Tooltip id="tooltip-1">레이아웃</Tooltip>}>
-            <img src="/assets/dr-icon-01.svg" alt="icon1" />
+            <img src="/mpc-react/assets/dr-icon-01.svg" alt="icon1" />
           </OverlayTrigger>
         </Dropdown.Item>
         <Dropdown.Item>
           <OverlayTrigger placement="left" overlay={<Tooltip id="tooltip-2">구역설정</Tooltip>}>
-            <img src="/assets/dr-icon-02.svg" alt="icon2" />
+            <img src="/mpc-react/assets/dr-icon-02.svg" alt="icon2" />
           </OverlayTrigger>
         </Dropdown.Item>
         <Dropdown.Item>
           <OverlayTrigger placement="left" overlay={<Tooltip id="tooltip-3">거리</Tooltip>}>
-            <img src="/assets/dr-icon-03.svg" alt="icon3" />
+            <img src="/mpc-react/assets/dr-icon-03.svg" alt="icon3" />
           </OverlayTrigger>
         </Dropdown.Item>
         <Dropdown.Item>
           <OverlayTrigger placement="left" overlay={<Tooltip id="tooltip-4">거리환산</Tooltip>}>
-            <img src="/assets/dr-icon-04.svg" alt="icon4" />
+            <img src="/mpc-react/assets/dr-icon-04.svg" alt="icon4" />
           </OverlayTrigger>
         </Dropdown.Item>
         <Dropdown.Item>
           <OverlayTrigger placement="left" overlay={<Tooltip id="tooltip-5">다운로드</Tooltip>}>
-            <img src="/assets/dr-icon-05.svg" alt="icon5" />
+            <img src="/mpc-react/assets/dr-icon-05.svg" alt="icon5" />
           </OverlayTrigger>
         </Dropdown.Item>
         <Dropdown.Item>
           <OverlayTrigger placement="left" overlay={<Tooltip id="tooltip-6">캡처</Tooltip>}>
-            <img src="/assets/dr-icon-06.svg" alt="icon6" />
+            <img src="/mpc-react/assets/dr-icon-06.svg" alt="icon6" />
           </OverlayTrigger>
         </Dropdown.Item>
         <Dropdown.Item>
           <OverlayTrigger placement="left" overlay={<Tooltip id="tooltip-6">초기화</Tooltip>}>
-            <img src="/assets/dr-icon-07.svg" alt="icon7" />
+            <img src="/mpc-react/assets/dr-icon-07.svg" alt="icon7" />
           </OverlayTrigger>
         </Dropdown.Item>
 
@@ -87,7 +87,7 @@ const RightQuickMenu1440: React.FC<RightQuickMenu1440Props> = ({ mapImage, setMa
         onClick={handleS57Click}
         >
           <img
-            src="/assets/map-small-01.png"
+            src="/mpc-react/assets/map-small-01.png"
             style={{
               width: '28px',
               border: '2px solid #C2CDDE',
@@ -99,7 +99,7 @@ const RightQuickMenu1440: React.FC<RightQuickMenu1440Props> = ({ mapImage, setMa
 
         <Dropdown.Item className="dropdown-item-with-label">
           <img
-            src="/assets/map-small-01.png"
+            src="/mpc-react/assets/map-small-01.png"
             style={{
               width: '28px',
               border: '2px solid #C2CDDE',
@@ -111,7 +111,7 @@ const RightQuickMenu1440: React.FC<RightQuickMenu1440Props> = ({ mapImage, setMa
 
         <Dropdown.Item className="dropdown-item-with-label">
           <img
-            src="/assets/map-small-01.png"
+            src="/mpc-react/assets/map-small-01.png"
             style={{
               width: '28px',
               border: '2px solid #C2CDDE',

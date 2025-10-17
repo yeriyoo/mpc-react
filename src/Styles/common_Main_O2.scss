@@ -1,7 +1,3 @@
-html {
-  --main-color: #ffffff; 
-}
-
 body {
   font-family: 'NanumSquare', sans-serif;
   letter-spacing: 0;
@@ -70,9 +66,9 @@ body {
   input {
     width: 100%;
     height: 50px;
-    margin-top: 4px;
-    padding: 10px;
-    font-size: 16px;
+    margin-top: -0.25rem;
+    padding: 0.625rem;
+    font-size: 1rem;
     border: none;
     border-radius: 4px;
     box-sizing: border-box;
@@ -95,7 +91,7 @@ body {
   color: white;
   border: none;
   border-radius: 4px;
-  font-size: 16px;
+  font-size: 1rem;
   cursor: pointer;
   margin-top: 24px;
 
@@ -106,7 +102,7 @@ body {
 }
 
 .links-wrapper {
-  margin-bottom: 16px;
+  margin-bottom: 1rem;
   display: flex;
   justify-content: center;
   gap: 20px;
@@ -140,7 +136,7 @@ body {
   text-align: center;
   color: #888aa3;
   margin: 44px 0 24px 0;
-  font-size: 14px;
+  font-size: 0.875rem;
 
   &::before,
   &::after {
@@ -151,7 +147,7 @@ body {
   }
 
   span {
-    margin: 0 12px;
+    margin: 0 0.75rem;
   }
 }
 
@@ -159,7 +155,7 @@ body {
 .button-row {
   display: flex;
   justify-content: center;
-  gap: 16px;
+  gap: 1rem;
 
   .full-width-btn {
     width: 50%;
@@ -170,8 +166,8 @@ body {
     color: white;
     border: none;
     border-radius: 4px;
-    font-size: 16px;
-    margin-top: 24px;
+    font-size: 1rem;
+    margin-top: 1.5rem;
     padding: 12px;
     cursor: pointer;
   }
@@ -276,8 +272,8 @@ body {
 .navbar {
   .navbar-brand {
     background-color: #fff;
-    font-size: 18px;
-    padding: 16px 20px;
+    font-size: 1.125rem;
+    padding: 1rem 1.25rem;
     margin: 0;
     height: 56px;
     display: flex;
@@ -286,7 +282,7 @@ body {
     .navbar__brand-logo {
       width: 44px;
       height: 44px;
-      margin-right: 8px;
+      margin-right: 0.5rem;
     }
   }
 }
@@ -294,13 +290,13 @@ body {
 .navbar__menu-icon {
   width: 24px;
   height: 24px;
-  margin-right: 8px;
+  margin-right: 0.5rem;
 }
 
 
 .nav-link {
   color: #fff;
-  font-size: 16px;
+  font-size: 1rem;
 
   &:hover,
   &:focus,
@@ -357,14 +353,14 @@ body {
     border-radius: 4px;
     overflow: visible;
     border: none;
-    // box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
-    font-size: 14px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+    font-size: 0.875rem;
     background-color: #000;
 
     .dropdown-item {
-      font-size: 16px;
+      font-size: 1rem;
       color: #000;
-      padding: 16px 0 16px 8px;
+      padding: 1rem 0 1rem 0.5rem;
       width: 240px;
       box-sizing: border-box;
 
@@ -390,7 +386,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 8px 16px;
+  padding: 0.5rem 1rem;
   background-color: transparent;
   width: 240px;
   height: 56px;
@@ -398,7 +394,7 @@ body {
   box-sizing: border-box;
 
   .nav-dropdown__item-label {
-    font-size: 16px;
+    font-size: 1rem;
   }
 
   .submenu-arrow {
@@ -437,13 +433,13 @@ body {
 
 .nav-dropdown__submenu {
   background-color: #ebf1f6;
-  padding: 4px 0;
+  padding: 0.25rem 0;
   width: 240px;
   box-sizing: border-box;
   transition: all 0.3s ease;
 
   .dropdown-item {
-    padding: 8px 16px !important;
+    padding: 0.5rem 1rem !important;
     width: 100%;
     box-sizing: border-box;
   }
@@ -477,7 +473,7 @@ body {
   height: 56px;
   margin: 0 !important;
   background-color: #1c2d6f;
-  font-size: 16px;
+  font-size: 1rem;
   border: none;
 }
 
@@ -491,7 +487,7 @@ body {
 
 .custom-button-01 {
   border-left: 1px solid #6972a3;
-  padding-left: 12px;
+  padding-left: 0.75rem;
   border-radius: 0;
 }
 
@@ -539,13 +535,13 @@ body {
 }
 
 .navbar-toggler {
-  margin-left: 12px;
-  padding: 6px 10px;
+  margin-left: 0.75rem;
+  padding: 0.375rem 0.625rem;
 }
 
 .custom-toggle {
   order: 1 !important;
-  margin-left: 12px;
+  margin-left: 0.75rem;
 }
 
 .navbar-wrapper {
@@ -571,7 +567,7 @@ body {
 
 .navbar-toggle-no-border {
   border: none;
-  margin-bottom: 16px;
+  margin-bottom: 1rem;
 }
 
 .navbar-text {
@@ -582,7 +578,7 @@ body {
   color: #000;
   font-weight: bold;
   height: 56px;
-  font-size: 16px;
+  font-size: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -629,7 +625,7 @@ body {
   width: 240px;
   height: 360px;
   overflow-y: auto;
-  padding: 8px 8px !important;
+  padding: 0.5rem 0.5rem !important;
   background-color: #fff;
   border: none;
   border-radius: 4px;
@@ -709,7 +705,7 @@ body {
 
 // 퀵메뉴 아이콘 //
 .dropdown-menu.show {
-  padding: 4px 0 !important;
+  padding: 0.25rem 0 !important;
   background-color: #fff;
   border: none;
   top: 97%;
@@ -804,7 +800,7 @@ body {
 
   span {
     margin-top: 4px;
-    font-size: 14px;
+    font-size: 0.85rem;
     color: #c2cdde;
     font-weight: 800px;
   }
@@ -847,7 +843,7 @@ body {
 // 슬라이드 메뉴 //
 .slide-menu {
   z-index: 9999;
-  font-size: 16px;
+  font-size: 1rem;
   cursor: pointer;
 
   .offcanvas-header {
@@ -863,7 +859,7 @@ body {
   }
 
   .offcanvas-title {
-    font-size: 16px;
+    font-size: 1rem;
     color: #fff;
   }
 
@@ -882,7 +878,7 @@ body {
 
     span {
       display: block;
-      padding: 12px 12px;
+      padding: 0.75rem 12px;
     }
   }
 
@@ -900,7 +896,7 @@ body {
     .dropdown-toggle {
       background: none;
       color: #000 !important;
-      padding: 16px 12px;
+      padding: 1rem 12px;
       width: 100%;
       text-align: left;
 
@@ -921,8 +917,8 @@ body {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 4px 4px;
-      font-size: 16px;
+      padding: 0.25rem 4px;
+      font-size: 1rem;
       cursor: pointer;
 
       svg {
@@ -934,8 +930,8 @@ body {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 16px 16px;
-      font-size: 16px;
+      padding: 1rem 1rem;
+      font-size: 1rem;
       cursor: pointer;
 
       svg {
@@ -955,9 +951,9 @@ body {
       }
 
       .dropdown-item {
-        padding: 16px 16px;
+        padding: 1rem 1rem;
         color: #000;
-        font-size: 16px;
+        font-size: 1rem;
         height: auto !important;
 
         &:hover {
@@ -1013,7 +1009,7 @@ body {
 .custom-dropdown-menu {
   background-color: #fff;
   border-radius: 999px !important;
-  // box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
   border: none;
   width: auto;
   min-width: auto;
@@ -1054,7 +1050,7 @@ body {
     align-items: center;
     padding: 6px 0;
     color: #fff;
-    font-size: 12px;
+    font-size: 0.75rem;
 
     svg {
       margin-bottom: 2px;
@@ -1067,7 +1063,7 @@ body {
   }
 
   .nav-label {
-    font-size: 12px;
+    font-size: 0.75rem;
   }
 }
 
@@ -1117,11 +1113,11 @@ body {
     background-color: #fff;
     border-bottom: 1px solid #dcdcdc;
     border-radius: 4px;
-    padding: 8px;
+    padding: 0.5rem;
 
     .modal-title {
       color: #000;
-      font-size: 16px;
+      font-size: 1rem;
       margin-left: 8px;
       letter-spacing: 0;
     }
@@ -1182,13 +1178,13 @@ body {
   justify-content: space-between;
   align-items: center;
   height: 48px;
-  padding: 16px;
-  margin-top: 8px;
+  padding: 1rem;
+  margin-top: 0.5rem;
 }
 
 .custom-btn {
   min-width: 80px;
-  font-size: 16px;
+  font-size: 1rem;
   border-radius: 4px;
   color: #000;
   border: 1px solid #000;
@@ -1239,7 +1235,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 16px;
+  margin: 1rem;
   border-radius: 4px;
   overflow-x: auto;
 
@@ -1277,7 +1273,7 @@ body {
     background: #fff;
     border-top-left-radius: 16px;
     border-top-right-radius: 16px;
-    // box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.15);
     z-index: 1050;
     flex-direction: column;
     display: flex;
@@ -1310,13 +1306,13 @@ body {
       align-items: center;
       background-color: #fff;
       font-weight: 600;
-      font-size: 1.16px;
+      font-size: 1.1rem;
       margin-bottom: 8px;
 
       padding: 12px 28px;
       border-bottom: 1px solid #eee;
       font-weight: bold;
-      font-size: 18px;
+      font-size: 1.125rem;
 
       .close-btn {
         background: none;
@@ -1352,7 +1348,7 @@ body {
     .sheet-content {
       overflow-y: auto;
       flex: 1 1 auto;
-      padding-top: 8px;
+      padding-top: 0.5rem;
 
       &.open {
         transform: translateY(0);
@@ -1373,7 +1369,7 @@ body {
     border-radius: 8px;
     overflow: hidden;
     border-radius: 24px;
-    margin: 0 24px 12px 24px;
+    margin: 0 1.5rem 0.75rem 1.5rem;
 
     .custom-accordion-item {
       .accordion-header {
@@ -1395,7 +1391,7 @@ body {
     }
 
     .accordion-button {
-      padding: 8px 0 8px 40px;
+      padding: 0.5rem 0 0.5rem 2.5rem;
       display: flex;
 
       &::after {
@@ -1406,16 +1402,16 @@ body {
         background-color: #fff !important;
         border: none;
         color: #000;
-        font-size: 16px;
+        font-size: 1rem;
         border-bottom: none !important;
       }
     }
 
     .accordion-header {
       background-color: #fff;
-      padding: 8px 16px;
+      padding: 0.5rem 1rem;
       font-weight: bold;
-      font-size: 16px;
+      font-size: 1rem;
       display: flex;
       align-items: center;
       cursor: pointer;
@@ -1454,20 +1450,20 @@ body {
     }
 
     .accordion-body {
-      padding: 16px;
+      padding: 1rem;
       background-color: #fff;
     }
   }
 }
 
 .accordion-body {
-  font-size: 16px;
-  padding: 8px 0 16px 56px !important;
+  font-size: 1rem;
+  padding: 0.5rem 0 1rem 3.5rem !important;
 
   .details-grid {
     display: flex;
     flex-wrap: wrap;
-    gap: 4px;
+    gap: 0.25rem;
     letter-spacing: 0;
   }
 
@@ -1501,7 +1497,7 @@ body {
   width: 100%;
   height: 32px;
   margin-top: 0;
-  font-size: 14px;
+  font-size: 0.875rem;
   border: none !important;
 
   .pagination {
@@ -1533,7 +1529,7 @@ body {
 
     .page-link {
       color: #000;
-      padding: 6px 12px;
+      padding: 0.375rem 0.75rem;
     }
   }
 }
@@ -1566,12 +1562,12 @@ body {
 
 .modal584-header {
   background-color: #11154b;
-  padding: 12px 16px;
+  padding: 0.75rem 1rem;
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
 
   .modal584-title {
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: 400;
     color: #fff;
   }
@@ -1614,7 +1610,7 @@ body {
   &-text {
     flex: 0 0 120px; // 왼쪽 타이틀 영역 고정
     font-weight: 500;
-    font-size: 14px;
+    font-size: 0.875rem;
 
     .required-mark {
       color: #ff0000;
@@ -1713,7 +1709,7 @@ body {
   text-align: center;
 
   span {
-    font-size: 12px;
+    font-size: 0.75rem;
   }
 }
 
@@ -1837,7 +1833,7 @@ body {
   span.fw-bold {
     display: flex;
     align-items: center;
-    font-size: 16px;
+    font-size: 0.9rem;
     white-space: nowrap;
   }
 
@@ -1855,7 +1851,7 @@ body {
   color: #000;    
   border: 1px solid #000;   
   padding: 4px 12px; 
-  font-size: 14px; 
+  font-size: 0.85rem; 
   border-radius: 4px;  
   height: 34px;
   flex: 1 1 120px;
@@ -1873,7 +1869,7 @@ body {
   color: #000;    
   border: 1px solid #000;   
   padding: 4px 12px; 
-  font-size: 14px; 
+  font-size: 0.85rem; 
   border-radius: 4px;  
   height: 34px;
   flex: 0 0 auto;
@@ -1896,15 +1892,15 @@ body {
   color: #000;    
   border: 1px solid #000;   
   padding: 4px 12px; 
-  font-size: 14px; 
+  font-size: 0.85rem; 
   border-radius: 4px;  
   height: 34px;
   }
 
   .dropdown-menu {
-    font-size: 14px;
+    font-size: 0.85rem;
     border-radius: 4px;
-    // box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     height: 124px;
   }
 }
@@ -1929,7 +1925,7 @@ body {
     min-width: 88px;
 
     input {
-      font-size: 14px;
+      font-size: 0.85rem;
       height: 34px;
       border: 1px solid #000;
     }
@@ -1954,7 +1950,7 @@ body {
       color: #000;
       border: 1px solid #000;
       padding: 4px 12px;
-      font-size: 14px;
+      font-size: 0.85rem;
       border-radius: 4px;
       transition: all 0.2s ease;
       height: 34px;
@@ -1962,9 +1958,9 @@ body {
     }
 
     .dropdown-menu {
-      font-size: 14px;
+      font-size: 0.85rem;
       height: 124px;
-      // box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     }
   }
 }
@@ -1977,7 +1973,7 @@ body {
 
 .bottom-vertical-table{
   margin: 8px 24px 24px 24px;
-  font-size: 14px;
+  font-size: 0.875rem;
 
    th {
     color: #11154B;
@@ -2003,7 +1999,7 @@ body {
   border-bottom: 1px solid #dcdcdc;
   .custom-modal-title {
     color: #000;
-    font-size: 19;
+    font-size: 1.2rem;
     font-weight: 600;
   }
   button {
@@ -2088,7 +2084,7 @@ body {
     cursor: pointer;
     height: 38px;
     border-radius: 0;
-    font-size: 16px;
+    font-size: 0.9rem;
     border-radius: 4px;
   }
 }
@@ -2166,7 +2162,7 @@ body {
 
 
 .modal03-title {
-  font-size: 16px !important; 
+  font-size: 1rem !important; 
   font-weight: 500;
   display: flex;
 }
@@ -2265,7 +2261,7 @@ body {
 }
 
 .modal04-content {
-  border-radius: 8px;
+  border-radius: 0.5rem;
   overflow: hidden;
   height: 860px;
   border: none;
@@ -2277,7 +2273,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 8px 16px;
+  padding: 0.5rem 1rem;
 
   .modal04-header-left {
     display: flex;
@@ -2286,11 +2282,11 @@ body {
 
   .modal04-title {
     font-weight: bold;
-    font-size: 16px;
+    font-size: 1rem;
   }
 
   .modal04-header-switch {
-    margin-left: 8px;
+    margin-left: 0.5rem;
   }
 
   .modal04-close-btn {
@@ -2305,7 +2301,7 @@ body {
 }
 
 .modal04-body {
-  padding: 16px 0;
+  padding: 1rem 0;
   height: 500px;
 
 }
@@ -2314,14 +2310,14 @@ body {
 .modal04-tab-menu {
   display: flex;
   gap: 4px;
-  margin-bottom: 16px;
+  margin-bottom: 1rem;
   border-bottom: 1px solid #dcdcdc;
   margin: 0;
 
   .modal04-tab {
     flex: 1;
     text-align: center;
-    padding: 8px 0;
+    padding: 0.5rem 0;
     cursor: pointer;
     font-weight: 500;
     transition: all 0.2s;
@@ -2342,7 +2338,7 @@ body {
 .modal04-list-item {
   display: flex;
   align-items: center;
-  padding: 4px 0;
+  padding: 0.25rem 0;
   justify-content: space-between;
 }
 
@@ -2402,18 +2398,18 @@ body {
   .modal04-accordion-row {
     display: flex;
     flex-direction: column;
-    gap: 8px;
-    margin-bottom: 8px;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
   }
 }
 
 .modal04-footer {
   display: flex;
   align-items: center;
-  margin-top: 16px;
+  margin-top: 1rem;
 
   .modal04-footer-label {
-    margin-right: 8px;
+    margin-right: 0.5rem;
   }
 }
 
@@ -2425,7 +2421,7 @@ body {
 // 미디어쿼리 //
 @media (min-width: 1440px) and (max-width: 1919px) {
   body {
-    font-size: 16px;
+    font-size: 1rem;
   }
 
     .login-box {
@@ -2455,12 +2451,12 @@ body {
 
 @media (min-width: 768px) and (max-width: 1439px) {
   body {
-    font-size: 14px;
+    font-size: 0.875rem;
   }
 
   .hamburger-button {
     position: static;
-    margin-left: 16px;
+    margin-left: 1rem;
   }
 
   .login-box {
@@ -2481,18 +2477,18 @@ body {
     width: 80%;
 
     .remember-wrapper {
-      font-size: 16px;
+      font-size: 1rem;
     }
 
     .links-wrapper a {
-      font-size: 16px;
+      font-size: 1rem;
     }
   }
 }
 
 @media (min-width: 375px) and (max-width: 767px) {
   body {
-    font-size: 12px;
+    font-size: 0.75rem;
   }
   .slide-menu {
     z-index: 9999;
@@ -2517,11 +2513,11 @@ body {
     width: 80%;
 
     .remember-wrapper {
-      font-size: 16px;
+      font-size: 1rem;
     }
 
     .links-wrapper a {
-      font-size: 16px;
+      font-size: 1rem;
     }
   }
 }
@@ -2563,7 +2559,7 @@ body {
   .search-button {
     background-color: #fff;
     color: #000;
-    margin-top: -8px;
+    margin-top: -0.5rem;
 
     &:hover,
     &:active,
@@ -2574,7 +2570,7 @@ body {
   }
 
   .navbar-toggle-no-border {
-    margin-top: 4px;
+    margin-top: 0.25rem;
   }
 
   .sub-toggle{
@@ -2582,7 +2578,7 @@ body {
   }
 
     .sub-toggle-02{
-      padding: 16px 24px !important;
+      padding: 1rem 24px !important;
     }
 
 
@@ -2601,7 +2597,7 @@ body {
     }
 
      .dropdown-item {
-        padding: 16px 24px !important; // 하위 아이템 패딩 재설정
+        padding: 1rem 24px !important; // 하위 아이템 패딩 재설정
       }
   }
 }

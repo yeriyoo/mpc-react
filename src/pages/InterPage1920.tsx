@@ -27,7 +27,7 @@ const InterPage1920: React.FC<InterPage1920Props> = ({
 }) => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 991);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  const [mapImage, setMapImage] = useState('/assets/default-map.jpg');
+  const [mapImage, setMapImage] = useState('/mpc-react/assets/default-map.jpg');
 
   useEffect(() => {
     const handleResize = () => {
@@ -63,7 +63,7 @@ const InterPage1920: React.FC<InterPage1920Props> = ({
   };
 
   const handleToggleS57Map = () => {
-  setMapImage(prev => prev === '/assets/s-57-map.jpg' ? '/assets/default-map.jpg' : '/assets/s-57-map.jpg');
+  setMapImage(prev => prev === '/mpc-react/assets/s-57-map.jpg' ? '/mpc-react/assets/default-map.jpg' : '/mpc-react/assets/s-57-map.jpg');
 };
 
   const handleClick = () => console.log('지도 버튼 클릭됨');
@@ -76,7 +76,7 @@ const InterPage1920: React.FC<InterPage1920Props> = ({
       <Navbar expand="lg" className="bg-body-tertiary">
         <Container fluid>
           <Navbar.Brand href="#action0" className="navbar__brand-box">
-            <img src="/assets/winglogo.svg" alt="로고" className="navbar__brand-logo" />
+            <img src="/mpc-react/assets/winglogo.svg" alt="로고" className="navbar__brand-logo" />
             <strong>해양환경 위기대응 통합지원 시스템</strong>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />

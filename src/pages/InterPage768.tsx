@@ -32,8 +32,8 @@ const InterPage768: React.FC<InterPage768Props> = ({
   const [isSlideMenuOpen, setIsSlideMenuOpen] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [mapIcons, setMapIcons] = useState<{ top: string; left: string; label?: string }[]>([]);
-  const [mapImage, setMapImage] = useState('/assets/default-map.jpg');
-  const defaultMap = '/assets/default-map.jpg';
+  const [mapImage, setMapImage] = useState('/mpc-react/assets/default-map.jpg');
+  const defaultMap = '/mpc-react/assets/default-map.jpg';
 
 
   useEffect(() => {
@@ -55,9 +55,9 @@ const InterPage768: React.FC<InterPage768Props> = ({
       <Navbar expand="lg" className="bg-body-tertiary">
         <Container fluid>
           <div className="d-flex align-items-center me-2">
-            <Navbar.Brand href="#action0" className="navbar__brand-box d-flex align-items-center">
+            <Navbar.Brand className="navbar__brand-box d-flex align-items-center">
               <img
-                src="/assets/winglogo.svg"
+                src="/mpc-react/assets/winglogo.svg"
                 alt="로고"
                 className="navbar__brand-logo"
               />

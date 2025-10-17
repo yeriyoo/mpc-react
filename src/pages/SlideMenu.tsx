@@ -36,7 +36,6 @@ const SlideMenu = ({ isOpen, onClose, setIsBottomTableOpen, setActiveSheet, setM
       <Offcanvas.Body>
         <Nav className="flex-column">
           <Nav.Link
-            href="#1"
             onClick={() => {
               setActiveSheet('BottomTable01');
               setIsBottomTableOpen(true);
@@ -282,7 +281,6 @@ const SlideMenu = ({ isOpen, onClose, setIsBottomTableOpen, setActiveSheet, setM
           </NavDropdown>
 
          <Nav.Link
-            href="#4"
             onClick={() => {
               setActiveSheet('BottomTable04');
               setIsBottomTableOpen(true); 
@@ -308,7 +306,6 @@ const SlideMenu = ({ isOpen, onClose, setIsBottomTableOpen, setActiveSheet, setM
             onToggle={(isOpen) => setOpenPredictDropdown2(isOpen)}
           >
             <NavDropdown.Item
-            href="#2-1"
             onClick={() => {
               setActiveSheet('BottomTable05');
               setIsBottomTableOpen(true); 
@@ -317,8 +314,8 @@ const SlideMenu = ({ isOpen, onClose, setIsBottomTableOpen, setActiveSheet, setM
             >
             공지사항
             </NavDropdown.Item>
-            <NavDropdown.Item href="#2-2">게시판</NavDropdown.Item>
-            <NavDropdown.Item href="#2-3">Q&A</NavDropdown.Item>
+            <NavDropdown.Item>게시판</NavDropdown.Item>
+            <NavDropdown.Item>Q&A</NavDropdown.Item>
           </NavDropdown>
 
           <NavDropdown
@@ -336,19 +333,19 @@ const SlideMenu = ({ isOpen, onClose, setIsBottomTableOpen, setActiveSheet, setM
             className="nav-dropdown custom-prediction-dropdown"
             onToggle={(isOpen) => setOpenPredictDropdown3(isOpen)}
           >
-            <NavDropdown.Item href="#3-1">해안오염 조사평가</NavDropdown.Item>
-            <NavDropdown.Item href="#3-2">해안오염분포도</NavDropdown.Item>
+            <NavDropdown.Item>해안오염 조사평가</NavDropdown.Item>
+            <NavDropdown.Item>해안오염분포도</NavDropdown.Item>
           </NavDropdown>
 
           <Nav.Link className="nav-bg-fill"></Nav.Link>
 
-          <Nav.Link href="#7">
+          <Nav.Link>
             <span>즐겨찾기</span>
           </Nav.Link>
-          <Nav.Link href="#8">
+          <Nav.Link>
             <span>알림</span>
           </Nav.Link>
-          <Nav.Link href="#9">
+          <Nav.Link>
             <span>나의 계정</span>
           </Nav.Link>
         </Nav>
