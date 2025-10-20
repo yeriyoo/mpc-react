@@ -95,7 +95,7 @@ const Modal02 = ({ show, onHide, title = '공지사항 작성' }: Modal02Props) 
 
       {/* 하단 버튼 */}
       <Modal.Footer className="modal584-footer d-flex justify-content-end">
-        <Button className="list-btn">
+        <Button className="list-btn" onClick={onHide}>
           목록으로 돌아가기
         </Button>
         <Button className="save-btn">저장</Button>
