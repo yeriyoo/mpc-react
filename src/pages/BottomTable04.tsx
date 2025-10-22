@@ -122,27 +122,118 @@ const BottomAccordionList = ({
               </Button>
             </InputGroup>
 
-            <Dropdown className="accordion-dropdown">
+            <Dropdown className="police-custom-dropdown-02">
               <Dropdown.Toggle id="dropdown-basic" className="custom-add-btn">
                 해경자산 필터
               </Dropdown.Toggle>
               <Dropdown.Menu>
-                <Dropdown.Item>개인보호창구</Dropdown.Item>
-                <Dropdown.Item>고압세척기</Dropdown.Item>
-                <Dropdown.Item>공기압축기</Dropdown.Item>
-                <Dropdown.Item>나노뜰채</Dropdown.Item>
+            <Dropdown.Item  onClick={(e) => e.stopPropagation()}>
+            <div
+                onClick={(e) => e.stopPropagation()}
+              >
+                <Form.Check
+                  type="checkbox"
+                  id="filter1"
+                  label="오일펜스"
+                />
+              </div>
+            </Dropdown.Item>
+            <Dropdown.Item onClick={(e) => e.stopPropagation()}>
+              <div
+                onClick={(e) => e.stopPropagation()}
+              >
+                <Form.Check
+                  type="checkbox"
+                  id="filter2"
+                  label="부대자재"
+                />
+              </div>
+            </Dropdown.Item>
+             <Dropdown.Item onClick={(e) => e.stopPropagation()}>
+              <div
+                onClick={(e) => e.stopPropagation()}
+              >
+                <Form.Check
+                  type="checkbox"
+                  id="filter3"
+                  label="저장용기"
+                />
+              </div>
+            </Dropdown.Item>
+            <Dropdown.Item onClick={(e) => e.stopPropagation()}>
+              <div
+                onClick={(e) => e.stopPropagation()}
+              >
+                <Form.Check
+                  type="checkbox"
+                  id="filter4"
+                  label="유흡착재"
+                />
+              </div>
+            </Dropdown.Item>
+            <Dropdown.Item onClick={(e) => e.stopPropagation()}>
+              <div
+                onClick={(e) => e.stopPropagation()}
+              >
+                <Form.Check
+                  type="checkbox"
+                  id="filter5"
+                  label="유처리재"
+                />
+              </div>
+            </Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>
 
-            <Dropdown className="accordion-dropdown">
+            <Dropdown className="police-custom-dropdown-02">
               <Dropdown.Toggle id="dropdown-basic" className="custom-add-btn">
                 관할해경 필터
               </Dropdown.Toggle>
               <Dropdown.Menu>
-                <Dropdown.Item>강릉해양경찰서</Dropdown.Item>
-                <Dropdown.Item>군산해양경찰서</Dropdown.Item>
-                <Dropdown.Item>동해해양경찰서</Dropdown.Item>
-                <Dropdown.Item>목포해양경찰서</Dropdown.Item>
+                <Dropdown.Item  onClick={(e) => e.stopPropagation()}>
+                  <div
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      <Form.Check
+                        type="checkbox"
+                        id="filter1"
+                        label="강릉해양경찰서"
+                      />
+                    </div>
+                  </Dropdown.Item>
+                  <Dropdown.Item  onClick={(e) => e.stopPropagation()}>
+                  <div
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      <Form.Check
+                        type="checkbox"
+                        id="filter1"
+                        label="군산해양경찰서"
+                      />
+                    </div>
+                  </Dropdown.Item>
+                    <Dropdown.Item  onClick={(e) => e.stopPropagation()}>
+                  <div
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      <Form.Check
+                        type="checkbox"
+                        id="filter1"
+                        label="동해해양경찰서"
+                      />
+                    </div>
+                  </Dropdown.Item>
+                  <Dropdown.Item  onClick={(e) => e.stopPropagation()}>
+                  <div
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      <Form.Check
+                        type="checkbox"
+                        id="filter1"
+                        label="목포해양경찰서"
+                      />
+                    </div>
+                  </Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>
            <Button
@@ -250,20 +341,61 @@ const BottomTable04 = ({ isShow, setIsShow, windowWidth }: BottomTableProps) => 
         >
           해경자산 필터
         </Dropdown.Toggle>
-
-
           <Dropdown.Menu>
-            <Dropdown.Item onClick={() => console.log('개인보호창구')}>
-              개인보호창구
+            <Dropdown.Item  onClick={(e) => e.stopPropagation()}>
+            <div
+                onClick={(e) => e.stopPropagation()}
+              >
+                <Form.Check
+                  type="checkbox"
+                  id="filter1"
+                  label="오일펜스"
+                />
+              </div>
             </Dropdown.Item>
-            <Dropdown.Item onClick={() => console.log('고압세척기')}>
-              고압세척기
+            <Dropdown.Item onClick={(e) => e.stopPropagation()}>
+              <div
+                onClick={(e) => e.stopPropagation()}
+              >
+                <Form.Check
+                  type="checkbox"
+                  id="filter2"
+                  label="부대자재"
+                />
+              </div>
             </Dropdown.Item>
-             <Dropdown.Item onClick={() => console.log('공기압축기')}>
-              공기압축기
+             <Dropdown.Item onClick={(e) => e.stopPropagation()}>
+              <div
+                onClick={(e) => e.stopPropagation()}
+              >
+                <Form.Check
+                  type="checkbox"
+                  id="filter3"
+                  label="저장용기"
+                />
+              </div>
             </Dropdown.Item>
-            <Dropdown.Item onClick={() => console.log('나노뜰채')}>
-              나노뜰채
+            <Dropdown.Item onClick={(e) => e.stopPropagation()}>
+              <div
+                onClick={(e) => e.stopPropagation()}
+              >
+                <Form.Check
+                  type="checkbox"
+                  id="filter4"
+                  label="유흡착재"
+                />
+              </div>
+            </Dropdown.Item>
+            <Dropdown.Item onClick={(e) => e.stopPropagation()}>
+              <div
+                onClick={(e) => e.stopPropagation()}
+              >
+                <Form.Check
+                  type="checkbox"
+                  id="filter5"
+                  label="유처리재"
+                />
+              </div>
             </Dropdown.Item>
           </Dropdown.Menu>
         </Dropdown>
@@ -276,19 +408,50 @@ const BottomTable04 = ({ isShow, setIsShow, windowWidth }: BottomTableProps) => 
           관할해경 필터
         </Dropdown.Toggle>
 
-
           <Dropdown.Menu>
-            <Dropdown.Item onClick={() => console.log('개인보호창구')}>
-              강릉해양경찰서
+            <Dropdown.Item  onClick={(e) => e.stopPropagation()}>
+            <div
+                onClick={(e) => e.stopPropagation()}
+              >
+                <Form.Check
+                  type="checkbox"
+                  id="filter1"
+                  label="강릉해양경찰서"
+                />
+              </div>
             </Dropdown.Item>
-            <Dropdown.Item onClick={() => console.log('고압세척기')}>
-              군산해양경찰서
+             <Dropdown.Item  onClick={(e) => e.stopPropagation()}>
+            <div
+                onClick={(e) => e.stopPropagation()}
+              >
+                <Form.Check
+                  type="checkbox"
+                  id="filter1"
+                  label="군산해양경찰서"
+                />
+              </div>
             </Dropdown.Item>
-             <Dropdown.Item onClick={() => console.log('공기압축기')}>
-              동해해양경찰서
+              <Dropdown.Item  onClick={(e) => e.stopPropagation()}>
+            <div
+                onClick={(e) => e.stopPropagation()}
+              >
+                <Form.Check
+                  type="checkbox"
+                  id="filter1"
+                  label="동해해양경찰서"
+                />
+              </div>
             </Dropdown.Item>
-            <Dropdown.Item onClick={() => console.log('공기압축기')}>
-              목포해양경찰서
+             <Dropdown.Item  onClick={(e) => e.stopPropagation()}>
+            <div
+                onClick={(e) => e.stopPropagation()}
+              >
+                <Form.Check
+                  type="checkbox"
+                  id="filter1"
+                  label="목포해양경찰서"
+                />
+              </div>
             </Dropdown.Item>
           </Dropdown.Menu>
         </Dropdown>

@@ -1256,7 +1256,7 @@ body {
   width: 100%;
   height: 600px;
   background-color: #fff;
-  z-index: 1060;
+  z-index: 1050;
   box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
   padding: 0 !important;
   border-top-left-radius: 16px;
@@ -1904,8 +1904,29 @@ body {
   .dropdown-menu {
     font-size: 14px;
     border-radius: 4px;
-    // box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    height: 124px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    height: 180px;
+  }
+}
+
+.police-custom-dropdown-02 {
+  .dropdown-toggle {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  color: #000;    
+  border: 1px solid #000;   
+  padding: 4px 12px; 
+  font-size: 14px; 
+  border-radius: 4px;  
+  height: 34px;
+  }
+
+  .dropdown-menu {
+    font-size: 14px;
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    height: 180px;
   }
 }
 
@@ -2014,6 +2035,36 @@ body {
   }
 }
 
+.modal584-line-02 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 8px 8px 24px;
+  margin-bottom: 8px;
+  background: #fff;
+
+  &-text {
+    flex: 0 0 120px;
+    font-weight: 500;
+    font-size: 14px;
+
+    .required-mark {
+      color: #ff0000;
+      margin-left: 6px;
+    }
+  }
+
+  &-sub {
+    flex: 1;
+
+    .form-control,
+    .form-select,
+    textarea {
+      width: 160px;
+    }
+  }
+}
+
 .modal584-label {
   width: 120px;
   font-weight: 500;
@@ -2102,16 +2153,94 @@ body {
 .modal584-dialog.mobile-view {
   max-width: 95%;
   width: 95%;
+  position: fixed !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
 }
 
 .modal584-content {
-  padding: 0px; /* 내부 여백 조정 */
+  padding: 0px;
   margin: 4px;
 }
 
 .modal584-content {
   font-size: 14px;
 }
+
+
+/* ✅ 모바일 전용 스타일 */
+@media (max-width: 767px) {
+  .mobile-body {
+    padding: 16px;
+    background: #fff;
+  }
+
+  .mobile-line {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .mobile-label {
+    width: 100px;
+    min-width: 100px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #222;
+    padding-left: 4px;
+  }
+
+  .mobile-select,
+  .mobile-input,
+  .mobile-textarea {
+    flex: 1;
+    font-size: 14px;
+    padding: 10px 12px;
+    border: 1px solid #000;
+    border-radius: 8px;
+    background-color: #fff;
+    box-sizing: border-box;
+
+    &:focus {
+      border-color: #007bff;
+      outline: none;
+      box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.15);
+    }
+  }
+
+  .mobile-textarea {
+    height: auto;
+    resize: none;
+  }
+
+  .mobile-file-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    .file-name-input {
+      height: 38px;
+      padding: 0 8px;
+      border: 1px solid #000;
+      border-radius: 6px;
+      margin-bottom: 4px;
+    }
+
+    .file-select-btn {
+      background: #1C2D6F;
+      color: #fff;
+      border-radius: 6px;
+      padding: 10px 0;
+      font-size: 14px;
+      cursor: pointer;
+
+      &:hover {
+        background: #16245A;
+      }
+    }
+  }
+}
+
 
 @media (max-width: 768px) {
   .modal584-dialog.mobile-view .modal584-content {
