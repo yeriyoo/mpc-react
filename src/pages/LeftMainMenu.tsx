@@ -4,7 +4,7 @@ import Icon from '@mdi/react';
 import { mdiChevronDown } from '@mdi/js';
 import MapWeatherIcon from './MapWeatherIcon'; 
 
-
+import predictionIcon from '/public/assets/prediction.svg';
 
 interface LeftMainMenuProps {
   handleOpenBottomTable: () => void;
@@ -150,7 +150,7 @@ const renderTree = (items: TreeItem[], level = 0) =>
         className="nav_menu-box custom-prediction-dropdown"
         title={
           <span>
-            <img src="/mpc-react/assets/prediction.svg" alt="예측" className="navbar__menu-icon" />
+            <img src={predictionIcon} alt="예측" className="navbar__menu-icon" />
             <span className="navbar__menu-title--bold">예측</span>
             <Icon path={mdiChevronDown} size={1} />
           </span>
