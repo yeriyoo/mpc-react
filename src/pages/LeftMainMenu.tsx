@@ -86,12 +86,12 @@ const dropdownRef = useRef<HTMLDivElement>(null);
   };
 
   const fixedPositions = [
-  { top: '100%', left: '-75%', transform: 'translate(-50%, -50%)' },
-  { top: '120%', left: '-70%', transform: 'translate(-50%, -50%)' },
-  { top: '128%', left: '-78%', transform: 'translate(-50%, -50%)' },
-  { top: '160%', left: '-80%', transform: 'translate(-50%, -50%)' },
-  { top: '166%', left: '-115%', transform: 'translate(-50%, -50%)' },
-  { top: '172%', left: '-145%', transform: 'translate(-50%, -50%)' },
+  { top: '100%', left: '8%', transform: 'translate(-50%, -50%)' },
+  { top: '120%', left: '15%', transform: 'translate(-50%, -50%)' },
+  { top: '128%', left: '18%', transform: 'translate(-50%, -50%)' },
+  { top: '160%', left: '18%', transform: 'translate(-50%, -50%)' },
+  { top: '200%', left: '13%', transform: 'translate(-50%, -50%)' },
+  { top: '208%', left: '7%', transform: 'translate(-50%, -50%)' },
   ];
 
   // 체크박스 클릭 시 아이콘 표시
@@ -288,7 +288,9 @@ const renderTree = (items: TreeItem[], level = 0) =>
 
     {/* 지도 영역 */}
     <div className="map-container" style={{ position: 'relative', width: '100%', height: '500px', marginTop: '16px' }}>
-      {mapIcons.length > 0 && <MapWeatherIcon positions={mapIcons} mapImage="/assets/default-map.jpg"/>}
+      <MapWeatherIcon
+      positions={mapIcons}
+    />
     </div>
     </>
   );
