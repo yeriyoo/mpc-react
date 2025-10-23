@@ -134,7 +134,7 @@ const Modal01 = ({ show, onHide, title = '사고정보 입력' }: Modal01Props) 
       show={show}
       onHide={onHide}
       centered={true}
-      dialogClassName={`modal584-dialog ${!isAccordionView ? 'mobile-view' : ''}`}
+      dialogClassName={`modal584-dialog-02 ${!isAccordionView ? 'mobile-view' : ''}`}
       contentClassName="modal584-content"
       className="modal584-wrapper"
     >

@@ -1543,8 +1543,7 @@ body {
 .modal584-wrapper {
   z-index: 9999; /* 화면에서 가장 위 */
 }
-
-.modal584-dialog {
+.modal584-dialog-02 {
   position: fixed;   
   top: 0%;       
   left: 35%; 
@@ -1552,6 +1551,7 @@ body {
   width: auto;  
   max-width: 90%; 
 }
+
 
 .modal584-content {
   height: auto;
@@ -2148,6 +2148,11 @@ body {
 .modal584-dialog {
   max-width: 800px;
   width: 90%;
+  position: fixed;   
+  top: 0%;       
+  left: 35%; 
+  margin: 0;   
+  width: auto;  
 }
 
 .modal584-dialog.mobile-view {
