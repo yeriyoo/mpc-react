@@ -116,7 +116,13 @@ const BottomAccordionList = ({
 
           <div className="accordion-filter-group">
             <InputGroup size="sm" className="me-2" style={{ width: '200px' }}>
-              <Form.Control placeholder="검색..." />
+              <Form.Control
+              id="search-input"
+              name="search"
+              type="text" 
+              placeholder="검색..."
+              aria-label="검색"
+            />
               <Button variant="outline-secondary">
                 <Icon path={mdiMagnify} size={1} />
               </Button>
@@ -134,6 +140,7 @@ const BottomAccordionList = ({
                 <Form.Check
                   type="checkbox"
                   id="filter1"
+                  name="filter1" 
                   label="오일펜스"
                 />
               </div>
@@ -145,6 +152,7 @@ const BottomAccordionList = ({
                 <Form.Check
                   type="checkbox"
                   id="filter2"
+                  name="filter2"
                   label="부대자재"
                 />
               </div>
@@ -156,6 +164,7 @@ const BottomAccordionList = ({
                 <Form.Check
                   type="checkbox"
                   id="filter3"
+                  name="filter3"
                   label="저장용기"
                 />
               </div>
@@ -167,6 +176,7 @@ const BottomAccordionList = ({
                 <Form.Check
                   type="checkbox"
                   id="filter4"
+                  name="filter4"
                   label="유흡착재"
                 />
               </div>
@@ -178,6 +188,7 @@ const BottomAccordionList = ({
                 <Form.Check
                   type="checkbox"
                   id="filter5"
+                  name="filter5"
                   label="유처리재"
                 />
               </div>
@@ -196,7 +207,8 @@ const BottomAccordionList = ({
                     >
                       <Form.Check
                         type="checkbox"
-                        id="filter1"
+                        id="filter01"
+                        name="filter01"
                         label="강릉해양경찰서"
                       />
                     </div>
@@ -207,7 +219,8 @@ const BottomAccordionList = ({
                     >
                       <Form.Check
                         type="checkbox"
-                        id="filter1"
+                        id="filter02"
+                        name="filter02"
                         label="군산해양경찰서"
                       />
                     </div>
@@ -218,7 +231,8 @@ const BottomAccordionList = ({
                     >
                       <Form.Check
                         type="checkbox"
-                        id="filter1"
+                        id="filter03"
+                        name="filter03"
                         label="동해해양경찰서"
                       />
                     </div>
@@ -229,7 +243,8 @@ const BottomAccordionList = ({
                     >
                       <Form.Check
                         type="checkbox"
-                        id="filter1"
+                        id="filter04"
+                        name="filter04"
                         label="목포해양경찰서"
                       />
                     </div>
@@ -303,7 +318,12 @@ const BottomTable04 = ({ isShow, setIsShow, windowWidth }: BottomTableProps) => 
       <div className="custom-top-bar d-flex justify-content-between align-items-center mb-2">
         <div className="d-flex align-items-center">
           <span className="me-2 fw-bold">총 7건</span>
-          <Form.Select size="sm" style={{ width: '100px', height: '34px' }}>
+          <Form.Select
+          id="items-per-page" 
+          name="itemsPerPage"
+          size="sm"
+          style={{ width: '100px', height: '34px' }}
+        >
             <option>7건</option>
             <option>14건</option>
             <option>28건</option>
@@ -325,6 +345,8 @@ const BottomTable04 = ({ isShow, setIsShow, windowWidth }: BottomTableProps) => 
         {/* 상황전파 → 검색창 */}
         <InputGroup size="sm" className="me-2">
           <Form.Control
+          id="police-search-input"
+          name="police-search"
           style={{
           border: '1px solid #000'
           }}
@@ -348,7 +370,8 @@ const BottomTable04 = ({ isShow, setIsShow, windowWidth }: BottomTableProps) => 
               >
                 <Form.Check
                   type="checkbox"
-                  id="filter1"
+                  id="filter001"
+                  name="filter001"
                   label="오일펜스"
                 />
               </div>
@@ -359,7 +382,8 @@ const BottomTable04 = ({ isShow, setIsShow, windowWidth }: BottomTableProps) => 
               >
                 <Form.Check
                   type="checkbox"
-                  id="filter2"
+                  id="filter002"
+                  name="filter002"
                   label="부대자재"
                 />
               </div>
@@ -370,7 +394,8 @@ const BottomTable04 = ({ isShow, setIsShow, windowWidth }: BottomTableProps) => 
               >
                 <Form.Check
                   type="checkbox"
-                  id="filter3"
+                  id="filter003"
+                  name="filter003"
                   label="저장용기"
                 />
               </div>
@@ -381,7 +406,8 @@ const BottomTable04 = ({ isShow, setIsShow, windowWidth }: BottomTableProps) => 
               >
                 <Form.Check
                   type="checkbox"
-                  id="filter4"
+                  id="filter004"
+                  name="filter004"
                   label="유흡착재"
                 />
               </div>
@@ -392,7 +418,8 @@ const BottomTable04 = ({ isShow, setIsShow, windowWidth }: BottomTableProps) => 
               >
                 <Form.Check
                   type="checkbox"
-                  id="filter5"
+                  id="filter005"
+                  name="filter005"
                   label="유처리재"
                 />
               </div>
@@ -415,7 +442,8 @@ const BottomTable04 = ({ isShow, setIsShow, windowWidth }: BottomTableProps) => 
               >
                 <Form.Check
                   type="checkbox"
-                  id="filter1"
+                  id="filter00001"
+                  name="filter00001"
                   label="강릉해양경찰서"
                 />
               </div>
@@ -426,7 +454,8 @@ const BottomTable04 = ({ isShow, setIsShow, windowWidth }: BottomTableProps) => 
               >
                 <Form.Check
                   type="checkbox"
-                  id="filter1"
+                  id="filter00002"
+                  name="filter00002"
                   label="군산해양경찰서"
                 />
               </div>
@@ -437,7 +466,8 @@ const BottomTable04 = ({ isShow, setIsShow, windowWidth }: BottomTableProps) => 
               >
                 <Form.Check
                   type="checkbox"
-                  id="filter1"
+                  id="filter00003"
+                  name="filter00003"
                   label="동해해양경찰서"
                 />
               </div>
@@ -448,7 +478,8 @@ const BottomTable04 = ({ isShow, setIsShow, windowWidth }: BottomTableProps) => 
               >
                 <Form.Check
                   type="checkbox"
-                  id="filter1"
+                  id="filter00004"
+                  name="filter00004"
                   label="목포해양경찰서"
                 />
               </div>

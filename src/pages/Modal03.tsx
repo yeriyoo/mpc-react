@@ -35,12 +35,13 @@ const [footerToggle, setFooterToggle] = useState(false);
             id="header-toggle"
             checked={headerToggle}
             onChange={() => setHeaderToggle(!headerToggle)}
-            label="" 
+            label=""
+            aria-label="헤더 토글"
             className="ms-2"
           />
           </div>
           </Modal.Title>  
-        <Button variant="link" className="p-0 border-0" onClick={onHide}>
+        <Button variant="link" className="p-0 border-0" onClick={onHide} aria-label="닫기">
           <Icon path={mdiClose} size={1} color="#fff"/>
         </Button>
       </Modal.Header>
@@ -132,6 +133,7 @@ const [footerToggle, setFooterToggle] = useState(false);
             id="footer-toggle"
             checked={footerToggle}
             onChange={() => setFooterToggle(!footerToggle)}
+            label="푸터 토글"
           />
         </div>
       </Modal.Body>

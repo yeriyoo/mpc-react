@@ -25,7 +25,7 @@ const RightQuickMenu: React.FC<RightQuickMenuProps> = ({ mapImage, setMapImage, 
   return (
     <>
     <Dropdown className="d-inline mx-2" autoClose={false}>
-      <Dropdown.Toggle id="dropdown-autoclose-outside" className="navbar__toggle">
+      <Dropdown.Toggle id="dropdown-autoclose-outside" className="navbar__toggle" aria-label="퀵메뉴">
         <Icon path={mdiMenu} size={1.2} color="#fff" />
       </Dropdown.Toggle>
 

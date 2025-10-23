@@ -5,6 +5,8 @@ html {
 body {
   font-family: 'NanumSquare', sans-serif;
   letter-spacing: 0;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 //로그인//
@@ -1246,7 +1248,6 @@ body {
 
   &.scroll-x {
     overflow-x: auto; 
-    -webkit-overflow-scrolling: touch; 
   }
 }
 

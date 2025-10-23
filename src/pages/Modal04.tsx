@@ -27,7 +27,7 @@ const Modal04 = ({ show, onHide }: Modal04Props) => {
         <div className="modal04-header-left">
           <span className="modal04-title">레이어</span>
         </div>
-        <Button variant="link" className="modal04-close-btn" onClick={onHide}>
+        <Button variant="link" className="modal04-close-btn" onClick={onHide} aria-label="닫기">
           <Icon path={mdiClose} size={1} />
         </Button>
       </Modal.Header>
@@ -70,6 +70,7 @@ const Modal04 = ({ show, onHide }: Modal04Props) => {
                     <Form.Check 
                     type="switch"
                     id="bluecarbon"
+                    label="블루카본 활성화"
                     />
                 </div>
                 <div className="modal04-accordion-box">
@@ -77,6 +78,7 @@ const Modal04 = ({ show, onHide }: Modal04Props) => {
                     <Form.Check 
                     type="switch"
                     id="bluecarbon"
+                    label="블루카본 활성화"
                     />
                 </div>
                 </div>
@@ -98,6 +100,7 @@ const Modal04 = ({ show, onHide }: Modal04Props) => {
                     <Form.Check 
                     type="switch"
                     id="bluecarbon"
+                    label="블루카본 활성화"
                     />
                 </div>
                 <div className="modal04-accordion-box">
@@ -105,6 +108,7 @@ const Modal04 = ({ show, onHide }: Modal04Props) => {
                     <Form.Check 
                     type="switch"
                     id="bluecarbon"
+                    label="블루카본 활성화"
                     />
                 </div>
                 </div>
@@ -126,6 +130,7 @@ const Modal04 = ({ show, onHide }: Modal04Props) => {
                     <Form.Check 
                     type="switch"
                     id="bluecarbon"
+                    label="블루카본 활성화"
                     />
                 </div>
                 <div className="modal04-accordion-box">
@@ -133,6 +138,7 @@ const Modal04 = ({ show, onHide }: Modal04Props) => {
                     <Form.Check 
                     type="switch"
                     id="bluecarbon"
+                    label="블루카본 활성화"
                     />
                 </div>
                 </div>
@@ -154,6 +160,7 @@ const Modal04 = ({ show, onHide }: Modal04Props) => {
                     <Form.Check 
                     type="switch"
                     id="bluecarbon"
+                    label="블루카본 활성화"
                     />
                 </div>
                 <div className="modal04-accordion-box">
@@ -161,6 +168,7 @@ const Modal04 = ({ show, onHide }: Modal04Props) => {
                     <Form.Check 
                     type="switch"
                     id="bluecarbon"
+                    label="블루카본 활성화"
                     />
                 </div>
                 </div>
@@ -182,6 +190,7 @@ const Modal04 = ({ show, onHide }: Modal04Props) => {
                     <Form.Check 
                     type="switch"
                     id="bluecarbon"
+                    label="블루카본 활성화"
                     />
                 </div>
                 <div className="modal04-accordion-box">
@@ -189,6 +198,7 @@ const Modal04 = ({ show, onHide }: Modal04Props) => {
                     <Form.Check 
                     type="switch"
                     id="bluecarbon"
+                    label="블루카본 활성화"
                     />
                 </div>
                 </div>
@@ -210,6 +220,7 @@ const Modal04 = ({ show, onHide }: Modal04Props) => {
                     <Form.Check 
                     type="switch"
                     id="bluecarbon"
+                    label="블루카본 활성화"
                     />
                 </div>
                 <div className="modal04-accordion-box">
@@ -217,6 +228,7 @@ const Modal04 = ({ show, onHide }: Modal04Props) => {
                     <Form.Check 
                     type="switch"
                     id="bluecarbon"
+                    label="블루카본 활성화"
                     />
                 </div>
                 </div>
@@ -238,6 +250,7 @@ const Modal04 = ({ show, onHide }: Modal04Props) => {
                     <Form.Check 
                     type="switch"
                     id="bluecarbon"
+                    label="블루카본 활성화"
                     />
                 </div>
                 <div className="modal04-accordion-box">
@@ -245,6 +258,7 @@ const Modal04 = ({ show, onHide }: Modal04Props) => {
                     <Form.Check 
                     type="switch"
                     id="bluecarbon"
+                    label="블루카본 활성화"
                     />
                 </div>
                 </div>
@@ -266,6 +280,7 @@ const Modal04 = ({ show, onHide }: Modal04Props) => {
                     <Form.Check 
                     type="switch"
                     id="bluecarbon"
+                    label="블루카본 활성화"
                     />
                 </div>
                 <div className="modal04-accordion-box">
@@ -273,6 +288,7 @@ const Modal04 = ({ show, onHide }: Modal04Props) => {
                     <Form.Check 
                     type="switch"
                     id="bluecarbon"
+                    label="블루카본 활성화"
                     />
                 </div>
                 </div>
@@ -294,6 +310,7 @@ const Modal04 = ({ show, onHide }: Modal04Props) => {
                     <Form.Check 
                     type="switch"
                     id="bluecarbon"
+                    label="블루카본 활성화"
                     />
                 </div>
                 <div className="modal04-accordion-box">
@@ -301,6 +318,7 @@ const Modal04 = ({ show, onHide }: Modal04Props) => {
                     <Form.Check 
                     type="switch"
                     id="bluecarbon"
+                    label="블루카본 활성화"
                     />
                 </div>
                 </div>
@@ -322,6 +340,7 @@ const Modal04 = ({ show, onHide }: Modal04Props) => {
                     <Form.Check 
                     type="switch"
                     id="bluecarbon"
+                    label="블루카본 활성화"
                     />
                 </div>
                 <div className="modal04-accordion-box">
@@ -329,6 +348,7 @@ const Modal04 = ({ show, onHide }: Modal04Props) => {
                     <Form.Check 
                     type="switch"
                     id="bluecarbon"
+                    label="블루카본 활성화"
                     />
                 </div>
                 </div>

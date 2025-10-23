@@ -57,7 +57,11 @@ const InterPage375 = () => {
             <div className="navbar-text">해양환경 위기대응 통합지원 시스템</div>
 
             <div className="icon-group-wrapper">
-              <Button className="search-button" variant="light">
+              <Button
+                className="search-button"
+                variant="light"
+                aria-label="검색"
+              >
                 <Icon path={mdiMagnify} size={1.2} />
               </Button>
             </div>

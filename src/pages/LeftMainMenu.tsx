@@ -2,11 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { Nav, NavDropdown } from 'react-bootstrap';
 import Icon from '@mdi/react';
 import { mdiChevronDown } from '@mdi/js';
-import MapIcon from './MapIcon';
 import MapWeatherIcon from './MapWeatherIcon'; 
-
-
-import Icon01 from '/mpc-react/assets/search.svg'; 
 
 
 

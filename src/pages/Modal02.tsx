@@ -49,7 +49,11 @@ const Modal02 = ({ show, onHide, title = '공지사항 작성' }: Modal02Props) 
           {/* 1. 서비스구분 드롭다운 */}
           <div className="modal584-line-02 d-flex align-items-center mb-3">
             <div className="modal584-label">서비스구분</div>
-            <Form.Select className="modal584-select">
+            <Form.Select
+              id="platform-select"
+              name="platform"
+              className="modal584-select"
+            >
               <option>국토정보플랫폼</option>
               <option>국토정보플랫폼</option>
               <option>국토정보플랫폼</option>
@@ -59,7 +63,11 @@ const Modal02 = ({ show, onHide, title = '공지사항 작성' }: Modal02Props) 
           {/* 2. 담당부서 드롭다운 */}
           <div className="modal584-line-02 d-flex align-items-center mb-3">
             <div className="modal584-label">담당부서</div>
-            <Form.Select className="modal584-select">
+            <Form.Select
+              id="department-select"
+              name="department"
+              className="modal584-select"
+            >
               <option>국토조사과</option>
               <option>해양팀</option>
               <option>환경팀</option>
@@ -69,13 +77,26 @@ const Modal02 = ({ show, onHide, title = '공지사항 작성' }: Modal02Props) 
           {/* 3. 제목 입력란 */}
           <div className="modal584-line-02 d-flex align-items-center mb-3">
             <div className="modal584-label">제목</div>
-            <Form.Control type="text" className="modal584-input" placeholder="제목 입력" />
+            <Form.Control
+            type="text"
+            id="title-input"
+            name="title"
+            className="modal584-input"
+            placeholder="제목 입력"
+          />
           </div>
 
           {/* 4. 내용 입력란 */}
           <div className="modal584-line-02 d-flex align-items-start mb-3">
             <div className="modal584-label" style={{ marginTop: '4px' }}>내용</div>
-            <Form.Control as="textarea" className="modal584-textarea" rows={4} placeholder="내용 입력" />
+            <Form.Control
+            as="textarea"
+            id="content-textarea"
+            name="content"
+            className="modal584-textarea"
+            rows={4}
+            placeholder="내용 입력"
+          />
           </div>
 
           {/* 5. 파일 업로드 */}
@@ -114,7 +135,11 @@ const Modal02 = ({ show, onHide, title = '공지사항 작성' }: Modal02Props) 
       {/* 1. 서비스구분 */}
       <div className="mobile-line d-flex align-items-center mb-3">
         <div className="mobile-label">서비스구분</div>
-        <Form.Select className="mobile-select flex-grow-1">
+        <Form.Select
+          id="platform-select-mb"
+          name="platform-mb"
+          className="mobile-select flex-grow-1"
+        >
           <option>국토정보플랫폼</option>
           <option>국토정보플랫폼</option>
           <option>국토정보플랫폼</option>
@@ -124,7 +149,11 @@ const Modal02 = ({ show, onHide, title = '공지사항 작성' }: Modal02Props) 
       {/* 2. 담당부서 */}
       <div className="mobile-line d-flex align-items-center mb-3">
         <div className="mobile-label">담당부서</div>
-        <Form.Select className="mobile-select flex-grow-1">
+        <Form.Select
+          id="department-select-mb"
+          name="department-mb"
+          className="mobile-select flex-grow-1"
+        >   
           <option>국토조사과</option>
           <option>해양팀</option>
           <option>환경팀</option>
@@ -136,6 +165,8 @@ const Modal02 = ({ show, onHide, title = '공지사항 작성' }: Modal02Props) 
         <div className="mobile-label">제목</div>
         <Form.Control
           type="text"
+          id="mobile-input-title-mb"
+          name="mobile-input-title-mb"
           className="mobile-input flex-grow-1"
           placeholder="제목 입력"
         />
@@ -144,12 +175,14 @@ const Modal02 = ({ show, onHide, title = '공지사항 작성' }: Modal02Props) 
       {/* 4. 내용 */}
       <div className="mobile-line d-flex align-items-start mb-3">
         <div className="mobile-label" style={{ marginTop: '4px' }}>내용</div>
-        <Form.Control
-          as="textarea"
-          className="mobile-textarea flex-grow-1"
-          rows={4}
-          placeholder="내용 입력"
-        />
+      <Form.Control
+        as="textarea"
+        id="mobile-textarea-content-mb"
+        name="mobile-textarea-content-mb"
+        className="mobile-textarea flex-grow-1"
+        rows={4}
+        placeholder="내용 입력"
+      />
       </div>
 
       {/* 5. 첨부파일 */}

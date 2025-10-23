@@ -219,7 +219,12 @@ const BottomTable01 = ({ isShow, setIsShow, windowWidth }: BottomTableProps) => 
       <div className="custom-top-bar d-flex justify-content-between align-items-center mb-2">
         <div className="d-flex align-items-center">
           <span className="me-2 fw-bold">총 7건</span>
-          <Form.Select size="sm" style={{ width: '100px', height: '34px' }}>
+          <Form.Select
+          id="items-per-page"
+          name="itemsPerPage" 
+          size="sm"
+          style={{ width: '100px', height: '34px' }}
+        >
             <option>7건</option>
             <option>14건</option>
             <option>28건</option>

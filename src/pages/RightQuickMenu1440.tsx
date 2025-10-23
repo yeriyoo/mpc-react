@@ -30,7 +30,7 @@ const RightQuickMenu1440: React.FC<RightQuickMenu1440Props> = ({ mapImage, setMa
       autoClose={false}
       onToggle={(isOpen) => setIsProfileDropdownOpen(isOpen)}
     >
-      <Dropdown.Toggle id="dropdown-autoclose-outside" className="navbar__toggle">
+      <Dropdown.Toggle id="dropdown-autoclose-outside" className="navbar__toggle" aria-label="퀵메뉴">
         <Icon
           path={mdiChevronDown}
           size={1.2}

@@ -67,6 +67,7 @@ const InterPage768: React.FC<InterPage768Props> = ({
             <Button
               variant="light"
               className="hamburger-button ms-2 d-lg-none"
+              aria-label="메뉴 열기"
               onClick={() => setIsSlideMenuOpen(true)}
             >
               <Icon path={mdiMenu} size={1.3} />
