@@ -15,7 +15,7 @@ type RightQuickMenuProps = {
 const RightQuickMenu: React.FC<RightQuickMenuProps> = ({ mapImage, setMapImage, defaultMap }) => {
   const [showModal03, setShowModal03] = useState(false);
   const [showModal04, setShowModal04] = useState(false);
-  const s57Map = '/mpc-react/assets/s-57-map.jpg';
+  const s57Map = '/mpc-react/assets/s-57-map-1440.jpg';
 
  const handleS57Click = () => {
   setMapImage(mapImage === s57Map ? defaultMap : s57Map);

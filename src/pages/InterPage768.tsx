@@ -32,8 +32,8 @@ const InterPage768: React.FC<InterPage768Props> = ({
   const [isSlideMenuOpen, setIsSlideMenuOpen] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [mapIcons, setMapIcons] = useState<{ top: string; left: string; label?: string }[]>([]);
-  const [mapImage, setMapImage] = useState('/mpc-react/assets/default-map.jpg');
-  const defaultMap = '/mpc-react/assets/default-map.jpg';
+  const [mapImage, setMapImage] = useState('/mpc-react/assets/map_03.jpg');
+  const defaultMap = '/mpc-react/assets/map_03.jpg';
 
 
   useEffect(() => {
@@ -137,30 +137,11 @@ const InterPage768: React.FC<InterPage768Props> = ({
           />
           )}
 
-          {/* 지도 영역 */}
-          <div className="map-container"
-            style={{
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center', 
-            width: '100%',
-            height: '100vh',
-            overflow: 'hidden',
-          }}
-          >
-
-          <img
-          src={mapImage}
-          alt="map"
-          style={{
-            minWidth: '100%',
-            minHeight: '100%',
-            objectFit: 'cover', 
-            objectPosition: 'center',
-          }}
-        />
-            <MapWeatherIcon positions={mapIcons} mapImage={mapImage} />
-          </div>
+         
+      {/* 아이콘 레이어 */}
+      <div className="map-container">
+        <MapWeatherIcon positions={mapIcons} mapImage={mapImage} />
+      </div>
     </div>
   );
 };

@@ -87,11 +87,7 @@ const dropdownRef = useRef<HTMLDivElement>(null);
 
   const fixedPositions = [
   { top: '100%', left: '8%', transform: 'translate(-50%, -50%)' },
-  { top: '120%', left: '15%', transform: 'translate(-50%, -50%)' },
-  { top: '128%', left: '18%', transform: 'translate(-50%, -50%)' },
-  { top: '160%', left: '18%', transform: 'translate(-50%, -50%)' },
-  { top: '200%', left: '13%', transform: 'translate(-50%, -50%)' },
-  { top: '208%', left: '7%', transform: 'translate(-50%, -50%)' },
+  { top: '200%', left: '15%', transform: 'translate(-50%, -50%)' },
   ];
 
   // 체크박스 클릭 시 아이콘 표시

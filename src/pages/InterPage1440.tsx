@@ -31,7 +31,7 @@ const InterPage1440: React.FC<InterPage1440Props> = ({
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [isSlideMenuOpen, setIsSlideMenuOpen] = useState(false);
   const [mapIcons, setMapIcons] = useState<{ top: string; left: string; label?: string }[]>([]);
-  const [mapImage, setMapImage] = useState('/mpc-react/assets/default-map.jpg');
+  const [mapImage, setMapImage] = useState('/mpc-react/assets/map_03.jpg');
   
 
 
@@ -105,7 +105,7 @@ const InterPage1440: React.FC<InterPage1440Props> = ({
           <RightTopMenu
           mapImage={mapImage}
           setMapImage={setMapImage}
-          defaultMap="/mpc-react/assets/default-map.jpg"
+          defaultMap="/mpc-react/assets/map_03.jpg"
           />
         </Container>
 
@@ -166,30 +166,9 @@ const InterPage1440: React.FC<InterPage1440Props> = ({
               )}
 
       </Navbar>
-      {/* 지도 영역 */}
-      <div className="map-container"
 
-        style={{
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center', 
-          width: '100%',
-          height: '100vh',
-          overflow: 'hidden', 
-          
-        }}
-      >
-
-      <img
-      src={mapImage}
-      alt="map"
-      style={{
-        minWidth: '100%',
-        minHeight: '100%',
-        objectFit: 'cover',  
-        objectPosition: 'center',
-      }}
-  />
+      {/* 아이콘 레이어 */}
+      <div className="map-container">
         <MapWeatherIcon positions={mapIcons} mapImage={mapImage} />
       </div>
     </div>

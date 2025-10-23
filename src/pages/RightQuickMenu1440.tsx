@@ -9,7 +9,7 @@ import Modal04 from './Modal04';
 
 type RightQuickMenu1440Props = {
   mapImage: string;
-  setMapImage: React.Dispatch<React.SetStateAction<string>>; // 부모에서 지도 상태 변경
+  setMapImage: React.Dispatch<React.SetStateAction<string>>;
   defaultMap: string; 
 };
 
@@ -17,7 +17,7 @@ const RightQuickMenu1440: React.FC<RightQuickMenu1440Props> = ({ mapImage, setMa
   const [isProfileDropdownOpen, setIsProfileDropdownOpen] = useState(false);
   const [showModal03, setShowModal03] = useState(false);
   const [showModal04, setShowModal04] = useState(false);
-  const s57Map = '/mpc-react/assets/s-57-map-1440.jpg';
+  const s57Map = '/mpc-react/assets/s-57-map-768.jpg';
 
    const handleS57Click = () => {
   setMapImage(mapImage === s57Map ? defaultMap : s57Map);
