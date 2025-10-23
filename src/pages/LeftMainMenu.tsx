@@ -5,6 +5,11 @@ import { mdiChevronDown } from '@mdi/js';
 import MapWeatherIcon from './MapWeatherIcon'; 
 
 import predictionIcon from '/public/assets/prediction.svg';
+import searchIcon from '/public/assets/search.svg';
+import weatherIcon from '/public/assets/weather.svg';
+import shipIcon from '/public/assets/ship.svg';
+import boardIcon from 'public/assets/board.svg';
+import pollutionIcon from '/assets/pollution.svg';
 
 interface LeftMainMenuProps {
   handleOpenBottomTable: () => void;
@@ -141,7 +146,7 @@ const renderTree = (items: TreeItem[], level = 0) =>
           setMapIcons([]); 
         }}
       >
-        <img src="/mpc-react/assets/search.svg" alt="사고조회" className="navbar__menu-icon" />
+        <img src={searchIcon} alt="사고조회" className="navbar__menu-icon" />
         <span>사고조회</span>
       </Nav.Link>
 
@@ -215,7 +220,7 @@ const renderTree = (items: TreeItem[], level = 0) =>
       className="nav_menu-box weather-dropdown"
       title={
         <span>
-          <img src="/mpc-react/assets/weather.svg" alt="기상정보" className="navbar__menu-icon" />
+          <img src={weatherIcon} alt="기상정보" className="navbar__menu-icon" />
           <span className="navbar__menu-title--bold">기상정보</span>
         </span>
       }
@@ -234,7 +239,7 @@ const renderTree = (items: TreeItem[], level = 0) =>
           setMapIcons([]);
         }}
       >
-        <img src="/mpc-react/assets/ship.svg" alt="해경자산" className="navbar__menu-icon" />
+        <img src={shipIcon} alt="해경자산" className="navbar__menu-icon" />
         <span>해경자산</span>
       </Nav.Link>
 
@@ -242,7 +247,7 @@ const renderTree = (items: TreeItem[], level = 0) =>
         className="nav_menu-box custom-prediction-dropdown"
         title={
           <span>
-            <img src="/mpc-react/assets/board.svg" alt="게시판" className="navbar__menu-icon" />
+            <img src={boardIcon} alt="게시판" className="navbar__menu-icon" />
             <span className="navbar__menu-title--bold">게시판</span>
             <Icon path={mdiChevronDown} size={1} />
           </span>
@@ -265,7 +270,7 @@ const renderTree = (items: TreeItem[], level = 0) =>
         className="nav_menu-box custom-prediction-dropdown"
         title={
           <span>
-            <img src="/mpc-react/assets/pollution.svg" alt="오염조사" className="navbar__menu-icon" />
+            <img src={pollutionIcon} alt="오염조사" className="navbar__menu-icon" />
             <span className="navbar__menu-title--bold">오염조사</span>
             <Icon path={mdiChevronDown} size={1} />
           </span>
