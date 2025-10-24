@@ -76,7 +76,7 @@ const InterPage1920: React.FC<InterPage1920Props> = ({
     >
       <Navbar expand="lg" className="bg-body-tertiary">
         <Container fluid>
-          <Navbar.Brand href="#action0" className="navbar__brand-box">
+          <Navbar.Brand className="navbar__brand-box">
             <img src={wingLogo} alt="로고" className="navbar__brand-logo" />
             <strong>해양환경 위기대응 통합지원 시스템</strong>
           </Navbar.Brand>
