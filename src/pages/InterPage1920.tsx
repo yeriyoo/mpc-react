@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { Navbar, Container, Form, InputGroup, Button } from 'react-bootstrap';
 import Icon from '@mdi/react';
 import { mdiMagnify, mdiStar, mdiBell, mdiAccount } from '@mdi/js';
-import wingLogo from '/assets/winglogo.svg';
+import wingLogo from '..//assets/winglogo.svg';
 
 import LeftMainMenu from './LeftMainMenu';
 import RightQuickMenu from './RightQuickMenu';

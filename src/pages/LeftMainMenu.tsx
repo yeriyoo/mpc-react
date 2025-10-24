@@ -4,12 +4,12 @@ import Icon from '@mdi/react';
 import { mdiChevronDown } from '@mdi/js';
 import MapWeatherIcon from './MapWeatherIcon'; 
 
-import predictionIcon from '/assets/prediction.svg';
-import searchIcon from '/assets/search.svg';
-import weatherIcon from '/assets/weather.svg';
-import shipIcon from '/assets/ship.svg';
-import boardIcon from '/assets/board.svg';
-import pollutionIcon from '/assets/pollution.svg';
+import predictionIcon from '..//assets/prediction.svg';
+import searchIcon from '..//assets/search.svg';
+import weatherIcon from '..//assets/weather.svg';
+import shipIcon from '..//assets/ship.svg';
+import boardIcon from '..//assets/board.svg';
+import pollutionIcon from '..//assets/pollution.svg';
 
 interface LeftMainMenuProps {
   handleOpenBottomTable: () => void;
