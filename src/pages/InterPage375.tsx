@@ -5,6 +5,7 @@ import BottomTable02 from './BottomTable02';
 import BottomTable03 from './BottomTable03';
 import BottomTable04 from './BottomTable04';
 import BottomTable05 from './BottomTable05';
+import wingLogo375 from '../assets/wing-logo-375.svg';
 
 
 import { Button, Container, Navbar, Dropdown, Nav } from 'react-bootstrap';
@@ -208,7 +209,7 @@ const InterPage375 = () => {
             <div>
               <img
                 className="logo-on-overlay"
-                src="/mpc-react/assets/wing-logo-375.svg"
+                src={wingLogo375}
                 alt="logo"
               />
             </div>
