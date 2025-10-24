@@ -9,6 +9,8 @@ import BottomTable04 from './BottomTable04';
 import BottomTable05 from './BottomTable05';
 
 import MapWeatherIcon from './MapWeatherIcon';
+import wingLogo from '../assets/winglogo.svg';
+
 
 import { Navbar, Container, Button } from 'react-bootstrap';
 import Icon from '@mdi/react';
@@ -78,7 +80,7 @@ const InterPage1440: React.FC<InterPage1440Props> = ({
         <Container fluid>
           <div className="d-flex align-items-center">
             <Navbar.Brand className="navbar__brand-box d-flex align-items-center">
-              <img src="/mpc-react/assets/winglogo.svg" alt="로고" className="navbar__brand-logo" />
+              <img src={wingLogo} alt="로고" className="navbar__brand-logo" />
               <strong>해양환경 위기대응 통합지원 시스템</strong>
             </Navbar.Brand>
 

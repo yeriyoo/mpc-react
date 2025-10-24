@@ -8,6 +8,7 @@ import BottomTable04 from './BottomTable04';
 import BottomTable05 from './BottomTable05';
 
 import MapWeatherIcon from './MapWeatherIcon';
+import wingLogo from '../assets/winglogo.svg';
 
 
 import { Navbar, Container, Button } from 'react-bootstrap';
@@ -57,7 +58,7 @@ const InterPage768: React.FC<InterPage768Props> = ({
           <div className="d-flex align-items-center me-2">
             <Navbar.Brand className="navbar__brand-box d-flex align-items-center">
               <img
-                src="/mpc-react/assets/winglogo.svg"
+                src={wingLogo}
                 alt="로고"
                 className="navbar__brand-logo"
               />

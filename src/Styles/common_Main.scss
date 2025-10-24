@@ -9,6 +9,11 @@ body {
   text-size-adjust: 100%;
 }
 
+.form-check-input {
+  print-color-adjust: exact;
+}
+
+
 //로그인//
 .bg-img {
   background-image: url('/mpc-react/assets/bg_login.jpg');
