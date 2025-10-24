@@ -6,6 +6,15 @@ import { mdiPlus, mdiMinus, mdiFormatListBulleted, mdiChevronDown, mdiAccountCog
 import Modal03 from './Modal03';
 import Modal04 from './Modal04';
 
+import drIcon00 from '../assets/dr-icon-00.svg';
+import drIcon01 from '../assets/dr-icon-01.svg';
+import drIcon02 from '../assets/dr-icon-02.svg';
+import drIcon03 from '../assets/dr-icon-03.svg';
+import drIcon04 from '../assets/dr-icon-04.svg';
+import drIcon05 from '../assets/dr-icon-05.svg';
+import drIcon06 from '../assets/dr-icon-06.svg';
+import drIcon07 from '../assets/dr-icon-07.svg';
+
 
 type RightQuickMenu1440Props = {
   mapImage: string;
@@ -42,43 +51,43 @@ const RightQuickMenu1440: React.FC<RightQuickMenu1440Props> = ({ mapImage, setMa
       <Dropdown.Menu className="dropdown-icon-menu">
         <Dropdown.Item onClick={() => setShowModal03(true)}>
           <OverlayTrigger placement="left" overlay={<Tooltip id="tooltip-1">선박항적</Tooltip>}>
-            <img src="/mpc-react/assets/dr-icon-00.svg" alt="icon1" />
+            <img src={drIcon00} alt="icon1" />
           </OverlayTrigger>
         </Dropdown.Item>
 
         <Dropdown.Item onClick={() => setShowModal04(true)}>
           <OverlayTrigger placement="left" overlay={<Tooltip id="tooltip-1">레이아웃</Tooltip>}>
-            <img src="/mpc-react/assets/dr-icon-01.svg" alt="icon1" />
+            <img src={drIcon01} alt="icon1" />
           </OverlayTrigger>
         </Dropdown.Item>
         <Dropdown.Item>
           <OverlayTrigger placement="left" overlay={<Tooltip id="tooltip-2">구역설정</Tooltip>}>
-            <img src="/mpc-react/assets/dr-icon-02.svg" alt="icon2" />
+            <img src={drIcon02} alt="icon2" />
           </OverlayTrigger>
         </Dropdown.Item>
         <Dropdown.Item>
           <OverlayTrigger placement="left" overlay={<Tooltip id="tooltip-3">거리</Tooltip>}>
-            <img src="/mpc-react/assets/dr-icon-03.svg" alt="icon3" />
+            <img src={drIcon03} alt="icon3" />
           </OverlayTrigger>
         </Dropdown.Item>
         <Dropdown.Item>
           <OverlayTrigger placement="left" overlay={<Tooltip id="tooltip-4">거리환산</Tooltip>}>
-            <img src="/mpc-react/assets/dr-icon-04.svg" alt="icon4" />
+            <img src={drIcon04} alt="icon4" />
           </OverlayTrigger>
         </Dropdown.Item>
         <Dropdown.Item>
           <OverlayTrigger placement="left" overlay={<Tooltip id="tooltip-5">다운로드</Tooltip>}>
-            <img src="/mpc-react/assets/dr-icon-05.svg" alt="icon5" />
+            <img src={drIcon05} alt="icon5" />
           </OverlayTrigger>
         </Dropdown.Item>
         <Dropdown.Item>
           <OverlayTrigger placement="left" overlay={<Tooltip id="tooltip-6">캡처</Tooltip>}>
-            <img src="/mpc-react/assets/dr-icon-06.svg" alt="icon6" />
+            <img src={drIcon06} alt="icon6" />
           </OverlayTrigger>
         </Dropdown.Item>
         <Dropdown.Item>
           <OverlayTrigger placement="left" overlay={<Tooltip id="tooltip-6">초기화</Tooltip>}>
-            <img src="/mpc-react/assets/dr-icon-07.svg" alt="icon7" />
+            <img src={drIcon07} alt="icon7" />
           </OverlayTrigger>
         </Dropdown.Item>
 

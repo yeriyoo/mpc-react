@@ -10,8 +10,10 @@ body {
 }
 
 .form-check-input {
+  -webkit-print-color-adjust: exact; 
   print-color-adjust: exact;
 }
+
 
 
 //로그인//

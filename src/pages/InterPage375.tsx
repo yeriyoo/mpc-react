@@ -5,7 +5,16 @@ import BottomTable02 from './BottomTable02';
 import BottomTable03 from './BottomTable03';
 import BottomTable04 from './BottomTable04';
 import BottomTable05 from './BottomTable05';
+
 import wingLogo375 from '../assets/wing-logo-375.svg';
+import drIcon00 from '../assets/dr-icon-00.svg';
+import drIcon01 from '../assets/dr-icon-01.svg';
+import drIcon02 from '../assets/dr-icon-02.svg';
+import drIcon03 from '../assets/dr-icon-03.svg';
+import drIcon04 from '../assets/dr-icon-04.svg';
+import drIcon05 from '../assets/dr-icon-05.svg';
+import drIcon06 from '../assets/dr-icon-06.svg';
+import drIcon07 from '../assets/dr-icon-07.svg';
 
 
 import { Button, Container, Navbar, Dropdown, Nav } from 'react-bootstrap';
@@ -123,28 +132,28 @@ const InterPage375 = () => {
 
           <Dropdown.Menu className="custom-dropdown-menu">
             <Dropdown.Item>
-              <img src="/mpc-react/assets/dr-icon-00.svg" />
+              <img src={drIcon00} />
             </Dropdown.Item>
             <Dropdown.Item>
-              <img src="/mpc-react/assets/dr-icon-01.svg" />
+              <img src={drIcon01} />
             </Dropdown.Item>
             <Dropdown.Item>
-              <img src="/mpc-react/assets/dr-icon-02.svg" />
+              <img src={drIcon02} />
             </Dropdown.Item>
             <Dropdown.Item>
-              <img src="/mpc-react/assets/dr-icon-03.svg" />
+              <img src={drIcon03} />
             </Dropdown.Item>
             <Dropdown.Item>
-              <img src="/mpc-react/assets/dr-icon-04.svg" />
+              <img src={drIcon04} />
             </Dropdown.Item>
             <Dropdown.Item>
-              <img src="/mpc-react/assets/dr-icon-05.svg" />
+              <img src={drIcon05} />
             </Dropdown.Item>
             <Dropdown.Item>
-              <img src="/mpc-react/assets/dr-icon-06.svg" />
+              <img src={drIcon06} />
             </Dropdown.Item>
             <Dropdown.Item>
-              <img src="/mpc-react/assets/dr-icon-07.svg" />
+              <img src={drIcon07} />
             </Dropdown.Item>
              <Dropdown.Item
              style={{
@@ -208,8 +217,8 @@ const InterPage375 = () => {
             <div className="white-overlay-box" />
             <div>
               <img
-                className="logo-on-overlay"
                 src={wingLogo375}
+                className="logo-on-overlay"
                 alt="logo"
               />
             </div>
