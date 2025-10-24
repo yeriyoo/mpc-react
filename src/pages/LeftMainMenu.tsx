@@ -4,11 +4,11 @@ import Icon from '@mdi/react';
 import { mdiChevronDown } from '@mdi/js';
 import MapWeatherIcon from './MapWeatherIcon'; 
 
-import predictionIcon from '/public/assets/prediction.svg';
-import searchIcon from '/public/assets/search.svg';
-import weatherIcon from '/public/assets/weather.svg';
-import shipIcon from '/public/assets/ship.svg';
-import boardIcon from 'public/assets/board.svg';
+import predictionIcon from '/assets/prediction.svg';
+import searchIcon from '/assets/search.svg';
+import weatherIcon from '/assets/weather.svg';
+import shipIcon from '/assets/ship.svg';
+import boardIcon from '/assets/board.svg';
 import pollutionIcon from '/assets/pollution.svg';
 
 interface LeftMainMenuProps {
