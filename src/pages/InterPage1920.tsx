@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import { Navbar, Container, Form, InputGroup, Button } from 'react-bootstrap';
 import Icon from '@mdi/react';
 import { mdiMagnify, mdiStar, mdiBell, mdiAccount } from '@mdi/js';
-import wingLogo from '../assets/winglogo.svg';
 
 import LeftMainMenu from './LeftMainMenu';
 import RightQuickMenu from './RightQuickMenu';
@@ -11,6 +10,9 @@ import BottomTable02 from './BottomTable02';
 import BottomTable03 from './BottomTable03';
 import BottomTable04 from './BottomTable04';
 import BottomTable05 from './BottomTable05';
+
+import WingLogo from '../assets/winglogo.svg';
+
 
 
 type InterPage1920Props = {
@@ -77,7 +79,7 @@ const InterPage1920: React.FC<InterPage1920Props> = ({
       <Navbar expand="lg" className="bg-body-tertiary">
         <Container fluid>
           <Navbar.Brand className="navbar__brand-box">
-            <img src={wingLogo} alt="로고" className="navbar__brand-logo" />
+            <img src={WingLogo} alt="로고" className="navbar__brand-logo" />
             <strong>해양환경 위기대응 통합지원 시스템</strong>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />

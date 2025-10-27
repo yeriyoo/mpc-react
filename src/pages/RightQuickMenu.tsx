@@ -14,6 +14,9 @@ import drIcon05 from '../assets/dr-icon-05.svg';
 import drIcon06 from '../assets/dr-icon-06.svg';
 import drIcon07 from '../assets/dr-icon-07.svg';
 
+import mapSmall01 from '../assets/map-small-01.png';
+import mapSmall02 from '../assets/map-small-02.png';
+
 
 type RightQuickMenuProps = {
   mapImage: string;
@@ -84,7 +87,7 @@ const RightQuickMenu: React.FC<RightQuickMenuProps> = ({ mapImage, setMapImage, 
         onClick={handleS57Click}
         >
           <img
-            src="/mpc-react/assets/map-small-01.png"
+            src={mapSmall01}
             style={{
               width: '28px',
               border: '2px solid #C2CDDE',
@@ -96,7 +99,7 @@ const RightQuickMenu: React.FC<RightQuickMenuProps> = ({ mapImage, setMapImage, 
 
         <Dropdown.Item className="dropdown-item-with-label">
           <img
-            src="/mpc-react/assets/map-small-01.png"
+            src={mapSmall01}
             style={{
               width: '28px',
               border: '2px solid #C2CDDE',
@@ -108,7 +111,7 @@ const RightQuickMenu: React.FC<RightQuickMenuProps> = ({ mapImage, setMapImage, 
 
         <Dropdown.Item className="dropdown-item-with-label">
           <img
-            src="/mpc-react/assets/map-small-02.png"
+            src={mapSmall02}
             style={{
               width: '28px',
               border: '2px solid #C2CDDE',

@@ -8,7 +8,7 @@ import BottomTable04 from './BottomTable04';
 import BottomTable05 from './BottomTable05';
 
 import MapWeatherIcon from './MapWeatherIcon';
-import wingLogo from '../assets/winglogo.svg';
+import WingLogo from '../assets/winglogo.svg';
 
 
 import { Navbar, Container, Button } from 'react-bootstrap';
@@ -33,8 +33,10 @@ const InterPage768: React.FC<InterPage768Props> = ({
   const [isSlideMenuOpen, setIsSlideMenuOpen] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [mapIcons, setMapIcons] = useState<{ top: string; left: string; label?: string }[]>([]);
-  const [mapImage, setMapImage] = useState('/mpc-react/assets/map_03.jpg');
-  const defaultMap = '/mpc-react/assets/map_03.jpg';
+  const baseUrl = import.meta.env.BASE_URL;
+  
+  const defaultMap = `${baseUrl}assets/map_03.jpg`;
+  const [mapImage, setMapImage] = useState(defaultMap);
 
 
   useEffect(() => {
@@ -58,7 +60,7 @@ const InterPage768: React.FC<InterPage768Props> = ({
           <div className="d-flex align-items-center me-2">
             <Navbar.Brand className="navbar__brand-box d-flex align-items-center">
               <img
-                src={wingLogo}
+                src={WingLogo}
                 alt="로고"
                 className="navbar__brand-logo"
               />

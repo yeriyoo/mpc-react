@@ -15,6 +15,10 @@ import drIcon04 from '../assets/dr-icon-04.svg';
 import drIcon05 from '../assets/dr-icon-05.svg';
 import drIcon06 from '../assets/dr-icon-06.svg';
 import drIcon07 from '../assets/dr-icon-07.svg';
+import mapSmall01 from '../assets/map-small-01.png';
+import mapSmall02 from '../assets/map-small-02.png';
+
+import WingLogo375 from '../assets/wing-logo-375.svg';
 
 
 import { Button, Container, Navbar, Dropdown, Nav } from 'react-bootstrap';
@@ -164,7 +168,7 @@ const InterPage375 = () => {
                 }}
               >
               <img
-            src="/mpc-react/assets/map-small-01.png"
+            src={mapSmall01}
             style={{
               width: '28px',
               border: '2px solid #C2CDDE',
@@ -182,7 +186,7 @@ const InterPage375 = () => {
                 }}
               >
               <img
-            src="/mpc-react/assets/map-small-01.png"
+            src={mapSmall01}
             style={{
               width: '28px',
               border: '2px solid #C2CDDE',
@@ -200,7 +204,7 @@ const InterPage375 = () => {
                 }}
               >
               <img
-            src="/mpc-react/assets/map-small-02.png"
+            src={mapSmall02}
             style={{
               width: '28px',
               border: '2px solid #C2CDDE',
@@ -217,7 +221,7 @@ const InterPage375 = () => {
             <div className="white-overlay-box" />
             <div>
               <img
-                src={wingLogo375}
+                src={WingLogo375}
                 className="logo-on-overlay"
                 alt="logo"
               />

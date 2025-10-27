@@ -18,7 +18,7 @@ body {
 
 //로그인//
 .bg-img {
-  background-image: url('/mpc-react/assets/bg_login.jpg');
+  background-image: url('/assets/bg_login.jpg');
   background-size: cover;
   background-position: center;
   min-height: 100vh;
@@ -49,7 +49,7 @@ body {
   transform: translateX(-50%);
   width: 188px;
   height: 54px;
-  background: url('/mpc-react/assets/police_logo.svg') no-repeat center / contain;
+  background: url('/assets/police_logo.svg') no-repeat center / contain;
 }
 
 .sub-logo {
@@ -59,7 +59,7 @@ body {
   transform: translateX(-50%);
   width: 400px;
   height: 36px;
-  background: url('/mpc-react/assets/main_logo_login.svg') no-repeat center / contain;
+  background: url('/assets/main_logo_login.svg') no-repeat center / contain;
 }
 
 .login-form {
@@ -189,7 +189,7 @@ body {
 //메인페이지//
 
 .main-background {
-  background-image: url('/mpc-react/assets/map.jpg');
+  background-image: url('/assets/map.jpg');
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -294,8 +294,8 @@ body {
     align-items: center;
 
     .navbar__brand-logo {
-      width: 44px;
-      height: 44px;
+      width: 52px;
+      height: auto;
       margin-right: 8px;
     }
   }
@@ -847,7 +847,7 @@ body {
 }
 
 .main-background-03 {
-  background-image: url('/mpc-react/assets/map_03.jpg');
+  background-image: url('/assets/map_03.jpg');
   background-size: cover;
   background-position: center;
   min-height: 100vh;

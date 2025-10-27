@@ -1,40 +1,41 @@
-import { defineConfig, type ViteDevServer } from 'vite';
+import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
-import * as path from 'path';
+import svgr from 'vite-plugin-svgr';
+import path from 'path';
 
-// ⚙️ 개발 서버에서 charset 헤더를 강제로 추가하는 플러그인
-function charsetPlugin() {
-  return {
-    name: 'vite:charset-plugin',
-    configureServer(server: ViteDevServer) {
-      server.middlewares.use((req, res, next) => {
-        try {
-          const url = req.url || '';
+// // ⚙️ 개발 서버에서 charset 헤더를 강제로 추가하는 플러그인
+// function charsetPlugin() {
+//   return {
+//     name: 'vite:charset-plugin',
+//     configureServer(server: ViteDevServer) {
+//       server.middlewares.use((req, res, next) => {
+//         try {
+//           const url = req.url || '';
 
-          // HTML 응답에 대해 charset 명시
-          if (url === '/' || url.endsWith('.html')) {
-            res.setHeader('Content-Type', 'text/html; charset=utf-8');
-            res.setHeader('X-Content-Type-Options', 'nosniff');
-          }
+//           // HTML 응답에 대해 charset 명시
+//           if (url === '/' || url.endsWith('.html')) {
+//             res.setHeader('Content-Type', 'text/html; charset=utf-8');
+//             res.setHeader('X-Content-Type-Options', 'nosniff');
+//           }
 
-          // SVG 파일에 대해 charset 명시
-          if (url.endsWith('.svg')) {
-            res.setHeader('Content-Type', 'image/svg+xml; charset=utf-8');
-            res.setHeader('X-Content-Type-Options', 'nosniff');
-          }
+//           // SVG 파일에 대해 charset 명시
+//           if (url.endsWith('.svg')) {
+//             res.setHeader('Content-Type', 'image/svg+xml; charset=utf-8');
+//             res.setHeader('X-Content-Type-Options', 'nosniff');
+//           }
 
-        } catch {
-          // 안전하게 무시
-        }
-        next();
-      });
-    },
-  };
-}
+//         } catch {
+//           // 안전하게 무시
+//         }
+//         next();
+//       });
+//     },
+//   };
+// }
 
 export default defineConfig({
-  base: '/mpc-react/', 
-  plugins: [react(), charsetPlugin()],
+  base: '/mpc-react/',
+  plugins: [react(), svgr()],
   resolve: {
     alias: {
       '@': path.resolve(__dirname, 'src'),
@@ -59,9 +60,6 @@ export default defineConfig({
     watch: {
       ignored: ['!**/*.tsx', '!**/*.ts', '!**/*.scss'],
     },
-    headers: {
-      'Content-Type': 'text/html; charset=utf-8',
-      'X-Content-Type-Options': 'nosniff',
-    },
+  
   },
 });

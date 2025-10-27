@@ -9,8 +9,7 @@ import BottomTable04 from './BottomTable04';
 import BottomTable05 from './BottomTable05';
 
 import MapWeatherIcon from './MapWeatherIcon';
-import wingLogo from '../assets/winglogo.svg';
-
+import WingLogo from '../assets/winglogo.svg';
 
 import { Navbar, Container, Button } from 'react-bootstrap';
 import Icon from '@mdi/react';
@@ -70,9 +69,14 @@ const InterPage1440: React.FC<InterPage1440Props> = ({
   setIsBottomTableOpen(true);
   };
 
+  const baseUrl = import.meta.env.BASE_URL;
+  const defaultMap = `${baseUrl}assets/default-map.jpg`;
+  const s57Map = `${baseUrl}assets/s-57-map-1440.jpg`;
+
   const handleToggleS57Map = () => {
-  setMapImage(prev => prev === '/mpc-react/assets/s-57-map-1440.jpg' ? '/mpc-react/assets/default-map.jpg' : '/mpc-react/assets/s-57-map-1440.jpg');
+    setMapImage(prev => prev === s57Map ? defaultMap : s57Map);
   };
+
 
   return (
     <div className="main-background">
@@ -80,7 +84,7 @@ const InterPage1440: React.FC<InterPage1440Props> = ({
         <Container fluid>
           <div className="d-flex align-items-center">
             <Navbar.Brand className="navbar__brand-box d-flex align-items-center">
-              <img src={wingLogo} alt="로고" className="navbar__brand-logo" />
+              <img src={WingLogo} alt="로고" className="navbar__brand-logo" />
               <strong>해양환경 위기대응 통합지원 시스템</strong>
             </Navbar.Brand>
 
@@ -108,7 +112,7 @@ const InterPage1440: React.FC<InterPage1440Props> = ({
           <RightTopMenu
           mapImage={mapImage}
           setMapImage={setMapImage}
-          defaultMap="/mpc-react/assets/map_03.jpg"
+          defaultMap={defaultMap}
           />
         </Container>
 
