@@ -2,6 +2,10 @@ module.exports = {
   plugins: {
     autoprefixer: {
       overrideBrowserslist: [
+        "chrome >= 54",
+        "edge >= 79",
+        "firefox >= 52",
+        "ios_saf >= 10",
         ">0.2%",
         "not dead",
         "not op_mini all"
