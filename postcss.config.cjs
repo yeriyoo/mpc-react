@@ -1,4 +1,3 @@
-// postcss.config.cjs
 module.exports = {
   plugins: {
     autoprefixer: {
@@ -8,8 +7,12 @@ module.exports = {
         "not op_mini all"
       ],
       flexbox: 'no-2009',
+      remove: false, // 기존 -webkit- 속성 유지
     },
-    // 필요하면 cssnano 추가 가능 (빌드시 압축)
-    // 'cssnano': { preset: 'default' }
+    // postcss-replace 플러그인으로 -webkit-text-size-adjust를 text-size-adjust로 변환
+    'postcss-replace': {
+      pattern: /-webkit-text-size-adjust/g,
+      data: { replace: 'text-size-adjust' },
+    },
   },
 };
