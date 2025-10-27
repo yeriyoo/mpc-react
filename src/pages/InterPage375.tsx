@@ -75,6 +75,7 @@ const InterPage375 = () => {
                 className="search-button"
                 variant="light"
                 aria-label="검색"
+                title="검색"
               >
                 <Icon path={mdiMagnify} size={1.2} />
               </Button>

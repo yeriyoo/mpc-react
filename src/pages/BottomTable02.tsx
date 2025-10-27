@@ -361,7 +361,7 @@ const BottomTable02 = ({ isShow, setIsShow, windowWidth }: BottomTableProps) => 
           <Modal.Header>
             <Modal.Title>유출유 확산 예측 목록</Modal.Title>
             <div className="ms-auto">
-              <Button variant="link-dark" size="sm" onClick={handleClose}>
+              <Button variant="link-dark" size="sm" onClick={handleClose} aria-label="닫기">
                 <Icon path={mdiClose} size={1} />
               </Button>
             </div>

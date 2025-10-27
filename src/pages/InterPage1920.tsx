@@ -159,13 +159,13 @@ const InterPage1920: React.FC<InterPage1920Props> = ({
             </Form>
 
             {/* 버튼들 */}
-            <Button variant="" className="ms-2 custom-button-01" title="즐겨찾기" onClick={handleClick}>
+            <Button variant="" className="ms-2 custom-button-01" aria-label="즐겨찾기" title="즐겨찾기" onClick={handleClick}>
               <Icon path={mdiStar} size={1} color="#fff" />
             </Button>
-            <Button variant="" className="ms-2 custom-button-02" title="알림" onClick={handleClick}>
+            <Button variant="" className="ms-2 custom-button-02" aria-label="알림" title="알림" onClick={handleClick}>
               <Icon path={mdiBell} size={1} color="#fff" />
             </Button>
-            <Button variant="" className="ms-2 custom-button-02" title="내계정" onClick={handleClick}>
+            <Button variant="" className="ms-2 custom-button-02" aria-label="내계정" title="내계정" onClick={handleClick}>
               <Icon path={mdiAccount} size={1} color="#fff" />
             </Button>
 

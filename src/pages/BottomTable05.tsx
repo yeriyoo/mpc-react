@@ -113,7 +113,7 @@ const BottomAccordionList = ({
 
         <div className="btn-group">
           <Button>삭제</Button>
-          <Button onClick={onWriteClick}>글쓰기</Button>
+          <Button onClick={onWriteClick} aria-label="글쓰기">글쓰기</Button>
         </div>
 
         <div className="bottom-vertical-table-wrapper">
@@ -299,7 +299,7 @@ const BottomTable05 = ({ isShow, setIsShow, windowWidth }: BottomTableProps) => 
           <Modal.Header>
             <Modal.Title>공지사항</Modal.Title>
             <div className="ms-auto">
-              <Button variant="link-dark" size="sm" onClick={handleClose}>
+              <Button variant="link-dark" size="sm" onClick={handleClose} aria-label="닫기">
                 <Icon path={mdiClose} size={1} />
               </Button>
             </div>

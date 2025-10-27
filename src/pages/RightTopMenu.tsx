@@ -14,13 +14,13 @@ type RightTopMenuProps = {
 const RightTopMenu: React.FC<RightTopMenuProps> = ({ mapImage, setMapImage, defaultMap }) => {
   return (
     <div className="icon-group-wrapper">
-      <Button className="search-button">
+      <Button className="search-button" aria-label="검색">
         <Icon path={mdiMagnify} size={1.2} color="#fff" />
       </Button>
-      <Button className="search-button">
+      <Button className="search-button" aria-label="알림">
         <Icon path={mdiBell} size={1} color="#fff" />
       </Button>
-      <Button className="search-button">
+      <Button className="search-button" aria-label="계정">
         <Icon path={mdiAccount} size={1} color="#fff" />
       </Button>
 

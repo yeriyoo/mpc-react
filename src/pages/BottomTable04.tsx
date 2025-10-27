@@ -123,7 +123,7 @@ const BottomAccordionList = ({
               placeholder="검색..."
               aria-label="검색"
             />
-              <Button variant="outline-secondary">
+              <Button variant="outline-secondary" aria-label="검색">
                 <Icon path={mdiMagnify} size={1} />
               </Button>
             </InputGroup>
@@ -351,7 +351,7 @@ const BottomTable04 = ({ isShow, setIsShow, windowWidth }: BottomTableProps) => 
           border: '1px solid #000'
           }}
           placeholder="검색..." />
-          <Button variant="outline-secondary">
+          <Button variant="outline-secondary" aria-label="검색">
             <Icon path={mdiMagnify} size={1} />
           </Button>
         </InputGroup>
@@ -589,7 +589,7 @@ const BottomTable04 = ({ isShow, setIsShow, windowWidth }: BottomTableProps) => 
           <Modal.Header>
             <Modal.Title>전체 해경자산 정보</Modal.Title>
             <div className="ms-auto">
-              <Button variant="link-dark" size="sm" onClick={handleClose}>
+              <Button variant="link-dark" size="sm" onClick={handleClose} aria-label="닫기">
                 <Icon path={mdiClose} size={1} />
               </Button>
             </div>

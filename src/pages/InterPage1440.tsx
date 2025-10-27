@@ -93,6 +93,7 @@ const InterPage1440: React.FC<InterPage1440Props> = ({
               className="hamburger-button ms-2 d-lg-none"
               onClick={() => setIsSlideMenuOpen(true)}
               aria-label="메뉴 열기"
+              title="메뉴 열기"
             >
               <Icon path={mdiMenu} size={1.3} />
             </Button>

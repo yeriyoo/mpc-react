@@ -39,15 +39,15 @@ const InterLogin1920 = () => {
             />
           </Form.Group>
 
-          <Button type="submit" className="custom-login-btn">
+          <Button type="submit" className="custom-login-btn" aria-label="로그인">
             로그인
           </Button>
 
           <div className="button-row">
-            <Button type="submit" className="gpki-btn full-width-btn">
+            <Button type="submit" className="gpki-btn full-width-btn" aria-label="회원가입">
               회원가입
             </Button>
-            <Button type="submit" className="gpki-btn full-width-btn">
+            <Button type="submit" className="gpki-btn full-width-btn" aria-label="GPKI 인증서 로그인">
               GPKI 인증서 로그인
             </Button>
           </div>
