@@ -367,7 +367,7 @@ const Modal04 = ({ show, onHide }: Modal04Props) => {
                     <Form.Check 
                     type="switch"
                     id="sensitive-bluecarbon-20"
-                    name="sensitive-bluecarbon-"
+                    name="sensitive-bluecarbon-20"
                     label="블루카본 활성화"
                     />
                 </div>

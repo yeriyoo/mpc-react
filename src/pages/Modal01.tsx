@@ -41,7 +41,11 @@ const Modal01 = ({ show, onHide, title = '사고정보 입력' }: Modal01Props) 
       <div className="modal584-line-sub">
         {row.type === 'datetime' ? (
           <div className="datetime-wrapper">
-            <select className="form-select">
+            <select
+            className="form-select"
+            id="accident-date-select"
+            name="accidentDateSelect"
+            >
               {row.options?.map((opt, idx) => (
                 <option key={idx}>{opt}</option>
               ))}
@@ -168,7 +172,11 @@ const Modal01 = ({ show, onHide, title = '사고정보 입력' }: Modal01Props) 
             name="shipName" />
           )
         ) : row.type === 'textarea' ? (
-          <textarea className="form-control" />
+          <textarea
+          className="form-control"
+          id={`textarea-${i}`}
+          name={`textarea-${i}`}
+           />
         ) : row.type === 'select' ? (
           row.label === '유출유종' ? (
             <div className="select-radio-wrapper">
@@ -190,7 +198,11 @@ const Modal01 = ({ show, onHide, title = '사고정보 입력' }: Modal01Props) 
               </div>
             </div>
           ) : (
-            <select className="form-select">
+            <select
+            className="form-select"
+            id="other-select-1"
+            name="otherSelect1"
+            >
               {row.options?.map((opt, idx) => (
                 <option key={idx}>{opt}</option>
               ))}

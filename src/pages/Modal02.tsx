@@ -105,6 +105,7 @@ const Modal02 = ({ show, onHide, title = '공지사항 작성' }: Modal02Props) 
             <div className="custom-file-wrapper" style={{ flex: 1, display: 'flex' }}>
                 <input
                 type="text"
+                id="file-name-input-pc"
                 className="file-name-input"
                 placeholder="파일을 선택해주세요"
                 readOnly
@@ -192,11 +193,12 @@ const Modal02 = ({ show, onHide, title = '공지사항 작성' }: Modal02Props) 
         <div className="mobile-file-wrapper flex-grow-1">
           <input
             type="text"
+            id="file-name-input-mb"
             className="file-name-input mb-2"
             placeholder="파일을 선택해주세요"
             readOnly
           />
-          <label htmlFor="fileInput" className="file-select-btn w-100 text-center">
+          <label htmlFor="fileInput-mb" className="file-select-btn w-100 text-center">
             파일 선택
           </label>
           <input
