@@ -1,23 +1,34 @@
+// postcss.config.js
 module.exports = {
-  plugins: {
-    autoprefixer: {
+  plugins: [
+    require('autoprefixer')({
       overrideBrowserslist: [
         "edge >= 140",
         "chrome >= 54",
         "chromeandroid >= 54",
         "firefox >= 52",
-        "ios_saf >= 10",
         ">0.2%",
         "not dead",
         "not op_mini all"
       ],
       flexbox: 'no-2009',
-      remove: false, // 기존 -webkit- 속성 유지
-    },
-    // postcss-replace 플러그인으로 -webkit-text-size-adjust를 text-size-adjust로 변환
-    'postcss-replace': {
-      pattern: /-webkit-text-size-adjust/g,
-      data: { replace: 'text-size-adjust' },
-    },
-  },
+    }),
+    require('postcss-discard')({
+      // 모든 CSS에서 -webkit-text-size-adjust 제거
+      remove: true,
+      filter: (decl) => decl.prop === '-webkit-text-size-adjust',
+    }),
+
+    // ✅ 모든 CSS에서 text-align: -webkit-match-parent 제거
+    require('postcss-discard')({
+      remove: true,
+      filter: (decl) => decl.prop === 'text-align' && decl.value === '-webkit-match-parent',
+    }),
+
+    // color-adjust 제거
+    require('postcss-discard')({
+      remove: true,
+      filter: (decl) => decl.prop === 'color-adjust',
+    }),
+  ],
 };
