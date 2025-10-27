@@ -115,6 +115,7 @@ const Modal02 = ({ show, onHide, title = '공지사항 작성' }: Modal02Props) 
                 <input
                 type="file"
                 id="fileInput"
+                name="filePc"
                 style={{ display: 'none' }}
                 onChange={(e) => {
                 const fileName = e.target.files?.[0]?.name || '';
@@ -200,7 +201,8 @@ const Modal02 = ({ show, onHide, title = '공지사항 작성' }: Modal02Props) 
           </label>
           <input
             type="file"
-            id="fileInput"
+            id="fileInput-mb"
+            name="fileMb"
             style={{ display: 'none' }}
             onChange={handleFileChange}
           />

@@ -31,7 +31,7 @@ const SlideMenu = ({ isOpen, onClose, setIsBottomTableOpen, setActiveSheet, setM
   return (
     <Offcanvas show={isOpen} onHide={onClose} placement="start" className="slide-menu">
       <Offcanvas.Header closeButton>
-      <Offcanvas.Title>전체메뉴</Offcanvas.Title>
+      <Offcanvas.Title id="slide-menu-title">전체메뉴</Offcanvas.Title>
       </Offcanvas.Header>
       <Offcanvas.Body>
         <Nav className="flex-column">

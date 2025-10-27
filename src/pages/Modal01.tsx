@@ -46,9 +46,19 @@ const Modal01 = ({ show, onHide, title = '사고정보 입력' }: Modal01Props) 
                 <option key={idx}>{opt}</option>
               ))}
             </select>
-            <input type="text" className="form-control datetime-input" />
+            <input
+            type="text"
+            className="form-control datetime-input"
+            id="accident-hour"
+            name="accidentHour"
+             />
             <span>:</span>
-            <input type="text" className="form-control datetime-input" />
+            <input
+            type="text"
+            className="form-control datetime-input"
+            id="accident-minute"
+            name="accidentMinute"
+            />
           </div>
         ) : row.type === 'location' ? (
           <div className="location-grid-wrapper">
@@ -56,20 +66,60 @@ const Modal01 = ({ show, onHide, title = '사고정보 입력' }: Modal01Props) 
               {/* 위도 */}
               <div className="location-row">
                 <div className="location-label">위도</div>
-                <input className="location-cell" />
-                <input className="location-cell" />
-                <input className="location-cell" />
+                  <input
+                  className="location-cell"
+                  id="latitude-1"
+                  name="latitude-1"
+                  type="text"
+                />
+                <input
+                  className="location-cell"
+                  id="latitude-2"
+                  name="latitude-2"
+                  type="text"
+                />
+                <input
+                  className="location-cell"
+                  id="latitude-3"
+                  name="latitude-3"
+                  type="text"
+                />
                 <span className="location-equal">=</span>
-                <input className="location-cell" />
+                <input
+                className="location-cell"
+                id="latitude-result"
+                name="latitude-result"
+                type="text"
+              />
               </div>
               {/* 경도 */}
               <div className="location-row">
                 <div className="location-label">경도</div>
-                <input className="location-cell" />
-                <input className="location-cell" />
-                <input className="location-cell" />
+                  <input
+                  className="location-cell"
+                  id="longitude-1"
+                  name="longitude-1"
+                  type="text"
+                />
+                <input
+                  className="location-cell"
+                  id="longitude-2"
+                  name="longitude-2"
+                  type="text"
+                />
+                  <input
+                  className="location-cell"
+                  id="longitude-3"
+                  name="longitude-3"
+                  type="text"
+                />
                 <span className="location-equal">=</span>
-                <input className="location-cell" />
+                <input
+                className="location-cell"
+                id="longitude-result"
+                name="longitude-result"
+                type="text"
+              />
               </div>
             </div>
 
@@ -88,32 +138,54 @@ const Modal01 = ({ show, onHide, title = '사고정보 입력' }: Modal01Props) 
         ) : row.type === 'input' ? (
           row.subType === 'triple' ? (
             <div className="oil-amount-wrapper">
-              <input type="text" className="form-control oil-amount-input" />
+              <input
+                type="text"
+                className="form-control oil-amount-input" 
+                id="oil-kl"
+                name="oilKL"
+                />
               <span>KL=</span>
-              <input type="text" className="form-control oil-amount-input" />
+              <input
+              type="text"
+              className="form-control oil-amount-input"
+              id="oil-bbl"
+              name="oilBBL"
+               />
               <span>BBL=</span>
-              <input type="text" className="form-control oil-amount-input" />
+              <input
+              type="text"
+              className="form-control oil-amount-input"
+              id="oil-ton"
+              name="oilMetricTon"
+               />
               <span>metric ton</span>
             </div>
           ) : (
-            <input type="text" className="form-control" />
+            <input
+            type="text"
+            className="form-control"
+            id="ship-name"
+            name="shipName" />
           )
         ) : row.type === 'textarea' ? (
           <textarea className="form-control" />
         ) : row.type === 'select' ? (
           row.label === '유출유종' ? (
             <div className="select-radio-wrapper">
-              <select className="form-select">
+              <select
+              className="form-select"
+              id="oil-type-select"
+              name="oilTypeSelect">
                 {row.options?.map((opt, idx) => (
                   <option key={idx}>{opt}</option>
                 ))}
               </select>
               <div className="radio-group">
                 <label className="radio-item">
-                  <input type="radio" name="oilType" value="option1" /> 비연속유출
+                  <input type="radio" id="oil-type-1" name="oilType" value="option1" /> 비연속유출
                 </label>
                 <label className="radio-item">
-                  <input type="radio" name="oilType" value="option2" /> 연속유출
+                  <input type="radio" id="oil-type-2" name="oilType" value="option2" /> 연속유출
                 </label>
               </div>
             </div>

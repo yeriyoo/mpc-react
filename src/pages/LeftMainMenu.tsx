@@ -125,6 +125,8 @@ const renderTree = (items: TreeItem[], level = 0) =>
         {level > 0 && (
           <input
             type="checkbox"
+            id={`checkbox-${item.label}`}
+            name="weatherItem"
             checked={checkedItems[item.label] || false}
             onChange={() => handleCheckboxClick(item.label)}
           />

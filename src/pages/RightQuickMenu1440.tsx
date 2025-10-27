@@ -58,37 +58,37 @@ const RightQuickMenu1440: React.FC<RightQuickMenu1440Props> = ({ mapImage, setMa
         </Dropdown.Item>
 
         <Dropdown.Item onClick={() => setShowModal04(true)}>
-          <OverlayTrigger placement="left" overlay={<Tooltip id="tooltip-1">레이아웃</Tooltip>}>
+          <OverlayTrigger placement="left" overlay={<Tooltip id="tooltip-2">레이아웃</Tooltip>}>
             <img src={drIcon01} alt="icon1" />
           </OverlayTrigger>
         </Dropdown.Item>
         <Dropdown.Item>
-          <OverlayTrigger placement="left" overlay={<Tooltip id="tooltip-2">구역설정</Tooltip>}>
+          <OverlayTrigger placement="left" overlay={<Tooltip id="tooltip-3">구역설정</Tooltip>}>
             <img src={drIcon02} alt="icon2" />
           </OverlayTrigger>
         </Dropdown.Item>
         <Dropdown.Item>
-          <OverlayTrigger placement="left" overlay={<Tooltip id="tooltip-3">거리</Tooltip>}>
+          <OverlayTrigger placement="left" overlay={<Tooltip id="tooltip-4">거리</Tooltip>}>
             <img src={drIcon03} alt="icon3" />
           </OverlayTrigger>
         </Dropdown.Item>
         <Dropdown.Item>
-          <OverlayTrigger placement="left" overlay={<Tooltip id="tooltip-4">거리환산</Tooltip>}>
+          <OverlayTrigger placement="left" overlay={<Tooltip id="tooltip-5">거리환산</Tooltip>}>
             <img src={drIcon04} alt="icon4" />
           </OverlayTrigger>
         </Dropdown.Item>
         <Dropdown.Item>
-          <OverlayTrigger placement="left" overlay={<Tooltip id="tooltip-5">다운로드</Tooltip>}>
+          <OverlayTrigger placement="left" overlay={<Tooltip id="tooltip-6">다운로드</Tooltip>}>
             <img src={drIcon05} alt="icon5" />
           </OverlayTrigger>
         </Dropdown.Item>
         <Dropdown.Item>
-          <OverlayTrigger placement="left" overlay={<Tooltip id="tooltip-6">캡처</Tooltip>}>
+          <OverlayTrigger placement="left" overlay={<Tooltip id="tooltip-7">캡처</Tooltip>}>
             <img src={drIcon06} alt="icon6" />
           </OverlayTrigger>
         </Dropdown.Item>
         <Dropdown.Item>
-          <OverlayTrigger placement="left" overlay={<Tooltip id="tooltip-6">초기화</Tooltip>}>
+          <OverlayTrigger placement="left" overlay={<Tooltip id="tooltip-8">초기화</Tooltip>}>
             <img src={drIcon07} alt="icon7" />
           </OverlayTrigger>
         </Dropdown.Item>

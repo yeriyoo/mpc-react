@@ -126,6 +126,7 @@ const BottomAccordionList = ({
                         <input
                         type="checkbox"
                         id={`check-${idx}`}
+                        name={`check-${idx}`}
                         className="me-2"
                         style={{ transform: 'scale(1.2)', marginRight: '8px' }}
                         />
@@ -243,7 +244,12 @@ const BottomTable05 = ({ isShow, setIsShow, windowWidth }: BottomTableProps) => 
                 ].map((row, index) => (
                 <tr key={row.id}>
                     <td style={{ verticalAlign: 'middle' }}>
-                    <input type="checkbox" />
+                    <input 
+                    id={`row-check-${index}`}
+                    name={`row-check-${index}`}
+                    type="checkbox"
+                     />
+                    
                     </td>
                     <td style={{ verticalAlign: 'middle' }}>{index + 1}</td> 
                     <td style={{ verticalAlign: 'middle' }}>{row.서비스구분}</td>

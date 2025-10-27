@@ -33,6 +33,7 @@ const [footerToggle, setFooterToggle] = useState(false);
         <Form.Check 
             type="switch"
             id="header-toggle"
+            name="headerToggle"
             checked={headerToggle}
             onChange={() => setHeaderToggle(!headerToggle)}
             label=""
@@ -70,7 +71,7 @@ const [footerToggle, setFooterToggle] = useState(false);
                 <div className="modal03-accordion-box">
                 <Form.Check 
                     type="checkbox"
-                    id="right-box-1"
+                    id="right-box-2"
                     label="E-NAV"
                 />
                 </div>
@@ -89,7 +90,7 @@ const [footerToggle, setFooterToggle] = useState(false);
                 <div className="modal03-accordion-box">
                 <Form.Check 
                     type="checkbox"
-                    id="left-box-1"
+                    id="left-box-3"
                     label="어선"
                 />
                 </div>
@@ -97,7 +98,7 @@ const [footerToggle, setFooterToggle] = useState(false);
                 <div className="modal03-accordion-box">
                 <Form.Check 
                     type="checkbox"
-                    id="right-box-1"
+                    id="right-box-4"
                     label="함정"
                 />
                 </div>
@@ -108,7 +109,7 @@ const [footerToggle, setFooterToggle] = useState(false);
                 <div className="modal03-accordion-box">
                 <Form.Check 
                     type="checkbox"
-                    id="left-box-1"
+                    id="left-box-5"
                     label="화물선"
                 />
                 </div>
@@ -116,7 +117,7 @@ const [footerToggle, setFooterToggle] = useState(false);
                 <div className="modal03-accordion-box">
                 <Form.Check 
                     type="checkbox"
-                    id="right-box-1"
+                    id="right-box-6"
                     label="여객선"
                 />
                 </div>
@@ -131,6 +132,7 @@ const [footerToggle, setFooterToggle] = useState(false);
           <Form.Check 
             type="switch"
             id="footer-toggle"
+            name="footerToggle"
             checked={footerToggle}
             onChange={() => setFooterToggle(!footerToggle)}
             label="푸터 토글"
