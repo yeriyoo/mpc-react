@@ -1,4 +1,26 @@
-// postcss.config.js
+const createSafeRemoveDeclPlugin = (prop, value) => {
+  const plugin = {
+    postcssPlugin: `remove-${prop}`,
+    Once(root) {
+      root.walkDecls((decl) => {
+        if (decl.prop === prop && (value === undefined || decl.value === value)) {
+          decl.remove();
+        }
+      });
+    },
+  };
+  plugin.postcss = true;
+  return plugin;
+};
+
+// color-adjust 계열 전체 제거
+const colorAdjustProps = [
+  'color-adjust',
+  '-webkit-color-adjust',
+  '-moz-color-adjust',
+  '-ms-color-adjust'
+];
+
 module.exports = {
   plugins: [
     require('autoprefixer')({
@@ -13,22 +35,9 @@ module.exports = {
       ],
       flexbox: 'no-2009',
     }),
-    require('postcss-discard')({
-      // 모든 CSS에서 -webkit-text-size-adjust 제거
-      remove: true,
-      filter: (decl) => decl.prop === '-webkit-text-size-adjust',
-    }),
 
-    // ✅ 모든 CSS에서 text-align: -webkit-match-parent 제거
-    require('postcss-discard')({
-      remove: true,
-      filter: (decl) => decl.prop === 'text-align' && decl.value === '-webkit-match-parent',
-    }),
-
-    // color-adjust 제거
-    require('postcss-discard')({
-      remove: true,
-      filter: (decl) => decl.prop === 'color-adjust',
-    }),
+    createSafeRemoveDeclPlugin('-webkit-text-size-adjust'),
+    createSafeRemoveDeclPlugin('text-align', '-webkit-match-parent'),
+    // createSafeRemoveDeclPlugin('color-adjust'),
   ],
 };

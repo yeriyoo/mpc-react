@@ -15,6 +15,11 @@ import { Navbar, Container, Button } from 'react-bootstrap';
 import Icon from '@mdi/react';
 import { mdiMenu } from '@mdi/js';
 
+import defaultMap1920 from '../assets/default-map.jpg';
+import map03Image from '../assets/map_03.jpg';
+import defaultMapImage from '../assets/default-map.jpg';
+import s57MapImage from '../assets/s-57-map-1440.jpg';
+
 type InterPage1440Props = {
   isBottomTableOpen: boolean;
   setIsBottomTableOpen: React.Dispatch<React.SetStateAction<boolean>>;
@@ -32,7 +37,7 @@ const InterPage1440: React.FC<InterPage1440Props> = ({
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [isSlideMenuOpen, setIsSlideMenuOpen] = useState(false);
   const [mapIcons, setMapIcons] = useState<{ top: string; left: string; label?: string }[]>([]);
-  const [mapImage, setMapImage] = useState('/mpc-react/assets/map_03.jpg');
+  const [mapImage, setMapImage] = useState(window.innerWidth >= 1200 ? defaultMap1920 : map03Image);
   
 
 
@@ -46,6 +51,13 @@ const InterPage1440: React.FC<InterPage1440Props> = ({
     return () => window.removeEventListener('resize', handleResize);
     }, []);
 
+    useEffect(() => {
+    if (windowWidth >= 1200) {
+      setMapImage(defaultMap1920);
+    } else {
+      setMapImage(map03Image);
+    }
+    }, [windowWidth]);
 
   const handleOpenBottomTable01 = () => {
   setActiveSheet(prev => (prev === 'BottomTable01' ? null : 'BottomTable01'));
@@ -69,17 +81,17 @@ const InterPage1440: React.FC<InterPage1440Props> = ({
   setIsBottomTableOpen(true);
   };
 
-  const baseUrl = import.meta.env.BASE_URL;
-  const defaultMap = `${baseUrl}assets/default-map.jpg`;
-  const s57Map = `${baseUrl}assets/s-57-map-1440.jpg`;
 
   const handleToggleS57Map = () => {
-    setMapImage(prev => prev === s57Map ? defaultMap : s57Map);
-  };
-
+      setMapImage(prev => (prev === s57MapImage ? defaultMapImage : s57MapImage));
+    };
+    
 
   return (
-    <div className="main-background">
+    <div
+    className="main-background"
+    style={{ backgroundImage: `url(${mapImage})` }}
+    >
       <Navbar expand="lg" className="bg-body-tertiary">
         <Container fluid>
           <div className="d-flex align-items-center">
@@ -113,7 +125,7 @@ const InterPage1440: React.FC<InterPage1440Props> = ({
           <RightTopMenu
           mapImage={mapImage}
           setMapImage={setMapImage}
-          defaultMap={defaultMap}
+          defaultMap={defaultMapImage}
           />
         </Container>
 
@@ -177,7 +189,7 @@ const InterPage1440: React.FC<InterPage1440Props> = ({
 
       {/* 아이콘 레이어 */}
       <div className="map-container">
-        <MapWeatherIcon positions={mapIcons} mapImage={mapImage} />
+        <MapWeatherIcon positions={mapIcons} />
       </div>
     </div>
   );

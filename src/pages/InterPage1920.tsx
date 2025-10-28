@@ -12,7 +12,8 @@ import BottomTable04 from './BottomTable04';
 import BottomTable05 from './BottomTable05';
 
 import WingLogo from '../assets/winglogo.svg';
-
+import defaultMapImage from '../assets/default-map.jpg';
+import s57MapImage from '../assets/s-57-map.jpg';
 
 
 type InterPage1920Props = {
@@ -30,8 +31,8 @@ const InterPage1920: React.FC<InterPage1920Props> = ({
 }) => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 991);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  const [mapImage, setMapImage] = useState('/mpc-react/assets/default-map.jpg');
-
+  const [mapImage, setMapImage] = useState(defaultMapImage);
+  
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 991);
@@ -66,8 +67,8 @@ const InterPage1920: React.FC<InterPage1920Props> = ({
   };
 
   const handleToggleS57Map = () => {
-  setMapImage(prev => prev === '/mpc-react/assets/s-57-map.jpg' ? '/mpc-react/assets/default-map.jpg' : '/mpc-react/assets/s-57-map.jpg');
-};
+    setMapImage(prev => (prev === s57MapImage ? defaultMapImage : s57MapImage));
+  };
 
   const handleClick = () => console.log('지도 버튼 클릭됨');
 

@@ -9,7 +9,6 @@ body {
 }
 
 
-
 //로그인//
 .bg-img {
   background-image: url('/assets/bg_login.jpg');
@@ -183,7 +182,6 @@ body {
 //메인페이지//
 
 .main-background {
-  background-image: url('/assets/map.jpg');
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -841,7 +839,6 @@ body {
 }
 
 .main-background-03 {
-  background-image: url('/assets/map_03.jpg');
   background-size: cover;
   background-position: center;
   min-height: 100vh;
@@ -971,6 +968,15 @@ body {
     }
   }
 }
+// 768 //
+.main-background-02 {
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+}
+
+
+
 
 // 375 //
 .dropdown-bottom-right {

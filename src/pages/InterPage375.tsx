@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import SlideMenu from './SlideMenu';
 import BottomTable01 from './BottomTable01';
 import BottomTable02 from './BottomTable02';
@@ -6,7 +6,7 @@ import BottomTable03 from './BottomTable03';
 import BottomTable04 from './BottomTable04';
 import BottomTable05 from './BottomTable05';
 
-import wingLogo375 from '../assets/wing-logo-375.svg';
+import WingLogo375 from '../assets/wing-logo-375.svg';
 import drIcon00 from '../assets/dr-icon-00.svg';
 import drIcon01 from '../assets/dr-icon-01.svg';
 import drIcon02 from '../assets/dr-icon-02.svg';
@@ -17,8 +17,7 @@ import drIcon06 from '../assets/dr-icon-06.svg';
 import drIcon07 from '../assets/dr-icon-07.svg';
 import mapSmall01 from '../assets/map-small-01.png';
 import mapSmall02 from '../assets/map-small-02.png';
-
-import WingLogo375 from '../assets/wing-logo-375.svg';
+import mapBackground from '../assets/map_02.jpg';
 
 
 import { Button, Container, Navbar, Dropdown, Nav } from 'react-bootstrap';
@@ -39,14 +38,29 @@ const InterPage375 = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isSlideMenuOpen, setIsSlideMenuOpen] = useState(false);
   const [isBottomTableOpen, setIsBottomTableOpen] = useState(false);
-  const [windowWidth] = useState(window.innerWidth);
-  const [isMobile] = useState(window.innerWidth <= 768);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const isMobile = windowWidth <= 768;
   const [activeSheet, setActiveSheet] = useState<'BottomTable01' | 'BottomTable02' | 'BottomTable03' | 'BottomTable04' | 'BottomTable05' |null>(null);
   const [mapIcons, setMapIcons] = useState<{ top: string; left: string; label?: string }[]>([]);
 
 
+  // 화면 resize 대응
+  useEffect(() => {
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+
   return (
-    <div className="main-background-03">
+    <div className="main-background-03"
+    style={{
+    backgroundImage: `url(${mapBackground})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    minHeight: '100vh',
+  }}
+    >
        <SlideMenu
           isOpen={isSlideMenuOpen}
           onClose={() => setIsSlideMenuOpen(false)}

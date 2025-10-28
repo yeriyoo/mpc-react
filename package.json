@@ -11,7 +11,8 @@
     "dev": "vite --port 9090",
     "lint": "eslint .",
     "preview": "vite preview",
-    "clean": "rimraf dist"
+    "clean": "rimraf dist",
+    "postbuild": "node scripts/remove-color-adjust.cjs && node add-cache-version.js"
   },
   "dependencies": {
     "@deck.gl/core": "9.1.1",

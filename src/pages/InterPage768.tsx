@@ -15,6 +15,7 @@ import { Navbar, Container, Button } from 'react-bootstrap';
 import Icon from '@mdi/react';
 import { mdiMenu } from '@mdi/js';
 
+import map03Image from '../assets/map_03.jpg';
 
 type InterPage768Props = {
   activeSheet: 'BottomTable01' | 'BottomTable02' | 'BottomTable03' | 'BottomTable04' | 'BottomTable05' | null;
@@ -33,11 +34,7 @@ const InterPage768: React.FC<InterPage768Props> = ({
   const [isSlideMenuOpen, setIsSlideMenuOpen] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [mapIcons, setMapIcons] = useState<{ top: string; left: string; label?: string }[]>([]);
-  const baseUrl = import.meta.env.BASE_URL;
-  
-  const defaultMap = `${baseUrl}assets/map_03.jpg`;
-  const [mapImage, setMapImage] = useState(defaultMap);
-
+  const [mapImage, setMapImage] = useState(map03Image);
 
   useEffect(() => {
     const handleResize = () => setWindowWidth(window.innerWidth);
@@ -54,7 +51,15 @@ const InterPage768: React.FC<InterPage768Props> = ({
 
 
   return (
-    <div className="main-background-02">
+    <div
+    className="main-background-02"
+     style={{
+    backgroundImage: `url(${map03Image})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    minHeight: '100vh',
+     }}
+     >
       <Navbar expand="lg" className="bg-body-tertiary">
         <Container fluid>
           <div className="d-flex align-items-center me-2">
@@ -81,7 +86,7 @@ const InterPage768: React.FC<InterPage768Props> = ({
           <RightTopMenu
           mapImage={mapImage}
           setMapImage={setMapImage}
-          defaultMap={defaultMap}
+          defaultMap={map03Image}
           />
 
         </Container>
@@ -145,7 +150,7 @@ const InterPage768: React.FC<InterPage768Props> = ({
          
       {/* 아이콘 레이어 */}
       <div className="map-container">
-        <MapWeatherIcon positions={mapIcons} mapImage={mapImage} />
+        <MapWeatherIcon positions={mapIcons} />
       </div>
     </div>
   );

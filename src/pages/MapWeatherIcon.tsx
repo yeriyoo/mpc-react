@@ -4,21 +4,11 @@ import { OverlayTrigger, Tooltip } from 'react-bootstrap';
 
 interface MapWeatherIconProps {
   positions: { top: string; left: string; transform?: string }[];
-  mapImage?: string; // optional
 }
 
-const MapWeatherIcon: React.FC<MapWeatherIconProps> = ({ positions, mapImage }) => {
+const MapWeatherIcon: React.FC<MapWeatherIconProps> = ({ positions }) => {
   return (
     <div style={{ position: 'relative', width: '100%', height: '100%' }}>
-      {/* mapImage가 있을 때만 지도 렌더 */}
-      {mapImage && (
-        <img
-          src={mapImage}
-          alt="map"
-          style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center' }}
-        />
-      )}
-
       {positions.length > 0 &&
         positions.map((pos, idx) => (
           <OverlayTrigger
@@ -52,5 +42,6 @@ const MapWeatherIcon: React.FC<MapWeatherIconProps> = ({ positions, mapImage }) 
     </div>
   );
 };
+
 
 export default MapWeatherIcon;
