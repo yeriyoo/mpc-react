@@ -7,9 +7,9 @@ import BottomTable03 from './BottomTable03';
 import BottomTable04 from './BottomTable04';
 import BottomTable05 from './BottomTable05';
 
+import defaultMap1920 from '../assets/default-map.jpg';
 import MapWeatherIcon from './MapWeatherIcon';
 import WingLogo from '../assets/winglogo.svg';
-
 
 import { Navbar, Container, Button } from 'react-bootstrap';
 import Icon from '@mdi/react';
@@ -86,7 +86,7 @@ const InterPage768: React.FC<InterPage768Props> = ({
           <RightTopMenu
           mapImage={mapImage}
           setMapImage={setMapImage}
-          defaultMap={map03Image}
+          defaultMap={windowWidth >= 1200 ? defaultMap1920 : map03Image}
           />
 
         </Container>

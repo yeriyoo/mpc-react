@@ -17,6 +17,7 @@ import drIcon07 from '../assets/dr-icon-07.svg';
 
 import mapSmall01 from '../assets/map-small-01.png';
 import mapSmall02 from '../assets/map-small-02.png';
+import s57MapImage from '../assets/s-57-map-1440.jpg';
 
 type RightQuickMenu1440Props = {
   mapImage: string;
@@ -28,11 +29,20 @@ const RightQuickMenu1440: React.FC<RightQuickMenu1440Props> = ({ mapImage, setMa
   const [isProfileDropdownOpen, setIsProfileDropdownOpen] = useState(false);
   const [showModal03, setShowModal03] = useState(false);
   const [showModal04, setShowModal04] = useState(false);
-  const s57Map = '/mpc-react/assets/s-57-map-768.jpg';
+  const [isS57Active, setIsS57Active] = useState(false);
 
-   const handleS57Click = () => {
-  setMapImage(mapImage === s57Map ? defaultMap : s57Map);
-};
+  const handleS57Click = () => {
+    const screenWidth = window.innerWidth;
+    if (screenWidth <= 1440 && screenWidth >= 375) {
+      setIsS57Active(prev => {
+      const next = !prev;                 // 다음 상태를 계산
+      setMapImage(next ? s57MapImage : defaultMap);  // next 기준으로 이미지 설정
+      return next;
+    });
+    } else {
+      setMapImage(defaultMap);
+    }
+  };
 
   return (
     <>

@@ -125,7 +125,7 @@ const InterPage1440: React.FC<InterPage1440Props> = ({
           <RightTopMenu
           mapImage={mapImage}
           setMapImage={setMapImage}
-          defaultMap={defaultMapImage}
+          defaultMap={windowWidth >= 1200 ? defaultMap1920 : map03Image}
           />
         </Container>
 
