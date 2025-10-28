@@ -32,13 +32,15 @@ const RightQuickMenu1440: React.FC<RightQuickMenu1440Props> = ({ mapImage, setMa
   const [isS57Active, setIsS57Active] = useState(false);
 
   const handleS57Click = () => {
+    console.log("S-57 클릭!", isS57Active);
     const screenWidth = window.innerWidth;
     if (screenWidth <= 1440 && screenWidth >= 375) {
       setIsS57Active(prev => {
-      const next = !prev;                 // 다음 상태를 계산
-      setMapImage(next ? s57MapImage : defaultMap);  // next 기준으로 이미지 설정
-      return next;
-    });
+        const next = !prev;
+        console.log("next 상태:", next, "이미지:", next ? s57MapImage : defaultMap);
+        setMapImage(next ? s57MapImage : defaultMap);
+        return next;
+      });
     } else {
       setMapImage(defaultMap);
     }
