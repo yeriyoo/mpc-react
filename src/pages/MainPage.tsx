@@ -8,7 +8,7 @@ import InterPage1920 from './InterPage1920';
 
 
 const getScreenSize = (width: number) => {
-  if (width <= 375) return 'smallMobile';
+  if (width <= 430) return 'smallMobile';
   if (width <= 768) return 'mobile';
   if (width <= 1440) return 'desktop';
   return 'largeDesktop';

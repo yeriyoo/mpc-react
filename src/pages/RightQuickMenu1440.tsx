@@ -37,7 +37,6 @@ const RightQuickMenu1440: React.FC<RightQuickMenu1440Props> = ({ mapImage, setMa
     if (screenWidth <= 1440 && screenWidth >= 375) {
       setIsS57Active(prev => {
         const next = !prev;
-        console.log("next 상태:", next, "이미지:", next ? s57MapImage : defaultMap);
         setMapImage(next ? s57MapImage : defaultMap);
         return next;
       });
