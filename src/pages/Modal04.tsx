@@ -71,7 +71,6 @@ const Modal04 = ({ show, onHide }: Modal04Props) => {
                     type="switch"
                     id="sensitive-bluecarbon-1"
                     name="sensitive-bluecarbon-1"
-                    label="블루카본 활성화"
                     />
                 </div>
                 <div className="modal04-accordion-box">
@@ -80,7 +79,6 @@ const Modal04 = ({ show, onHide }: Modal04Props) => {
                     type="switch"
                     id="sensitive-bluecarbon-2"
                     name="sensitive-bluecarbon-2"
-                    label="블루카본 활성화"
                     />
                 </div>
                 </div>
@@ -103,7 +101,6 @@ const Modal04 = ({ show, onHide }: Modal04Props) => {
                     type="switch"
                     id="sensitive-bluecarbon-3"
                     name="sensitive-bluecarbon-3"
-                    label="블루카본 활성화"
                     />
                 </div>
                 <div className="modal04-accordion-box">
@@ -112,7 +109,6 @@ const Modal04 = ({ show, onHide }: Modal04Props) => {
                     type="switch"
                     id="sensitive-bluecarbon-4"
                     name="sensitive-bluecarbon-4"
-                    label="블루카본 활성화"
                     />
                 </div>
                 </div>
@@ -135,7 +131,6 @@ const Modal04 = ({ show, onHide }: Modal04Props) => {
                     type="switch"
                     id="sensitive-bluecarbon-5"
                     name="sensitive-bluecarbon-5"
-                    label="블루카본 활성화"
                     />
                 </div>
                 <div className="modal04-accordion-box">
@@ -144,7 +139,6 @@ const Modal04 = ({ show, onHide }: Modal04Props) => {
                     type="switch"
                     id="sensitive-bluecarbon-6"
                     name="sensitive-bluecarbon-6"
-                    label="블루카본 활성화"
                     />
                 </div>
                 </div>
@@ -167,7 +161,6 @@ const Modal04 = ({ show, onHide }: Modal04Props) => {
                     type="switch"
                     id="sensitive-bluecarbon-7"
                     name="sensitive-bluecarbon-7"
-                    label="블루카본 활성화"
                     />
                 </div>
                 <div className="modal04-accordion-box">
@@ -176,7 +169,6 @@ const Modal04 = ({ show, onHide }: Modal04Props) => {
                     type="switch"
                     id="sensitive-bluecarbon-8"
                     name="sensitive-bluecarbon-8"
-                    label="블루카본 활성화"
                     />
                 </div>
                 </div>
@@ -199,7 +191,6 @@ const Modal04 = ({ show, onHide }: Modal04Props) => {
                     type="switch"
                     id="sensitive-bluecarbon-9"
                     name="sensitive-bluecarbon-9"
-                    label="블루카본 활성화"
                     />
                 </div>
                 <div className="modal04-accordion-box">
@@ -208,7 +199,6 @@ const Modal04 = ({ show, onHide }: Modal04Props) => {
                     type="switch"
                     id="sensitive-bluecarbon-10"
                     name="sensitive-bluecarbon-10"
-                    label="블루카본 활성화"
                     />
                 </div>
                 </div>
@@ -231,7 +221,6 @@ const Modal04 = ({ show, onHide }: Modal04Props) => {
                     type="switch"
                     id="sensitive-bluecarbon-11"
                     name="sensitive-bluecarbon-11"
-                    label="블루카본 활성화"
                     />
                 </div>
                 <div className="modal04-accordion-box">
@@ -240,7 +229,6 @@ const Modal04 = ({ show, onHide }: Modal04Props) => {
                     type="switch"
                     id="sensitive-bluecarbon-12"
                     name="sensitive-bluecarbon-12"
-                    label="블루카본 활성화"
                     />
                 </div>
                 </div>
@@ -263,7 +251,6 @@ const Modal04 = ({ show, onHide }: Modal04Props) => {
                     type="switch"
                     id="sensitive-bluecarbon-13"
                     name="sensitive-bluecarbon-13"
-                    label="블루카본 활성화"
                     />
                 </div>
                 <div className="modal04-accordion-box">
@@ -272,7 +259,6 @@ const Modal04 = ({ show, onHide }: Modal04Props) => {
                     type="switch"
                     id="sensitive-bluecarbon-14"
                     name="sensitive-bluecarbon-14"
-                    label="블루카본 활성화"
                     />
                 </div>
                 </div>
@@ -295,7 +281,6 @@ const Modal04 = ({ show, onHide }: Modal04Props) => {
                     type="switch"
                     id="sensitive-bluecarbon-15"
                     name="sensitive-bluecarbon-15"
-                    label="블루카본 활성화"
                     />
                 </div>
                 <div className="modal04-accordion-box">
@@ -304,7 +289,6 @@ const Modal04 = ({ show, onHide }: Modal04Props) => {
                     type="switch"
                     id="sensitive-bluecarbon-16"
                     name="sensitive-bluecarbon-16"
-                    label="블루카본 활성화"
                     />
                 </div>
                 </div>
@@ -327,7 +311,6 @@ const Modal04 = ({ show, onHide }: Modal04Props) => {
                     type="switch"
                     id="sensitive-bluecarbon-17"
                     name="sensitive-bluecarbon-17"
-                    label="블루카본 활성화"
                     />
                 </div>
                 <div className="modal04-accordion-box">
@@ -336,7 +319,6 @@ const Modal04 = ({ show, onHide }: Modal04Props) => {
                     type="switch"
                     id="sensitive-bluecarbon-18"
                     name="sensitive-bluecarbon-18"
-                    label="블루카본 활성화"
                     />
                 </div>
                 </div>
@@ -359,7 +341,6 @@ const Modal04 = ({ show, onHide }: Modal04Props) => {
                     type="switch"
                     id="sensitive-bluecarbon-19"
                     name="sensitive-bluecarbon-19"
-                    label="블루카본 활성화"
                     />
                 </div>
                 <div className="modal04-accordion-box">
@@ -368,7 +349,6 @@ const Modal04 = ({ show, onHide }: Modal04Props) => {
                     type="switch"
                     id="sensitive-bluecarbon-20"
                     name="sensitive-bluecarbon-20"
-                    label="블루카본 활성화"
                     />
                 </div>
                 </div>
