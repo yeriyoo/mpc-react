@@ -60,35 +60,7 @@ const SlideMenu = ({ isOpen, onClose, setIsBottomTableOpen, setActiveSheet, setM
             className="nav-dropdown custom-prediction-dropdown"
             onToggle={(isOpen) => setOpenPredictDropdown(isOpen)}
           >
-            <Dropdown
-              drop="down"
-              as="div"
-              show={openNestedDropdown}
-              onToggle={(isOpen) => setOpenNestedDropdown(isOpen)}
-            >
-              <Dropdown.Toggle as="div" className="sub-toggle-02" style={{ cursor: 'pointer' }}>
-                <span>현장 탐색 정보 표출</span>
-                <Icon
-                  path={mdiChevronDown}
-                  size={1}
-                  className={`ms-2 dropdown-icon ${openNestedDropdown ? 'rotate' : ''}`}
-                />
-              </Dropdown.Toggle>
-
-              <Dropdown.Menu className="custom-menu-dropdown">
-                <Dropdown.Item
-                 onClick={() => {
-                    setActiveSheet('BottomTable03');
-                    setIsBottomTableOpen(true);
-                    onClose();
-                  }}
-                >
-                오염정보 목록</Dropdown.Item>
-                <Dropdown.Item>현장정보 업로드</Dropdown.Item>
-              </Dropdown.Menu>
-            </Dropdown>
-
-            <Dropdown
+             <Dropdown
               drop="end"
               as="div"
               show={openNestedDropdown2}
@@ -114,6 +86,34 @@ const SlideMenu = ({ isOpen, onClose, setIsBottomTableOpen, setActiveSheet, setM
                   예측 목록
                 </Dropdown.Item>
                 <Dropdown.Item>유출유 확산 예측</Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
+
+            <Dropdown
+              drop="down"
+              as="div"
+              show={openNestedDropdown}
+              onToggle={(isOpen) => setOpenNestedDropdown(isOpen)}
+            >
+              <Dropdown.Toggle as="div" className="sub-toggle-02" style={{ cursor: 'pointer' }}>
+                <span>현장 탐색 정보 표출</span>
+                <Icon
+                  path={mdiChevronDown}
+                  size={1}
+                  className={`ms-2 dropdown-icon ${openNestedDropdown ? 'rotate' : ''}`}
+                />
+              </Dropdown.Toggle>
+
+              <Dropdown.Menu className="custom-menu-dropdown">
+                <Dropdown.Item
+                 onClick={() => {
+                    setActiveSheet('BottomTable03');
+                    setIsBottomTableOpen(true);
+                    onClose();
+                  }}
+                >
+                오염정보 목록</Dropdown.Item>
+                <Dropdown.Item>현장정보 업로드</Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>
 

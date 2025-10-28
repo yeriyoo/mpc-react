@@ -166,24 +166,6 @@ const renderTree = (items: TreeItem[], level = 0) =>
         onToggle={() => setMapIcons([])}
       >
         <div
-          className={`nav-dropdown__item-with-submenu ${openSubmenu3 ? 'open' : ''}`}
-          onClick={() => setOpenSubmenu3(!openSubmenu3)}
-        >
-          <span className="nav-dropdown__item-label">현장 탐색 정보 표출</span>
-          <span className="submenu-arrow">
-            <Icon path={mdiChevronDown} size={1} />
-          </span>
-        </div>
-        {openSubmenu3 && (
-          <div className="nav-dropdown__submenu">
-            <NavDropdown.Item>
-              <div onClick={handleOpenBottomTable03}>오염정보 목록</div>
-            </NavDropdown.Item>
-            <NavDropdown.Item>현장정보 업로드</NavDropdown.Item>
-          </div>
-        )}
-
-        <div
           className={`nav-dropdown__item-with-submenu ${openSubmenu ? 'open' : ''}`}
           onClick={() => setOpenSubmenu(!openSubmenu)}
         >
@@ -200,7 +182,23 @@ const renderTree = (items: TreeItem[], level = 0) =>
             <NavDropdown.Item>유출유 확산 예측</NavDropdown.Item>
           </div>
         )}
-
+        <div
+          className={`nav-dropdown__item-with-submenu ${openSubmenu3 ? 'open' : ''}`}
+          onClick={() => setOpenSubmenu3(!openSubmenu3)}
+        >
+          <span className="nav-dropdown__item-label">현장 탐색 정보 표출</span>
+          <span className="submenu-arrow">
+            <Icon path={mdiChevronDown} size={1} />
+          </span>
+        </div>
+        {openSubmenu3 && (
+          <div className="nav-dropdown__submenu">
+            <NavDropdown.Item>
+              <div onClick={handleOpenBottomTable03}>오염정보 목록</div>
+            </NavDropdown.Item>
+            <NavDropdown.Item>현장정보 업로드</NavDropdown.Item>
+          </div>
+        )}
         <div
           className={`nav-dropdown__item-with-submenu ${openSubmenu2 ? 'open' : ''}`}
           onClick={() => setOpenSubmenu2(!openSubmenu2)}
