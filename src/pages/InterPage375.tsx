@@ -259,7 +259,7 @@ const InterPage375 = () => {
                   <Nav.Link
                     className="bottom-nav-link"
                     onClick={() => {
-                      setActiveSheet('BottomTable03');
+                      setActiveSheet('BottomTable02');
                       setIsBottomTableOpen(true);
                     }}
                   >
