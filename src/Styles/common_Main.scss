@@ -2740,11 +2740,13 @@ body {
   }
 
   .button-row {
-    flex-direction: column;
-    gap: 12px;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 8px;
 
     .full-width-btn {
       width: 100%;
+      margin-top: 12px;
     }
   }
 
