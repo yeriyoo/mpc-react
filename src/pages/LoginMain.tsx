@@ -8,7 +8,7 @@ import InterLogin1440 from './InterLogin1440';
 import InterLogin1920 from './InterLogin1920';
 
 const getScreenSize = (width: number) => {
-  if (width <= 375) return 'smallMobile';
+  if (width <= 633) return 'smallMobile';
   if (width <= 768) return 'mobile';
   if (width <= 1440) return 'desktop';
   return 'largeDesktop';

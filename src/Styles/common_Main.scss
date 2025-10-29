@@ -1918,7 +1918,12 @@ body {
   }
 }
 
-.form-check-input:focus {
+.form-check-input,
+.form-check-input:focus,
+.form-check-input:checked,
+.form-check-input:focus:checked,
+.form-check-input::before,
+.form-check-input::after {
   box-shadow: none !important;
   outline: none !important;
 }
@@ -2682,31 +2687,72 @@ body {
 
 @media (min-width: 100px) and (max-width: 633px) {
 
-  .login-box {
-    width: 80%;
+  /* 전체 배경을 flex 컨테이너로 중앙 정렬 */
+  .bg-img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* 세로 중앙 배치 */
+    padding: 40px 16px;
+    min-height: 100vh;
     position: relative;
-    left: 50%;
-    transform: translateX(-50%);
   }
 
   .main-logo {
-    width: 50%;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-  }
+  position: absolute;
+  top: 15%; /* 화면 높이에 비례 */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  max-width: 160px;
+}
 
-  .sub-logo {
+.sub-logo {
+  position: absolute;
+  top: 25%; /* main-logo 아래로 위치 */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  max-width: 280px;
+}
+
+
+  /* 로그인 박스 */
+  .login-box {
     width: 90%;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    max-width: 360px;
+    height: auto;
+    background-color: #11154b;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    padding: 24px 16px;
+    position: static; /* 중앙 고정 해제 */
+    transform: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
   }
 
+  /* 로그인 폼 */
   .login-form {
-    width: 80%;
+    width: 100%;
+    position: static;
+    transform: none;
   }
 
+  /* 버튼 줄 세로 정렬 */
+  .button-row {
+    flex-direction: column;
+    gap: 12px;
+
+    .full-width-btn {
+      width: 100%;
+    }
+  }
+
+  /* 기존 유지 스타일 */
   .icon-group-wrapper {
     display: flex;
     position: absolute;
@@ -2731,13 +2777,13 @@ body {
     margin-top: 4px;
   }
 
-  .sub-toggle{
+  .sub-toggle {
     padding: 4px 16px !important;
   }
 
-    .sub-toggle-02{
-      padding: 16px 24px !important;
-    }
+  .sub-toggle-02 {
+    padding: 16px 24px !important;
+  }
 
 
   /* 상위 예측 드롭다운 */
