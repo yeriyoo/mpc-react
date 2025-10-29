@@ -2699,18 +2699,12 @@ body {
 
   .main-logo {
   position: absolute;
-  top: 7%;
-  left: 50%;
-  transform: translateX(-50%);
   width: 50%;
   max-width: 160px;
 }
 
 .sub-logo {
   position: absolute;
-  top: 15%;
-  left: 50%;
-  transform: translateX(-50%);
   width: 80%;
 }
 
@@ -2723,8 +2717,7 @@ body {
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
     padding: 24px 16px;
-    position: relative;
-    transform: none;
+    position: absolute;
     display: flex;
     flex-direction: column;
     align-items: center;
