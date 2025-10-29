@@ -18,6 +18,8 @@ import drIcon07 from '../assets/dr-icon-07.svg';
 import mapSmall01 from '../assets/map-small-01.png';
 import mapSmall02 from '../assets/map-small-02.png';
 import mapBackground from '../assets/map_02.jpg';
+import MapWeatherIcon from './MapWeatherIcon';
+
 
 
 import { Button, Container, Navbar, Dropdown, Nav } from 'react-bootstrap';
@@ -232,6 +234,7 @@ const InterPage375 = () => {
         </Dropdown>
 
         <div className="map-container">
+          <MapWeatherIcon positions={mapIcons} />
           <>
             <div className="white-overlay-box" />
             <div>
@@ -282,6 +285,7 @@ const InterPage375 = () => {
         </div>
       </div>
     </div>
+    
   );
 };
 

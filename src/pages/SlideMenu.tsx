@@ -171,14 +171,24 @@ const SlideMenu = ({ isOpen, onClose, setIsBottomTableOpen, setActiveSheet, setM
 
               <Dropdown.Menu className="custom-menu-dropdown">
                 <Dropdown.Item
-                onClick={() => {
-                  setMapIcons([
-                    { top: '120px', left: '270px', label: '현수원_진하 해양관측부이' },
-                    { top: '200px', left: '670px', label: '현수원_진하 해양관측부이' },
-                    { top: '250px', left: '670px', label: '현수원_진하 해양관측부이' },
-                  ]);
-                  onClose();
-                }}
+                  onClick={() => {
+                    if (window.innerWidth >= 633) {
+                      // 데스크탑 좌표
+                      setMapIcons([
+                        { top: '120px', left: '370px', label: '현수원_진하 해양관측부이' },
+                        { top: '200px', left: '470px', label: '현수원_진하 해양관측부이' },
+                        { top: '250px', left: '470px', label: '현수원_진하 해양관측부이' },
+                      ]);
+                    } else {
+                      // 모바일 좌표
+                      setMapIcons([
+                        { top: '60px', left: '150px', label: '현수원_진하 해양관측부이' },
+                        { top: '100px', left: '220px', label: '현수원_진하 해양관측부이' },
+                        { top: '130px', left: '220px', label: '현수원_진하 해양관측부이' },
+                      ]);
+                    }
+                    onClose();
+                  }}
                 >
                 해양관측부이(KHOA)
                 </Dropdown.Item>
