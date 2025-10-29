@@ -2687,12 +2687,11 @@ body {
 
 @media (min-width: 100px) and (max-width: 633px) {
 
-  /* 전체 배경을 flex 컨테이너로 중앙 정렬 */
   .bg-img {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; /* 세로 중앙 배치 */
+    justify-content: center;
     padding: 40px 16px;
     min-height: 100vh;
     position: relative;
@@ -2700,7 +2699,7 @@ body {
 
   .main-logo {
   position: absolute;
-  top: 15%; /* 화면 높이에 비례 */
+  top: 7%;
   left: 50%;
   transform: translateX(-50%);
   width: 50%;
@@ -2709,7 +2708,7 @@ body {
 
 .sub-logo {
   position: absolute;
-  top: 25%; /* main-logo 아래로 위치 */
+  top: 15%;
   left: 50%;
   transform: translateX(-50%);
   width: 80%;
@@ -2717,7 +2716,6 @@ body {
 }
 
 
-  /* 로그인 박스 */
   .login-box {
     width: 90%;
     max-width: 360px;
@@ -2726,7 +2724,7 @@ body {
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
     padding: 24px 16px;
-    position: static; /* 중앙 고정 해제 */
+    position: static; 
     transform: none;
     display: flex;
     flex-direction: column;
@@ -2735,14 +2733,12 @@ body {
     gap: 20px;
   }
 
-  /* 로그인 폼 */
   .login-form {
     width: 100%;
     position: static;
     transform: none;
   }
 
-  /* 버튼 줄 세로 정렬 */
   .button-row {
     flex-direction: column;
     gap: 12px;
@@ -2752,7 +2748,6 @@ body {
     }
   }
 
-  /* 기존 유지 스타일 */
   .icon-group-wrapper {
     display: flex;
     position: absolute;
