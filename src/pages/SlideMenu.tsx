@@ -175,9 +175,9 @@ const SlideMenu = ({ isOpen, onClose, setIsBottomTableOpen, setActiveSheet, setM
                     if (window.innerWidth >= 633) {
                       // 데스크탑 좌표
                       setMapIcons([
-                        { top: '120px', left: '370px', label: '현수원_진하 해양관측부이' },
-                        { top: '200px', left: '470px', label: '현수원_진하 해양관측부이' },
-                        { top: '250px', left: '470px', label: '현수원_진하 해양관측부이' },
+                        { top: '120px', left: '470px', label: '현수원_진하 해양관측부이' },
+                        { top: '200px', left: '570px', label: '현수원_진하 해양관측부이' },
+                        { top: '250px', left: '570px', label: '현수원_진하 해양관측부이' },
                       ]);
                     } else {
                       // 모바일 좌표
