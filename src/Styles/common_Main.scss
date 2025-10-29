@@ -2691,28 +2691,30 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     padding: 40px 16px;
     min-height: 100vh;
     position: relative;
   }
 
   .main-logo {
-  position: absolute;
-  top: 7%;
-  left: 50%;
-  transform: translateX(-50%);
+  position: relative;
+  top: auto;
+  left: auto;
+  transform: none;
   width: 50%;
   max-width: 160px;
+  margin-bottom: 8px; // 아래 여백
 }
 
 .sub-logo {
-  position: absolute;
-  top: 15%;
-  left: 50%;
-  transform: translateX(-50%);
+  position: relative;
+  top: auto;
+  left: auto;
+  transform: none;
   width: 80%;
   max-width: 280px;
+  margin-bottom: 8px; // 아래 여백
 }
 
 
@@ -2724,7 +2726,7 @@ body {
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
     padding: 24px 16px;
-    position: static; 
+    position: relative; 
     transform: none;
     display: flex;
     flex-direction: column;
@@ -2735,7 +2737,7 @@ body {
 
   .login-form {
     width: 100%;
-    position: static;
+    position: relative;
     transform: none;
   }
 
