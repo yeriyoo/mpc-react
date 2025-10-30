@@ -31,6 +31,7 @@
     "axios": "^1.9.0",
     "bootstrap": "5.3.3",
     "chart.js": "^4.4.9",
+    "coi-serviceworker": "^0.1.7",
     "dayjs": "^1.11.13",
     "deck.gl": "9.1.1",
     "ol": "9.2.4",
