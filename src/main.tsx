@@ -8,8 +8,6 @@ import 'bootstrap/dist/css/bootstrap.css';
 import Publish from './Publish';
 import MainPage from './pages/MainPage';
 import LoginMain from './pages/LoginMain';
-import { registerServiceWorker } from './swRegister';
-registerServiceWorker();
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
