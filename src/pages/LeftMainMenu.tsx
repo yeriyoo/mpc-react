@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { Nav, NavDropdown } from 'react-bootstrap';
+import { Nav, NavDropdown, Dropdown } from 'react-bootstrap';
 import Icon from '@mdi/react';
 import { mdiChevronDown } from '@mdi/js';
 import MapWeatherIcon from './MapWeatherIcon'; 
@@ -62,15 +62,15 @@ const [openSubmenu2, setOpenSubmenu2] = useState(false);
 const [openSubmenu3, setOpenSubmenu3] = useState(false);
 
 
-// 기상 트리 메뉴 상태
 const [openWeatherDropdown, setOpenWeatherDropdown] = useState(false);
 const [openItems, setOpenItems] = useState<Record<string, boolean>>({});
 const [checkedItems, setCheckedItems] = useState<Record<string, boolean>>({});
 const [mapIcons, setMapIcons] = useState<{ top: string; left: string }[]>([]);
+const [openPredictionDropdown, setOpenPredictionDropdown] = useState(false);
+
 
 const dropdownRef = useRef<HTMLDivElement>(null);
 
-  // 외부 클릭 시 드롭다운 닫기
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
@@ -91,12 +91,10 @@ const dropdownRef = useRef<HTMLDivElement>(null);
   { top: '200%', left: '15%', transform: 'translate(-50%, -50%)' },
   ];
 
-  // 체크박스 클릭 시 아이콘 표시
   const handleCheckboxClick = (label: string) => {
   setCheckedItems(prev => {
     const newChecked = !prev[label];
 
-    // ✅ 해양관측부이(KHOA)만 아이콘 제어
     if (label === '해양관측부이(KHOA)') {
       if (newChecked) {
         setMapIcons(fixedPositions); 
@@ -142,145 +140,229 @@ const renderTree = (items: TreeItem[], level = 0) =>
     <>
     <Nav className="me-auto my-2 my-lg-0" style={{ maxHeight: '100px' }} navbarScroll>
       <Nav.Link
+        as="button"
         className="nav_menu-box"
         onClick={() => {
           handleOpenBottomTable();
           setMapIcons([]); 
         }}
       >
-        <img src={searchIcon} alt="사고조회" className="navbar__menu-icon" />
+        <img src={searchIcon} alt="" aria-hidden="true" className="navbar__menu-icon" />
         <span>사고조회</span>
       </Nav.Link>
 
-      {/* 예측 메뉴 */}
-      <NavDropdown
-        className="nav_menu-box custom-prediction-dropdown"
-        title={
-          <span>
-            <img src={predictionIcon} alt="예측" className="navbar__menu-icon" />
-            <span className="navbar__menu-title--bold">예측</span>
-            <Icon path={mdiChevronDown} size={1} />
-          </span>
-        }
-        id="dropdown-prediction"
-        onToggle={() => setMapIcons([])}
+      <Dropdown
+      as="div"
+      className="nav_menu-box custom-prediction-dropdown"
+      show={openPredictionDropdown}
+      autoClose="outside"
+      onToggle={(isOpen, e) => {
+      setOpenPredictionDropdown(isOpen);
+      setMapIcons([]);
+    }}
+    >
+      <Dropdown.Toggle
+        as="button"
+        className="navbar__menu-link"
+        aria-haspopup="true"
+        aria-expanded={openPredictionDropdown}
+        onClick={(e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          setOpenPredictionDropdown(!openPredictionDropdown);
+        }}
       >
-        <div
-          className={`nav-dropdown__item-with-submenu ${openSubmenu ? 'open' : ''}`}
+        <img src={predictionIcon} alt="" aria-hidden="true" className="navbar__menu-icon" />
+        <span className="navbar__menu-title--bold">예측</span>
+        <Icon path={mdiChevronDown} size={1} />
+      </Dropdown.Toggle>
+
+      <Dropdown.Menu>
+        <Dropdown.Item
+          as="div"
           onClick={() => setOpenSubmenu(!openSubmenu)}
-        >
+          className={`nav-dropdown__item-with-submenu ${openSubmenu ? 'open' : ''}`}
+          >
           <span className="nav-dropdown__item-label">유출유 확산예측</span>
           <span className="submenu-arrow">
-            <Icon path={mdiChevronDown} size={1} />
+            <Icon
+            path={mdiChevronDown}
+            size={1}
+            color={openSubmenu ? "#fff" : "#000"}
+            />
           </span>
-        </div>
+        </Dropdown.Item>
         {openSubmenu && (
-          <div className="nav-dropdown__submenu">
-            <NavDropdown.Item>
-              <div onClick={handleOpenBottomTable02}>예측 목록</div>
-            </NavDropdown.Item>
-            <NavDropdown.Item>유출유 확산 예측</NavDropdown.Item>
-          </div>
+          <>
+            <Dropdown.Item
+              onClick={() => {
+                handleOpenBottomTable02();  
+                setOpenPredictionDropdown(false);
+              }}
+              className="nav-dropdown__submenu">
+              예측 목록
+              </Dropdown.Item>
+            <Dropdown.Item  className="nav-dropdown__submenu">유출유 확산 예측</Dropdown.Item>
+          </>
         )}
-        <div
-          className={`nav-dropdown__item-with-submenu ${openSubmenu3 ? 'open' : ''}`}
+
+        <Dropdown.Item
+          as="div"
           onClick={() => setOpenSubmenu3(!openSubmenu3)}
-        >
+          className={`nav-dropdown__item-with-submenu ${openSubmenu3 ? 'open' : ''}`}
+          >
           <span className="nav-dropdown__item-label">현장 탐색 정보 표출</span>
           <span className="submenu-arrow">
-            <Icon path={mdiChevronDown} size={1} />
+            <Icon
+            path={mdiChevronDown}
+            size={1}
+            color={openSubmenu ? "#fff" : "#000"}
+            />
           </span>
-        </div>
+        </Dropdown.Item>
         {openSubmenu3 && (
-          <div className="nav-dropdown__submenu">
-            <NavDropdown.Item>
-              <div onClick={handleOpenBottomTable03}>오염정보 목록</div>
-            </NavDropdown.Item>
-            <NavDropdown.Item>현장정보 업로드</NavDropdown.Item>
-          </div>
+          <>
+            <Dropdown.Item
+             onClick={() => {
+              handleOpenBottomTable03();
+              setOpenPredictionDropdown(false);
+            }}
+             className="nav-dropdown__submenu">
+            오염정보 목록
+            </Dropdown.Item>
+            <Dropdown.Item className="nav-dropdown__submenu">현장정보 업로드</Dropdown.Item>
+          </>
         )}
-        <div
-          className={`nav-dropdown__item-with-submenu ${openSubmenu2 ? 'open' : ''}`}
+
+        <Dropdown.Item
+          as="div"
           onClick={() => setOpenSubmenu2(!openSubmenu2)}
-        >
+          className={`nav-dropdown__item-with-submenu ${openSubmenu2 ? 'open' : ''}`}
+          >
           <span className="nav-dropdown__item-label">정밀 비구조격자 해양예측</span>
           <span className="submenu-arrow">
-            <Icon path={mdiChevronDown} size={1} />
+            <Icon
+            path={mdiChevronDown}
+            size={1}
+            color={openSubmenu ? "#fff" : "#000"}
+            />
           </span>
-        </div>
+        </Dropdown.Item>
         {openSubmenu2 && (
-          <div className="nav-dropdown__submenu">
-            <NavDropdown.Item>예측 목록</NavDropdown.Item>
-            <NavDropdown.Item>정밀 비구조격자 해양예측</NavDropdown.Item>
-          </div>
+          <>
+            <Dropdown.Item className="nav-dropdown__submenu">예측 목록</Dropdown.Item>
+            <Dropdown.Item className="nav-dropdown__submenu">정밀 비구조격자 해양예측</Dropdown.Item>
+          </>
         )}
-      </NavDropdown>
+      </Dropdown.Menu>
+    </Dropdown>
 
-     <NavDropdown
-      className="nav_menu-box weather-dropdown"
-      title={
-        <span>
-          <img src={weatherIcon} alt="기상정보" className="navbar__menu-icon" />
-          <span className="navbar__menu-title--bold">기상정보</span>
-        </span>
-      }
-      show={openWeatherDropdown}
-      onToggle={() => setOpenWeatherDropdown(prev => !prev)}
-      autoClose={false} 
-    >
-      {renderTree(weatherItems)}
-    </NavDropdown>
+      <Dropdown
+        as="div"
+        className="nav_menu-box weather-dropdown"
+        autoClose={false}
+        show={openWeatherDropdown}
+        onToggle={() => setMapIcons([])}
+      >
+      <Dropdown.Toggle
+        as="button"
+        className="navbar__menu-link"
+        aria-haspopup="true"
+        aria-expanded={openWeatherDropdown}
+        onClick={(e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          setOpenWeatherDropdown(!openWeatherDropdown);
+        }}
+      >
+        <img
+          src={weatherIcon}
+          alt=""
+          aria-hidden="true"
+          className="navbar__menu-icon"
+        />
+        <span className="navbar__menu-title--bold">기상정보</span>
+        <Icon path={mdiChevronDown} size={1} />
+      </Dropdown.Toggle>
 
+      <Dropdown.Menu>
+        {renderTree(weatherItems)}
+      </Dropdown.Menu>
+      </Dropdown>
 
       <Nav.Link
+        as="button"
         className="nav_menu-box"
         onClick={() => {
           handleOpenBottomTable04();
           setMapIcons([]);
         }}
       >
-        <img src={shipIcon} alt="해경자산" className="navbar__menu-icon" />
+        <img src={shipIcon} alt="" aria-hidden="true" className="navbar__menu-icon" />
         <span>해경자산</span>
       </Nav.Link>
 
-      <NavDropdown
-        className="nav_menu-box custom-prediction-dropdown"
-        title={
-          <span>
-            <img src={boardIcon} alt="게시판" className="navbar__menu-icon" />
-            <span className="navbar__menu-title--bold">게시판</span>
-            <Icon path={mdiChevronDown} size={1} />
-          </span>
-        }
-        id="dropdown-board"
-        onToggle={() => setMapIcons([])}
+      <Dropdown
+      as="div"
+      className="nav_menu-box custom-prediction-dropdown"
+      onToggle={() => setMapIcons([])}
       >
+      <Dropdown.Toggle
+        as="button"
+        className="navbar__menu-link"
+        aria-haspopup="true"
+        aria-expanded={openSubmenu}
+      >
+        <img
+          src={boardIcon}
+          alt=""
+          aria-hidden="true"
+          className="navbar__menu-icon"
+        />
+        <span className="navbar__menu-title--bold">게시판</span>
+        <Icon path={mdiChevronDown} size={1} />
+      </Dropdown.Toggle>
+
+        <Dropdown.Menu>
         <NavDropdown.Item
         onClick={() => {
           handleOpenBottomTable05();
           setMapIcons([]);
         }}
         >
-        공지사항</NavDropdown.Item>
-        <NavDropdown.Item>게시판</NavDropdown.Item>
-        <NavDropdown.Item>Q&A</NavDropdown.Item>
-      </NavDropdown>
+        공지사항
+      </NavDropdown.Item>
+        <NavDropdown.Item href="/board/bulletinboard">게시판</NavDropdown.Item>
+        <NavDropdown.Item href="/board/Q&A">Q&A</NavDropdown.Item>
+        </Dropdown.Menu>
+      </Dropdown>
 
-      <NavDropdown
+      <Dropdown
+        as="div"
         className="nav_menu-box custom-prediction-dropdown"
-        title={
-          <span>
-            <img src={pollutionIcon} alt="오염조사" className="navbar__menu-icon" />
-            <span className="navbar__menu-title--bold">오염조사</span>
-            <Icon path={mdiChevronDown} size={1} />
-          </span>
-        }
-        id="dropdown-pollution"
         onToggle={() => setMapIcons([])}
       >
-        <NavDropdown.Item>해안오염 조사평가</NavDropdown.Item>
-        <NavDropdown.Item>해안오염분포도</NavDropdown.Item>
-      </NavDropdown>
+        <Dropdown.Toggle
+          as="button"
+          className="navbar__menu-link"
+          aria-haspopup="true"
+          aria-expanded={openSubmenu}
+        >
+          <img
+            src={pollutionIcon}
+            alt=""
+            aria-hidden="true"
+            className="navbar__menu-icon"
+          />
+          <span className="navbar__menu-title--bold">오염조사</span>
+          <Icon path={mdiChevronDown} size={1} />
+        </Dropdown.Toggle>
+
+        <Dropdown.Menu>
+          <Dropdown.Item href="/pollution/report">해안오염 조사평가</Dropdown.Item>
+          <Dropdown.Item href="/pollution/map">해안오염분포도</Dropdown.Item>
+        </Dropdown.Menu>
+      </Dropdown>
     </Nav>
 
     {/* 지도 영역 */}

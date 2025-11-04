@@ -1,13 +1,24 @@
 import { Form, Button } from 'react-bootstrap';
 
+import PoliceLogo from '../assets/police_logo.svg';
+import MainLogo from '../assets/main_logo_login.svg';
+import BgImage from '../assets/bg_login.jpg';
+
 const InterLogin375 = () => {
   return (
-    <div className="bg-img">
-      <div className="main-logo"></div>
-      <div className="sub-logo"></div>
+    <div
+      className="bg-img"
+      style={{ backgroundImage: `url(${BgImage})` }}
+      >
+      <div className="logo-container">
+        <img src={PoliceLogo} alt="해양경찰청 로고" className="main-logo" />
+        <img src={MainLogo} alt="해양환경 위기대응 통합지원 시스템 로고" className="sub-logo" />
+      </div>
+
       <div className="login-box">
         <Form className="login-form">
           <Form.Group controlId="userid" className="mb-3 custom-group">
+            <Form.Label>사번</Form.Label>
             <Form.Control
               type="text"
               id="userid"
@@ -19,6 +30,7 @@ const InterLogin375 = () => {
           </Form.Group>
 
           <Form.Group controlId="password" className="mb-3 custom-group">
+            <Form.Label>비밀번호</Form.Label>
             <Form.Control
               type="password"
               id="password"

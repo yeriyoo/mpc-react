@@ -66,7 +66,8 @@ const InterPage768: React.FC<InterPage768Props> = ({
             <Navbar.Brand className="navbar__brand-box d-flex align-items-center">
               <img
                 src={WingLogo}
-                alt="로고"
+                alt=""
+                aria-hidden="true"
                 className="navbar__brand-logo"
               />
               <strong>해양환경 위기대응 통합지원 시스템</strong>

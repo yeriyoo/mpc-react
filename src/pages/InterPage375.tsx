@@ -241,7 +241,8 @@ const InterPage375 = () => {
               <img
                 src={WingLogo375}
                 className="logo-on-overlay"
-                alt="logo"
+                alt=""
+                aria-hidden="true"
               />
             </div>
             <Navbar fixed="bottom" className="bottom-navbar">

@@ -11,7 +11,6 @@ body {
 
 //로그인//
 .bg-img {
-  background-image: url('/assets/bg_login.jpg');
   background-size: cover;
   background-position: center;
   min-height: 100vh;
@@ -42,7 +41,7 @@ body {
   transform: translateX(-50%);
   width: 188px;
   height: 54px;
-  background: url('/assets/police_logo.svg') no-repeat center / contain;
+  background: no-repeat center / contain;
 }
 
 .sub-logo {
@@ -52,7 +51,7 @@ body {
   transform: translateX(-50%);
   width: 400px;
   height: 36px;
-  background: url('/assets/main_logo_login.svg') no-repeat center / contain;
+  background: no-repeat center / contain;
 }
 
 .login-form {
@@ -69,6 +68,12 @@ body {
   flex-direction: column;
   width: 100%;
 
+  label {
+    color: #FFFFFF;
+    font-size: 14px;
+    margin-bottom: 4px;
+  }
+
   input {
     width: 100%;
     height: 50px;
@@ -83,17 +88,31 @@ body {
     &::placeholder {
       color: #898f9d;
     }
+
+    &:focus-visible {
+      outline: 2px solid #008AFF;
+      outline-offset: 2px;
+    }
   }
 }
 
+
 .remember-wrapper label {
   color: #fff;
+  cursor: pointer;
+}
+
+.form-check-input:focus-visible {
+  outline: 2px solid #008aff; 
+  outline-offset: 2px;
+  border-radius: 4px;
+  z-index: 10;
 }
 
 .custom-login-btn {
   width: 100%;
   height: 50px;
-  background-color: #008aff;
+  background-color: #006FCC;
   color: white;
   border: none;
   border-radius: 4px;
@@ -103,7 +122,7 @@ body {
 
   &:hover,
   &:active {
-    background-color: #3ca6ff;
+    background-color: #0055AA;
   }
 }
 
@@ -276,19 +295,50 @@ body {
 }
 
 .navbar {
+  background-color: #11154b;
+  color: #1a1a1a !important;
+}
+
+@media (max-width: 767px) {
+  .navbar {
+    background-color: #fff !important;
+    color: #000 !important;
+  }
+}
+
+
+.navbar {
   .navbar-brand {
-    background-color: #fff;
+    background-color: #fff !important;
+    color: #1a1a1a !important;
     font-size: 18px;
-    padding: 16px 20px;
+    padding: 12px 20px;
     margin: 0;
-    height: 56px;
     display: flex;
     align-items: center;
+    // flex-wrap: wrap;   
+    height: auto;   
+    min-height: 56px;
+
+    strong {
+      display: block;
+      width: 100%; 
+      background-color: #fff !important;
+      color: #1a1a1a !important;
+      white-space: normal; 
+      word-break: break-word; 
+      flex: 1 1 auto;  
+      min-width: 0;  
+      font-weight: 600;
+      padding: 0;
+    }
+
 
     .navbar__brand-logo {
       width: 52px;
       height: auto;
       margin-right: 8px;
+      flex-shrink: 0;
     }
   }
 }
@@ -359,14 +409,13 @@ body {
     border-radius: 4px;
     overflow: visible;
     border: none;
-    // box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
     font-size: 14px;
     background-color: #000;
 
     .dropdown-item {
       font-size: 16px;
       color: #000;
-      padding: 16px 0 16px 8px;
+      padding: 16px 16px 16px 8px;
       width: 240px;
       box-sizing: border-box;
 
@@ -398,35 +447,23 @@ body {
   height: 56px;
   max-height: 220px;
   box-sizing: border-box;
+}
+
+.nav-dropdown__item-with-submenu.open {
+  background-color: #008aff;
+  color: #fff;
 
   .nav-dropdown__item-label {
+    color: #fff !important;
     font-size: 16px;
   }
 
   .submenu-arrow {
-    transition:
-      transform 0.3s ease,
-      color 0.3s ease;
-  }
-
-  &.open {
-    max-height: 1000px;
-    background-color: #008aff;
-
-    .submenu-arrow {
-      transform: rotate(180deg);
-      display: inline-block;
-    }
+    transform: rotate(180deg);
+    display: inline-block;
   }
 }
 
-.navbar-nav .nav_menu-box .submenu-arrow svg {
-  color: #000 !important;
-}
-
-.nav-dropdown__item-with-submenu.open .submenu-arrow svg {
-  color: #fff !important;
-}
 
 .nav-dropdown__item-with-submenu.open {
   background-color: #008aff;
@@ -462,10 +499,13 @@ body {
     color: #6972a3;
   }
 
-  &:focus {
-    box-shadow: none;
-    outline: none;
-    background-color: #1c2d6f;
+  &:focus,
+  &:focus-visible {
+    z-index: 10;
+    outline: 2px solid #66B3FF; 
+    outline-offset: 2px;
+    box-shadow: 0 0 0 3px rgba(0, 138, 255, 0.5);
+    background-color: #6972a3;
     color: #fff;
   }
 }
@@ -489,23 +529,44 @@ body {
   height: 56px;
   margin: 0 !important;
   background-color: #1c2d6f;
+  border-radius: 0 !important;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #008AFF;
+  }
+
+  /* 포커스 접근성 */
+  &:focus,
+  &:focus-visible {
+    background-color: #0040FF;
+    outline: 2px solid #66B3FF;
+  outline-offset: 2px;
+    box-shadow: 0 0 0 3px rgba(0, 138, 255, 0.5);
+    z-index: 10;
+  }
 }
 
 .custom-button-01 {
   border-left: 1px solid #6972a3;
   padding-left: 12px;
-  border-radius: 0;
 }
 
-.custom-button-02 {
+.navbar__menu-link {
   border: none;
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  color: #fff; 
 }
 
-.custom-button-01,
-.custom-button-02,
-.search-button {
-  border-radius: 0 !important; 
+.navbar__menu-link .navbar__menu-title--bold {
+  font-weight: 500;
+  margin-left: 4px; 
+  color: inherit;
+  font-size: 16px !important;
 }
+
 
 .navbar_search-group,
 .navbar_search-group .form-control,
@@ -530,6 +591,7 @@ body {
   align-items: center;
   justify-content: center;
   border: none !important;
+  border-radius: 0;
 }
 
 .dropdown-icon {
@@ -562,7 +624,7 @@ body {
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: #fff;
+  background-color: #fff !important;
   z-index: 0;
   display: none;
 
@@ -580,7 +642,7 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -64%);
+  transform: translate(-50%, -50%);
   color: #000;
   font-weight: bold;
   height: 56px;
@@ -788,7 +850,7 @@ body {
       display: flex;
       justify-content: center;
       align-items: center;
-      margin: 16px 0 16px 8px;
+      margin: 16px 16px 16px 8px;
     }
   }
 
@@ -836,6 +898,7 @@ body {
   display: flex;
   position: absolute;
   right: 0;
+  border: 0;
 }
 
 .main-background-03 {
@@ -1099,7 +1162,7 @@ body {
   width: 75px;
   height: 66px;
   background-color: #fff;
-  z-index: 1040; // 낮게
+  z-index: 1040;
 }
 
 .logo-on-overlay {
@@ -1107,7 +1170,7 @@ body {
   bottom: 20px;
   left: 12px;
   width: 48px;
-  z-index: 1040; // 확실히 높게
+  z-index: 1040;
 }
 
 // 하단모달 //
@@ -1318,13 +1381,12 @@ body {
       justify-content: space-between;
       align-items: center;
       background-color: #fff;
-      font-weight: 600;
+      font-weight: 500;
       font-size: 1.16px;
       margin-bottom: 8px;
 
       padding: 12px 28px;
       border-bottom: 1px solid #eee;
-      font-weight: bold;
       font-size: 18px;
 
       .close-btn {
@@ -2505,8 +2567,6 @@ body {
   justify-content: space-between;
 }
 
-
-/* 아코디언 버튼 전체 브라우저 폭으로 */
 .modal04-accordion .accordion-button {
   border-radius: 0 !important;  
   width: 100%;        
@@ -2519,7 +2579,6 @@ body {
   color: #000;
 }
 
-/* 아코디언 아이템 전체 폭 */
 .modal04-accordion .accordion-item {
   margin: 0;
   border: none;
@@ -2527,12 +2586,10 @@ body {
   background-color: #EAF1F7;
 }
 
-/* 아코디언 본문 */
 .modal04-accordion .accordion-body {
-  padding: 8px 16px; /* 버튼과 맞추어 좌우 여백 통일 */
+  padding: 8px 16px;
 }
 
-/* 아코디언 항목 한 줄 배치 */
 .accordion-body-wrapper {
   display: flex;
   flex-direction: column;
@@ -2549,7 +2606,7 @@ body {
 }
 
 .modal04-accordion .accordion-body {
-  padding: 0 8px !important; /* 기존 padding 완전히 제거 */
+  padding: 0 8px !important; 
 }
 
 
@@ -2682,6 +2739,10 @@ body {
     .links-wrapper a {
       font-size: 16px;
     }
+  }
+
+  .mobile-white-bg {
+  background-color: #fff !important
   }
 }
 

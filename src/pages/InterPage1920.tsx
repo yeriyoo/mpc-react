@@ -77,10 +77,10 @@ const InterPage1920: React.FC<InterPage1920Props> = ({
     className="main-background"
     style={{backgroundImage: `url(${mapImage})`}}
     >
-      <Navbar expand="lg" className="bg-body-tertiary">
+      <Navbar expand="lg" className="bg-body-tertiary" as="nav">
         <Container fluid>
           <Navbar.Brand className="navbar__brand-box">
-            <img src={WingLogo} alt="로고" className="navbar__brand-logo" />
+            <img src={WingLogo} alt="" aria-hidden="true" className="navbar__brand-logo" />
             <strong>해양환경 위기대응 통합지원 시스템</strong>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
@@ -143,7 +143,7 @@ const InterPage1920: React.FC<InterPage1920Props> = ({
               )}
 
             {/* 검색 */}
-            <Form className="d-flex">
+            <Form className="d-flex" role="search">
               <InputGroup className="navbar_search-group">
                 <InputGroup.Text className="navbar_search-icon">
                   <Icon path={mdiMagnify} size={1.2} style={{ color: '#fff' }} />
@@ -151,7 +151,7 @@ const InterPage1920: React.FC<InterPage1920Props> = ({
                 <Form.Control
                   type="search"
                   placeholder="검색"
-                  aria-label="Search"
+                  aria-label="검색"
                   id="navbar-search"
                   name="navbarSearch"
                   className="custom-search-input"

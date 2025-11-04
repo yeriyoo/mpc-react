@@ -39,82 +39,84 @@ const BottomAccordionList = ({
       title: '0001 / 2025-05-25 00:00',
       details: [
         '예측시간 : 12H',
-        '진행률 : 100%',
         '유종 : Disel',
-        <span>바로실행 : <Icon path={mdiRadar} size={1} color="#008AFF" /></span>,
         '유출량 : 1kl',
-        <span>사고정보 : <Icon path={mdiFileDocumentEditOutline} size={1} color="#11154B" /></span>,
+        '위성탐지 : SAR(2)',
+        '현장탐지 : 무인기(2)',
+        '예측 유출량 : 1kl',
+        <span>확산예측 : <Icon path={mdiRadar} size={1} color="#008AFF" /></span>,
+      ],
+    },
+   {
+      title: '0001 / 2025-05-25 00:00',
+      details: [
+        '예측시간 : 12H',
+        '유종 : Disel',
+        '유출량 : 1kl',
+        '위성탐지 : SAR(2)',
+        '현장탐지 : 무인기(2)',
+        '예측 유출량 : 1kl',
+        <span>확산예측 : <Icon path={mdiRadar} size={1} color="#008AFF" /></span>,
       ],
     },
     {
-      title: '0002 / 2025-07-31 15:00',
+      title: '0001 / 2025-05-25 00:00',
       details: [
         '예측시간 : 12H',
-        '진행률 : 100%',
         '유종 : Disel',
-        <span>바로실행 : <Icon path={mdiRadar} size={1} color="#008AFF" /></span>,
         '유출량 : 1kl',
-        <span>사고정보 : <Icon path={mdiFileDocumentEditOutline} size={1} color="#11154B" /></span>,
+        '위성탐지 : SAR(2)',
+        '현장탐지 : 무인기(2)',
+        '예측 유출량 : 1kl',
+        <span>확산예측 : <Icon path={mdiRadar} size={1} color="#008AFF" /></span>,
       ],
     },
     {
-      title: '0003 / 2025-11-14 21:00',
+      title: '0001 / 2025-05-25 00:00',
       details: [
-        '사고 시각 : 2024-09-23 00:00:00',
         '예측시간 : 12H',
-        '진행률 : 100%',
         '유종 : Disel',
-        <span>바로실행 : <Icon path={mdiRadar} size={1} color="#008AFF" /></span>,
         '유출량 : 1kl',
-        <span>사고정보 : <Icon path={mdiFileDocumentEditOutline} size={1} color="#11154B" /></span>,
+        '위성탐지 : SAR(2)',
+        '현장탐지 : 무인기(2)',
+        '예측 유출량 : 1kl',
+        <span>확산예측 : <Icon path={mdiRadar} size={1} color="#008AFF" /></span>,
       ],
     },
     {
-      title: '0004 / 2025-11-14 21:00',
+      title: '0001 / 2025-05-25 00:00',
       details: [
-        '사고 시각 : 2024-09-23 00:00:00',
         '예측시간 : 12H',
-        '진행률 : 100%',
         '유종 : Disel',
-        <span>바로실행 : <Icon path={mdiRadar} size={1} color="#008AFF" /></span>,
         '유출량 : 1kl',
-        <span>사고정보 : <Icon path={mdiFileDocumentEditOutline} size={1} color="#11154B" /></span>,
+        '위성탐지 : SAR(2)',
+        '현장탐지 : 무인기(2)',
+        '예측 유출량 : 1kl',
+        <span>확산예측 : <Icon path={mdiRadar} size={1} color="#008AFF" /></span>,
       ],
     },
     {
-      title: '0004 / 2025-11-14 21:00',
+      title: '0001 / 2025-05-25 00:00',
       details: [
-        '사고 시각 : 2024-09-23 00:00:00',
         '예측시간 : 12H',
-        '진행률 : 100%',
         '유종 : Disel',
-        <span>바로실행 : <Icon path={mdiRadar} size={1} color="#008AFF" /></span>,
         '유출량 : 1kl',
-        <span>사고정보 : <Icon path={mdiFileDocumentEditOutline} size={1} color="#11154B" /></span>,
+        '위성탐지 : SAR(2)',
+        '현장탐지 : 무인기(2)',
+        '예측 유출량 : 1kl',
+        <span>확산예측 : <Icon path={mdiRadar} size={1} color="#008AFF" /></span>,
       ],
     },
     {
-      title: '0004 / 2025-11-14 21:00',
+      title: '0001 / 2025-05-25 00:00',
       details: [
-        '사고 시각 : 2024-09-23 00:00:00',
         '예측시간 : 12H',
-        '진행률 : 100%',
         '유종 : Disel',
-        <span>바로실행 : <Icon path={mdiRadar} size={1} color="#008AFF" /></span>,
         '유출량 : 1kl',
-        <span>사고정보 : <Icon path={mdiFileDocumentEditOutline} size={1} color="#11154B" /></span>,
-      ],
-    },
-    {
-      title: '0004 / 2025-11-14 21:00',
-      details: [
-        '사고 시각 : 2024-09-23 00:00:00',
-        '예측시간 : 12H',
-        '진행률 : 100%',
-        '유종 : Disel',
-        <span>바로실행 : <Icon path={mdiRadar} size={1} color="#008AFF" /></span>,
-        '유출량 : 1kl',
-        <span>사고정보 : <Icon path={mdiFileDocumentEditOutline} size={1} color="#11154B" /></span>,
+        '위성탐지 : SAR(2)',
+        '현장탐지 : 무인기(2)',
+        '예측 유출량 : 1kl',
+        <span>확산예측 : <Icon path={mdiRadar} size={1} color="#008AFF" /></span>,
       ],
     },
   ];
@@ -138,7 +140,7 @@ const BottomAccordionList = ({
         ></div>
 
         <div className="sheet-header">
-          <span>현장탐색-오염정보</span>
+          <span>오염정보 목록</span>
           <button className="close-btn" onClick={handleClose}>
             <Icon path={mdiClose} size={1} />
           </button>
@@ -363,7 +365,7 @@ const BottomTable03 = ({ isShow, setIsShow, windowWidth }: BottomTableProps) => 
       {isModalView && (
         <div className="bottom-table-modal">
           <Modal.Header>
-            <Modal.Title>오염정보-목록</Modal.Title>
+            <Modal.Title>오염정보 목록</Modal.Title>
             <div className="ms-auto">
               <Button variant="link-dark" size="sm" onClick={handleClose} aria-label="닫기">
                 <Icon path={mdiClose} size={1} />

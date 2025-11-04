@@ -96,7 +96,7 @@ const InterPage1440: React.FC<InterPage1440Props> = ({
         <Container fluid>
           <div className="d-flex align-items-center">
             <Navbar.Brand className="navbar__brand-box d-flex align-items-center">
-              <img src={WingLogo} alt="로고" className="navbar__brand-logo" />
+              <img src={WingLogo} alt="" aria-hidden="true" className="navbar__brand-logo" />
               <strong>해양환경 위기대응 통합지원 시스템</strong>
             </Navbar.Brand>
 
